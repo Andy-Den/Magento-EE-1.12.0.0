@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<signaturelink translate="label">
+			<label>SecureBuy</label>
+			<tab>sales</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>400</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<sl_config translate="label">
+					<label>SecureBuy Configuration</label>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>
+						<sl_account_header translate="label">
+							<label>Register</label>
+							<frontend_model>signaturelink/adminhtml_system_form_renderer_configMessage</frontend_model>
+							<comment>Enter your SecureBuy credentials below. If you don't yet have SecureBuy credentials or aren't sure, click the button below to get started or recover a password.</comment>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</sl_account_header>
+						<sl_account_button>
+							<label/>
+							<frontend_model>signaturelink/adminhtml_system_form_renderer_linkButton</frontend_model>
+							<button_label>Get Account</button_label>
+							<button_url><![CDATA[http://www.signaturelink.com]]></button_url>
+							<comment>Note: Clicking on the register button will open a new browser window and take you to Securebuy.</comment>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</sl_account_button>
+						<te_user translate="label">
+							<label><![CDATA[SecureBuy Account Login]]></label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</te_user>
+						<te_pass translate="label">
+							<label><![CDATA[SecureBuy Account Password]]></label>
+							<frontend_type>password</frontend_type>
+							<comment><![CDATA[	
+							 <script>
+							jQuery(function() {								
+								jQuery("#signaturelink_sl_config_te_pass,#signaturelink_sl_config_te_user,#signaturelink_sl_config_storeid,#signaturelink_sl_config_clientid,#signaturelink_sl_config_signpad_mode").change(function() {
+									
+										var te_user = jQuery('#signaturelink_sl_config_te_user').val();
+										var te_pass = jQuery('#signaturelink_sl_config_te_pass').val();	
+										var storeid = jQuery('#signaturelink_sl_config_storeid').val();
+										var clientid = jQuery('#signaturelink_sl_config_clientid').val();	
+										var pageUrl = window.location.href.toString();
+										var myArray = pageUrl.split('index.php');
+										var baseUrl = myArray[0];
+										
+										if(te_user!='' && te_pass!='' && storeid!='' && clientid!='') { 
+
+											jQuery('.content-header').append('<span class="load">Please wait...</span>');
+											jQuery.ajax({
+												async: false,
+												type: 'POST',
+												url: baseUrl+'threedsecure_frame.php',
+												data: 'te_user='+te_user+'&te_pass='+te_pass+'&storeid='+storeid+'&validate_securebuy=1',
+												cache: false,
+												success: function(response){
+													//alert('response=='+response);
+													if(response!=clientid){
+														alert("Not a valid SecureBuy login credential");
+														jQuery('.form-buttons').hide();
+													} else{
+														jQuery('.form-buttons').show();
+													}
+													jQuery('.content-header .load').remove();
+												}
+											});
+										} else {
+											var message = '';
+											jQuery("#signaturelink_sl_config_signpad_mode").val('0');
+
+											if(storeid == '') {
+
+												message = message + 'Store Id,';
+											} 
+
+											if(clientid == '') {
+
+												message = message + 'Client Id,';
+											}
+
+											if(te_user == '') {
+
+												message = message + 'Username,';
+											} 
+											
+											if(te_pass == '') {
+												
+												message = message + 'Password.';
+											} else {
+												message = message.substr(0, message.length -1) 
+											}
+											
+											alert('Please fill ' + message);
+										}
+									});
+									jQuery("#signaturelink_sl_config_opt_min_amountbox,#signaturelink_tm_config_securbuy_based_risk_score,#signaturelink_tm_config_securebuy_min_mpi_amountbox").blur(function(){
+
+										if(jQuery(this).val()!='' && isNaN(jQuery(this).val()))
+										{
+											alert("Please enter numbers only");
+											jQuery(this).val('');
+											jQuery(this).focus();
+										}
+										
+									});
+								  });
+							</script>
+							 ]]></comment>							
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</te_pass>
+						<clientid translate="label comment">
+							<label><![CDATA[SecureBuy Client ID]]></label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</clientid>
+						<storeid translate="label">
+							<label><![CDATA[SecureBuy Store ID]]></label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</storeid>
+
+						<signpad_mode>
+							<label>Enable SecureBuy</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</signpad_mode>
+						
+						<sales_receipt_pdf>
+							<label>Sales Receipt - PDF</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/salesoption</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sales_receipt_pdf>
+
+						<risk_score>
+							<label>Risk Scoring</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/salesoption</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</risk_score>
+						
+						<opt_tcbox translate="label">
+							<label>Enable Terms &amp; Conditions Box</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/salesoption</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</opt_tcbox>	
+
+						
+						<lang_list>
+							<label>Language List</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/languagelist</source_model>
+							<sort_order>51</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><opt_tcbox>1</opt_tcbox></depends>
+						</lang_list>
+						
+						
+						<securebuy_options_list>
+							<label>SignPad</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/securebuyoption</source_model>
+							<sort_order>52</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</securebuy_options_list>	
+						
+						<opt_min_amountbox translate="label">
+							<label>Minimum Amount</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>53</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><securebuy_options_list>2</securebuy_options_list></depends>
+						</opt_min_amountbox>
+										
+					</fields>
+				</sl_config>
+
+				<tm_config>
+					<label><![CDATA[Active Authentication Configuration]]></label>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>
+						<enabled>
+							<label>Call 3D Secure MPI</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/quarantineoptions</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled>
+												
+						<securbuy_based_risk_score>
+							<label>Based On Risk Score</label>
+							<frontend_type>text</frontend_type>
+							<comment><![CDATA[	
+							 <script>
+							jQuery(function() {
+									jQuery( "#slider-range" ).slider({
+									  min: -100,
+									  max: 100,
+									  value: 0,
+										width: 2,
+									  slide: function( event, ui ) {
+										jQuery( "#signaturelink_tm_config_securbuy_based_risk_score" ).val( ui.value );
+									  }
+									});
+									 jQuery( "#slider-range" ).slider( "value", jQuery( "#signaturelink_tm_config_securbuy_based_risk_score" ).val() ) ;
+									
+									jQuery("#signaturelink_tm_config_securbuy_based_risk_score").change(function() {
+										if(!isNaN(jQuery(this).val())) {
+											jQuery( "#slider-range" ).slider( "value", jQuery(this).val() );
+										}
+									});
+								  });
+							</script>
+							<p>
+							  <div for="securbuy_based_risk_score">Passive Risk Scale:</div>
+							</p>
+							<div id="slider-range" class="passiveSlider">
+								<div id="highRisk" class="ui-corner-left">High</div>
+								<div id="mediumRisk" class="">Med</div>
+								<div id="lowRisk" class="">Low</div>
+								Nuetral
+							</div>
+							<br/>
+							 ]]></comment>
+							<sort_order>62</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><enabled>2</enabled></depends>
+						</securbuy_based_risk_score>
+	
+						<securebuy_min_mpi_amountbox translate="label">
+							<label>Based on $(Minimum Amount)</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>63</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><enabled>2</enabled></depends>
+						</securebuy_min_mpi_amountbox>						
+
+						<signpad_allow_specific_country translate="label">
+							<label>Based on Country</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+							<sort_order>64</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<depends><enabled>2</enabled></depends>
+						</signpad_allow_specific_country>						
+						<signpad_country_mode translate="label">
+							<label>Countries List</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>paypal/system_config_source_buyerCountry</source_model>
+							<sort_order>65</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<depends><signpad_allow_specific_country>1</signpad_allow_specific_country></depends>
+							<depends><enabled>2</enabled></depends>
+						</signpad_country_mode>								
+							
+						<!--<tm_quarantine_fraud_message>
+							<label>3D MPI checkout Message</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tm_quarantine_fraud_message>-->
+												
+					</fields>
+				</tm_config>
+			</groups>
+		</signaturelink>
+		<payment>
+			<groups>
+				<signaturelink translate="label">
+					<label>Signature Suspected Fraud Quarentine Payment</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>999</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<order_status translate="label">
+							<label>New Order Status</label>
+							<frontend_type>select</frontend_type>
+							<source_model>signaturelink/fraudstatuses</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</order_status>
+						<model>
+						</model>
+					</fields>
+				</signaturelink>
+			</groups>
+		</payment>
+	</sections>
+</config>

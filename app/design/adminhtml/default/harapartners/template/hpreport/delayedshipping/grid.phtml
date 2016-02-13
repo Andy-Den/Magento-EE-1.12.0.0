@@ -1,0 +1,59 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+<div id="singleSort" style="width:100%;"></div>
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery("#singleSort").kendoGrid({
+	        dataSource: {
+	            data: <?php echo $this->getCollectionJson()?>,
+	            pageSize: 30
+	        },
+	        sortable: {
+	            mode: "single",
+	            allowUnsort: false
+	        },
+	        pageable: true,
+	        scrollable: false,
+	        columns: [
+	 	        {
+	                field: "increment_id",
+	                title: "Order ID",
+	                type: "number"
+	            },
+	            {
+	                field: "order_id",
+	                title: "Internal Order ID",
+	                type: "number"
+	            },      	        
+	            {
+	                field: "order_created_at",
+	                title: "Order Created At"
+	            },
+	            {
+	                field: "time_delay",
+	                title: "Time Delay"
+	            },
+	            {
+	                field: "item_sku",
+	                title: "Item SKU"
+	            },
+	            {
+	                field: "item_name",
+	                title: "Item Name"
+	            },
+	            {
+	                field: "status",
+	                title: "Order Status"
+	            },
+	            {
+	                field: "qty_inquestion",
+	                title: "QTY in question",
+	                type: "number"
+	            }
+
+	            
+	        ]
+	    });
+	 });
+</script>

@@ -1,0 +1,8 @@
+a:5:{i:0;s:45:"Mage registry key "controller" already exists";i:1;s:589:"#0 E:\www\aec\app\Mage.php(222): Mage::throwException('Mage registry k...')
+#1 E:\www\aec\app\code\core\Mage\Core\Model\App.php(747): Mage::register('controller', Object(Mage_Core_Controller_Varien_Front))
+#2 E:\www\aec\app\code\core\Mage\Core\Model\App.php(1094): Mage_Core_Model_App->_initFrontController()
+#3 variable expression(1): Mage_Core_Model_App->getFrontController()
+#4 E:\www\aec\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App::run()
+#5 E:\www\aec\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#6 E:\www\aec\index.php(87): Mage::run('', 'store')
+#7 {main}";s:3:"url";s:26:"/index.php/businessaccount";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

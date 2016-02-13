@@ -1,0 +1,34 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ */
+?>
+<?php 
+//Vendor banner preceeds default category banner
+$bannerCategory = $this->getCurrentCategory();
+if($vendorId = $this->getRequest()->getParam("vendor_id")){
+	$bannerCategory = Mage::helper('service/catalog')->getCategoryByVendorId($vendorId);
+}
+?>
+<?php if($bannerCategory && $bannerCategory->getImageUrl()): ?>
+	<?php if($bannerCategory->getThumbnail()): ?>
+		<div class="vendoroptions-header-banner-left">
+			<img src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$bannerCategory->getThumbnail(); ?>" alt="<?php echo $this->getVendor()->getCode(); ?>">
+		</div>
+		<div class="vendoroptions-header-banner-right">
+			<img src="<?php echo $bannerCategory->getImageUrl(); ?>" alt="<?php echo $this->getVendor()->getCode(); ?>">
+		</div>
+	<?php else: ?>
+		<div class="vendoroptions-header-banner">
+			<img src="<?php echo $bannerCategory->getImageUrl(); ?>" alt="<?php echo $this->getVendor()->getCode(); ?>">
+		</div>
+	<?php endif; ?>
+	<div class="clear"></div>
+<?php endif; ?>

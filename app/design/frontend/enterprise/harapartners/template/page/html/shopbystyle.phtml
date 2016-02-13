@@ -1,0 +1,43 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ */
+?>
+<?php
+$catalogHelper = Mage::helper('service/catalog');
+$catalogRootCategoryCollecion = $catalogHelper->getCatalogRootCategoryCollection();
+?>
+		
+<div class="shop-by-all-styles">
+	<div class="shop-by-all-styles-title">
+		<div>ALL STYLES</div>
+	</div>
+	
+	<?php foreach($catalogRootCategoryCollecion as $level0Category): ?>
+	<div class="shop-by-all-styles-level0">
+		<div class="shop-by-all-styles-level0-title"><a href="<?php echo $level0Category->getUrl(); ?>"><?php echo $level0Category->getName(); ?></a></div>
+		<?php foreach($level0Category->getChildrenCategories() as $level1Category): ?>
+		<div class="shop-by-all-styles-level1">
+			<div class="shop-by-all-styles-level1-title"><a href="<?php echo $level1Category->getUrl(); ?>"><?php echo $level1Category->getName(); ?></a></div>
+			<?php foreach($level1Category->getChildrenCategories() as $level2Category): ?>
+			<div class="shop-by-all-styles-level2">
+				<div class="shop-by-all-styles-level2-title"><a href="<?php echo $level2Category->getUrl(); ?>"><?php echo $level2Category->getName(); ?></a></div>
+				<?php foreach($level2Category->getChildrenCategories() as $level3Category): ?>
+				<div class="shop-by-all-styles-level3">
+					<div class="shop-by-all-styles-level3-title"><a href="<?php echo $level3Category->getUrl(); ?>"><?php echo $level3Category->getName(); ?></a></div>
+				</div>
+				<?php endforeach; ?>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<?php endforeach; ?>
+	</div>
+	<?php endforeach; ?>
+</div>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ */
+ -->
+<config>
+    <modules>
+        <Harapartners_ShippingFactory>
+            <version>1.0.0</version>
+        </Harapartners_ShippingFactory>
+    </modules>
+    <global>
+        <models>
+            <shippingfactory>
+                <class>Harapartners_ShippingFactory_Model</class>
+            </shippingfactory>
+			<usa>
+				<rewrite>
+					<shipping_carrier_fedex>Harapartners_ShippingFactory_Model_Rewrite_Shipping_Carrier_Fedex</shipping_carrier_fedex>
+					<shipping_carrier_usps>Harapartners_ShippingFactory_Model_Rewrite_Shipping_Carrier_Usps</shipping_carrier_usps>
+				</rewrite>
+			</usa>
+        </models>
+        <helpers>
+            <shippingfactory>
+                <class>Harapartners_ShippingFactory_Helper</class>
+            </shippingfactory>
+        </helpers>
+		<events>
+			<sales_quote_collect_totals_before>
+				<observers>
+                    <shippingfactory_validate_vendor_ship_international>
+                        <class>shippingfactory/observer</class>
+                        <method>validateVendorShipInternational</method>
+                    </shippingfactory_validate_vendor_ship_international>
+                </observers>
+			</sales_quote_collect_totals_before>
+        </events>
+    </global>
+	<default>
+        <carriers>
+			<!-- Important update, USPS need to specify Priority Mail Type for domestic shipping -->
+            <usps>
+                <methods>Priority Mail Express 1-Day,Priority Mail 2-Day,Priority Mail 3-Day,Priority Mail Military,Priority Mail International</methods>
+            </usps>
+        </carriers>
+    </default>
+</config>

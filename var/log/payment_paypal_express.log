@@ -1,0 +1,939 @@
+2014-09-09T13:32:53+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-09-09T13:32:53Z
+            [CORRELATIONID] => 4d82d9b92547
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 12709182
+        )
+
+    [__pid] => 17805
+)
+
+2014-10-31T20:09:04+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-10-31T20:09:04Z
+            [CORRELATIONID] => 2ba83a4b19d8d
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 13443904
+        )
+
+    [__pid] => 31365
+)
+
+2014-11-18T22:47:02+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-11-18T22:47:02Z
+            [CORRELATIONID] => fc2ebd9935f3f
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 13443904
+        )
+
+    [__pid] => 1360
+)
+
+2014-11-20T22:16:57+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-11-20T22:16:57Z
+            [CORRELATIONID] => a46f9071b4bb
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 13834430
+        )
+
+    [__pid] => 1248
+)
+
+2014-11-24T19:26:05+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-11-24T19:26:05Z
+            [CORRELATIONID] => 2dc3b1a078514
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 13834430
+        )
+
+    [__pid] => 6596
+)
+
+2014-11-26T19:07:38+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-11-26T19:07:38Z
+            [CORRELATIONID] => ace3818195a20
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 13834430
+        )
+
+    [__pid] => 6675
+)
+
+2014-11-26T19:09:13+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 519.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://shoemart.vps.harapartners.com/paypal/express/return/
+            [CANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [INVNUM] => 100112458
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 509.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 10.00
+            [L_NUMBER0] => PAR_099427_9_M
+            [L_NAME0] => PARA BOOT Mens Reims
+            [L_QTY0] => 1
+            [L_AMT0] => 399.00
+            [L_NUMBER1] => MER_J21301_10.5_M
+            [L_NAME1] => MERRELL Mens Moab Rover
+            [L_QTY1] => 1
+            [L_AMT1] => 110.00
+            [BUSINESS] => Shoe Mart Inc.
+            [NOTETEXT] => 
+            [EMAIL] => testing@theshoemart.com
+            [FIRSTNAME] => Daniel
+            [LASTNAME] => Zapatka
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => CT
+            [CITY] => Norwalk
+            [STREET] => 3 Berkeley St
+            [ZIP] => 06850
+            [PHONENUM] => 203-701-5340
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => CT
+            [SHIPTOCITY] => Norwalk
+            [SHIPTOSTREET] => 3 Berkeley St
+            [SHIPTOZIP] => 06850
+            [SHIPTOPHONENUM] => 203-701-5340
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Daniel Zapatka
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-35B35638GC127230L
+            [TIMESTAMP] => 2014-11-26T19:09:13Z
+            [CORRELATIONID] => 6aa310d9eb255
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 13630372
+        )
+
+    [__pid] => 6670
+)
+
+2014-12-12T21:27:06+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2014-12-12T21:27:06Z
+            [CORRELATIONID] => 89f5f491368b7
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 14077178
+        )
+
+    [__pid] => 16083
+)
+
+2015-02-04T21:43:04+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-02-04T21:43:04Z
+            [CORRELATIONID] => dde1c0794ade5
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 14970326
+        )
+
+    [__pid] => 16300
+)
+
+2015-02-09T20:34:27+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-02-09T20:34:27Z
+            [CORRELATIONID] => 14633c9413140
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 14970326
+        )
+
+    [__pid] => 20926
+)
+
+2015-03-06T22:43:10+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-03-06T22:43:10Z
+            [CORRELATIONID] => 8cafe15f74756
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 15420584
+        )
+
+    [__pid] => 5795
+)
+
+2015-07-15T20:36:00+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-07-15T20:36:00Z
+            [CORRELATIONID] => 8c385bd4183c4
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 17103657
+        )
+
+    [__pid] => 12732
+)
+
+2015-09-17T17:48:01+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-09-17T17:48:01Z
+            [CORRELATIONID] => ec0b226a7dd80
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 17750617
+        )
+
+    [__pid] => 23257
+)
+
+2015-09-17T17:49:43+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 122.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://shoemart.vps.harapartners.com/paypal/express/return/
+            [CANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [INVNUM] => 100112459
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 122.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => CAR_1821_9_D
+            [L_NAME0] => CAROLINA Mens 8 Inch Logger ST
+            [L_QTY0] => 1
+            [L_AMT0] => 122.00
+            [CALLBACK] => http://shoemart.vps.harapartners.com/paypal/express/shippingOptionsCallback/quote_id/131/
+            [CALLBACKTIMEOUT] => 6
+            [MAXAMT] => 1121
+            [L_SHIPPINGOPTIONISDEFAULT0] => true
+            [L_SHIPPINGOPTIONAMOUNT0] => 0.00
+            [L_SHIPPINGOPTIONNAME0] => no_rate
+            [L_SHIPPINGOPTIONLABEL0] => N/A
+            [L_TAXAMT0] => 
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-5BD39340XX807100X
+            [TIMESTAMP] => 2015-09-17T17:49:43Z
+            [CORRELATIONID] => 89d18dad3bc45
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 29059
+)
+
+2015-09-18T13:52:31+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-09-18T13:52:31Z
+            [CORRELATIONID] => a9107189dd009
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 17750617
+        )
+
+    [__pid] => 20089
+)
+
+2015-10-05T15:08:07+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 5.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://shoemart.vps.harapartners.com/paypal/express/return/
+            [CANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [INVNUM] => 100112461
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 5.00
+            [BUSINESS] => 
+            [NOTETEXT] => 
+            [EMAIL] => rmsith@gmail.com
+            [FIRSTNAME] => Richard
+            [LASTNAME] => Smith
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => HI
+            [CITY] => Honolulu
+            [STREET] => 1234 Main
+            [ZIP] => 09821
+            [PHONENUM] => 203 123  4567
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => HI
+            [SHIPTOCITY] => Honolulu
+            [SHIPTOSTREET] => 1234 Main
+            [SHIPTOZIP] => 09821
+            [SHIPTOPHONENUM] => 203 123  4567
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Richard Smith
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2015-10-05T15:08:07Z
+            [CORRELATIONID] => 9e5189eb354a7
+            [ACK] => Failure
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [L_ERRORCODE0] => 10736
+            [L_SHORTMESSAGE0] => Shipping Address Invalid City State Postal Code
+            [L_LONGMESSAGE0] => A match of the Shipping Address City, State, and Postal Code failed.
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 25863
+)
+
+2015-10-05T15:08:10+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-10-05T15:08:10Z
+            [CORRELATIONID] => aea106ecabafe
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 25863
+)
+
+2015-10-05T15:09:42+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 5.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://shoemart.vps.harapartners.com/paypal/express/return/
+            [CANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [INVNUM] => 100112461
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 5.00
+            [BUSINESS] => 
+            [NOTETEXT] => 
+            [EMAIL] => asdf@as.com
+            [FIRSTNAME] => asdf
+            [LASTNAME] => asdf
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => AK
+            [CITY] => asdf
+            [STREET] => asdf
+            [ZIP] => 96821
+            [PHONENUM] => 123412345
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => AK
+            [SHIPTOCITY] => asdf
+            [SHIPTOSTREET] => asdf
+            [SHIPTOZIP] => 96821
+            [SHIPTOPHONENUM] => 123412345
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => asdf asdf
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2015-10-05T15:09:42Z
+            [CORRELATIONID] => 9e76802410519
+            [ACK] => Failure
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [L_ERRORCODE0] => 10736
+            [L_SHORTMESSAGE0] => Shipping Address Invalid City State Postal Code
+            [L_LONGMESSAGE0] => A match of the Shipping Address City, State, and Postal Code failed.
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 25863
+)
+
+2015-10-06T13:40:16+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-10-06T13:40:16Z
+            [CORRELATIONID] => fb6e12be52262
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 25862
+)
+
+2015-10-06T13:48:03+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 356.40
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://shoemart.vps.harapartners.com/paypal/express/return/
+            [CANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [INVNUM] => 100112463
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 356.40
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => COL_D40626_7.5_B
+            [L_NAME0] => Monroe Penny
+            [L_QTY0] => 1
+            [L_AMT0] => 178.20
+            [L_NUMBER1] => COL_D40626_8_B
+            [L_NAME1] => Monroe Penny
+            [L_QTY1] => 1
+            [L_AMT1] => 178.20
+            [BUSINESS] => 
+            [NOTETEXT] => 
+            [EMAIL] => dangleason52@gmail.com
+            [FIRSTNAME] => Dan
+            [LASTNAME] => Gleason
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => CT
+            [CITY] => Guilford
+            [STREET] => 274 Church Street
+            [ZIP] => 06437
+            [PHONENUM] => 203 393 5610
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => CT
+            [SHIPTOCITY] => Guilford
+            [SHIPTOSTREET] => 274 Church Street
+            [SHIPTOZIP] => 06437
+            [SHIPTOPHONENUM] => 203 393 5610
+            [SHIPTOSTREET2] => Unit 9B
+            [STREET2] => Unit 9B
+            [SHIPTONAME] => Dan Gleason
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-11551980S6977910T
+            [TIMESTAMP] => 2015-10-06T13:48:03Z
+            [CORRELATIONID] => d3f17a3067b83
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 25860
+)
+
+2015-10-14T14:59:22+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-10-14T14:59:22Z
+            [CORRELATIONID] => fd4dd0517e3a8
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18308778
+        )
+
+    [__pid] => 6793
+)
+
+2015-10-14T15:05:44+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 1397.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://shoemart.vps.harapartners.com/paypal/express/return/
+            [CANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [INVNUM] => 100112464
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://shoemart.vps.harapartners.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://shoemart.vps.harapartners.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 1387.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 10.00
+            [L_NUMBER0] => RYN_R3333_8.5_C
+            [L_NAME0] => Classic Penny Loafer
+            [L_QTY0] => 1
+            [L_AMT0] => 650.00
+            [L_NUMBER1] => ALD_40568C_10.5_E
+            [L_NAME1] => Indy Boot Shell Cordovan
+            [L_QTY1] => 1
+            [L_AMT1] => 737.00
+            [BUSINESS] => 
+            [NOTETEXT] => 
+            [EMAIL] => 
+            [FIRSTNAME] => Ed
+            [LASTNAME] => Smith
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => CT
+            [CITY] => new haven
+            [STREET] => 1234 Main
+            [ZIP] => 06511
+            [PHONENUM] => 203 11111111
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => CT
+            [SHIPTOCITY] => new haven
+            [SHIPTOSTREET] => 1234 Main
+            [SHIPTOZIP] => 06511
+            [SHIPTOPHONENUM] => 203 11111111
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Ed Smith
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-0H161145L4391553V
+            [TIMESTAMP] => 2015-10-14T15:05:44Z
+            [CORRELATIONID] => 6cd7d208b3fdb
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18308778
+        )
+
+    [__pid] => 6795
+)
+
+2015-10-21T17:38:44+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+            [PAL] => V9N75EY3RRSN4
+            [LOCALE] => en_US
+            [TIMESTAMP] => 2015-10-21T17:38:44Z
+            [CORRELATIONID] => edf95d3b7d45a
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18308778
+        )
+
+    [__pid] => 11284
+)
+
+2016-02-09T18:11:47+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [getPalDetails] => Array
+        (
+            [METHOD] => getPalDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+        )
+
+    [__pid] => 25665
+)
+
+2016-02-09T18:13:33+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 104.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://theshoem.nextmp.net/paypal/express/return/
+            [CANCELURL] => http://theshoem.nextmp.net/paypal/express/cancel/
+            [INVNUM] => 100112465
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://theshoem.nextmp.net/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://theshoem.nextmp.net/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://theshoem.nextmp.net/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 99.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 5.00
+            [L_NUMBER0] => CLA_68208_11_M
+            [L_NAME0] => Shiply Step
+            [L_QTY0] => 1
+            [L_AMT0] => 99.00
+            [BUSINESS] => 
+            [NOTETEXT] => 
+            [EMAIL] => ed@gmail.com
+            [FIRSTNAME] => ed
+            [LASTNAME] => ramasey
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => CT
+            [CITY] => sdfasdf
+            [STREET] => 123 freadf
+            [ZIP] => 06437
+            [PHONENUM] => 2031111111
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => CT
+            [SHIPTOCITY] => sdfasdf
+            [SHIPTOSTREET] => 123 freadf
+            [SHIPTOZIP] => 06437
+            [SHIPTOPHONENUM] => 2031111111
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => ed ramasey
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_EC_US
+        )
+
+    [response] => Array
+        (
+        )
+
+    [__pid] => 25780
+)
+

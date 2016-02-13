@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ *
+ -->
+<config>
+    <modules>
+        <Harapartners_HpOptimization>
+            <version>1.0.0</version>
+        </Harapartners_HpOptimization>
+    </modules>			
+	<global>
+		<blocks>
+            <hpoptimization>
+                <class>Harapartners_HpOptimization_Block</class>
+            </hpoptimization>
+			<!-- Admin html large grid optimization -->
+			<adminhtml>
+				<rewrite>
+					<catalog_product_grid>Harapartners_HpOptimization_Block_Rewrite_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+					<customer_grid>Harapartners_HpOptimization_Block_Rewrite_Adminhtml_Customer_Grid</customer_grid>
+				</rewrite>
+			</adminhtml>
+		</blocks>
+        <models>
+            <hpoptimization>
+				<class>Harapartners_HpOptimization_Model</class>
+			</hpoptimization>
+		</models>
+		<helpers>
+			<hpoptimization>
+				<class>Harapartners_HpOptimization_Helper</class>
+			</hpoptimization>
+		</helpers>
+		<!-- Adding indices to tables if necessary -->
+		<!--resources>
+            <hpoptimization_setup>
+                <setup>
+                    <module>Harapartners_HpOptimization</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </hpoptimization_setup>
+        </resources-->
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<!-- Block cache time defined within -->
+				<hpoptimization>
+					<file>hpoptimization.xml</file>
+				</hpoptimization>
+			</updates>
+		</layout>
+	</frontend>
+    <adminhtml/>
+	<default/>
+</config>

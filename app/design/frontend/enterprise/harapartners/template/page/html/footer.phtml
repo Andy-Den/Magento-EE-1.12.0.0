@@ -1,0 +1,159 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+?>
+<div class="footer-container">
+    <div class="footer">
+	
+	   <div class="footer-row first">
+	      <div class="footer-contact-us">
+		     <div class="footer-contact-us-text"><span>need any help? give us a call us at: <span>(800) 850-7463</span></span></div>
+		  </div>
+		  <div class="footer-credit-card">
+		     <div class="footer-credit-card-text"><span>we accept: </span><img class="footer-credit-card-img" src="<?php echo $this->getSkinUrl()?>images/footer_creditcard_icons.png" alt="credit card options" /></div>
+		  </div>
+	   </div>
+	   
+	   <div class="clear"></div>
+	   
+	   <div class="footer-row second">
+	        <ul class="footer-main-links">
+			   <li class="first"><a href="<?php echo $this->getBaseUrl();?>about-us">About Us</a></li>
+			   <li><a href="<?php echo $this->getBaseUrl();?>contacts">Contact Us</a></li>
+	    	   <li><a href="<?php echo $this->getBaseUrl();?>blog">Blog</a></li>
+	    	   <li class="last"><a href="<?php echo $this->getBaseUrl();?>hard-to-fit-sizes">Hard-To-Fit-Sizes</a></li>
+			</ul>
+			<div id='facebook-connect'>
+				<span>Connect With Us:</span>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="<?php echo $this->getBaseUrl();?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
+	   		</div>
+	   </div>
+	   
+	   <div class="clear"></div>
+	   
+	   <div class="footer-row third">
+	       <div class="footer-quick-links">
+		        <div class="footer-quick-links-title">
+				    <span>quick links</span>
+				</div>
+				<div class="footer-quick-links-window">
+				   <div class="footer-quick-links-window-column first">
+				      <ul>
+			               <li><a href="<?php echo $this->getBaseUrl();?>men-s/shoes.html">Men's Shoes</a></li>
+			               <li><a href="<?php echo $this->getBaseUrl();?>women-s/shoes.html">Women's Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/alden/id/725/">Alden Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/cole-haan/id/746/">Cole Haan Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/vibram/id/812/">Vibram</a></li>
+			          </ul>
+				   </div>
+				   
+				   <div class="footer-quick-links-window-column second">
+				      <ul>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/ecco/id/755/">Ecco Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/keen/id/769/">Keen Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/sperry/id/806/">Sperry Topsiders</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/naot/id/779/">Naot Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/new-balance/id/781/">New Balance Shoes</a></li>
+			          </ul>
+				   </div>
+				   
+				   <div class="footer-quick-links-window-column third">
+				      <ul>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/skins/id/802/">Skins Compression</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/timberland/id/809/">Timberland Boots</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/inov-8/id/763/">Inov-8</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/clarks/id/744/">Clarks Shoes</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>catalog/category/view/s/minnetonka/id/777/">Minnetonka Moccasins</a></li>
+			          </ul>
+				   </div>
+				</div>
+		   </div>
+		   
+		   <div class="footer-store-info">
+		      <div class="footer-email-signup">
+			      	<?php echo $this->getChildHtml('footer.newsletter')?> 
+				   	<?php echo $this->getChildHtml('newsletter.message')?> 
+			  </div>
+			  <div class="footer-store-info-links">
+			  		  <ul>
+			               <li><a href="<?php echo $this->getBaseUrl();?>privacy-policy">Privacy Policy</a></li>
+			               <li><a href="<?php echo $this->getBaseUrl();?>online-policy">Online Policies</a></li>
+	    	               <li><a href="<?php echo $this->getBaseUrl();?>email-us">Email Us</a></li>
+			          </ul>
+			  </div>
+		      <div class="footer-copyright">
+		        <address><?php echo $this->getCopyright() ?></address>
+			  </div>
+			  
+			  <div class="footer-poweredby">
+			     <span>Website by <a href="http://www.harapartners.com/">Hara Partners</a></span>
+			  </div>
+		   </div>
+	   </div>
+	   
+	   <div class="clear"></div>
+	   
+	   <div class="footer-row last">
+	       <div class="footer-bottom-images">
+		         <div class="footer-bottom-img-col first">
+		              <a href="<?php echo 'http://www.shopzilla.com/ratings_guide/cust_reviews__mid--123615.html'?>"><img src="<?php echo $this->getSkinUrl()?>images/123615_medal.gif" alt="customer certified" /></a>
+		          </div>
+				  
+			      <div class="footer-bottom-img-col one">
+		              <a href="<?php echo 'http://www.pricegrabber.com/rating_getreview.php/retid=4394'?>"><img src="<?php echo $this->getSkinUrl()?>images/merchant_rating_image_secure.gif" alt="price grabber" /></a>
+		          </div>
+				  
+				  <div class="footer-bottom-img-col two">
+		              <a href="<?php echo 'http://verify.authorize.net/anetseal/?pid=f5ca7a5a-924b-4a61-bcb4-aad375fe6c67&amp;rurl=http%3A//www.theshoemart.com/'?>"><img src="<?php echo $this->getSkinUrl()?>images/secure90x72.gif" alt="authorize net" /></a>
+		          </div>
+				  
+		     	  <div class="footer-bottom-img-col three">
+		              <a href="<?php echo 'http://www.nextag.com/Shoemart~1911649zzzreviewsz1zmainz17-htm'?>"><img src="<?php echo $this->getSkinUrl()?>images/NextagLogo.gif" alt="Nexttag logo" /></a>
+		          </div>
+				  
+				  <div class="footer-bottom-img-col four">
+		              <a href="<?php echo 'https://smarticon.geotrust.com/smarticonprofile?Referer=http://www.theshoemart.com'?>"><img src="<?php echo $this->getSkinUrl()?>images/smarticon.gif" alt="Geo Trust" /></a>
+		          </div>
+				  
+				  <div class="footer-bottom-img-col last">
+		              <a href="<?php echo 'http://www.thefind.com/apparel/sc-Shoes/'?>"><img src="<?php echo $this->getSkinUrl()?>images/starbadge.tf100.lg.gif" alt="Find 100" /></a>
+		          </div>
+				  
+	       </div>
+	   </div>
+	   
+	   <div class="clear"></div>
+        <?php //echo $this->getChildHtml() ?>
+ 
+    </div>
+</div>

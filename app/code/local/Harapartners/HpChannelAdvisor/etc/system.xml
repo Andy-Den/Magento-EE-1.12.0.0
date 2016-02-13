@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ *
+ * @author      Steven Hoffman <s.hoffman@harapartners.com>
+ * @copyright   Copyright (c) 2013 Harapartners Inc.
+ * 
+ -->
+<!-- app/code/local/Harapartners/HpChannelAdvisor/etc/system.xml -->
+
+<config>
+    <sections>
+        <hpchanneladvisor translate="label" module="hpchanneladvisor">
+            <label>Hara Partners ChannelAdvisor</label>
+            <tab>service</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+				<core_config translate="label">
+					<label>Core Settings</label>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<account_id translate="label">
+							<label>Account Id</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</account_id>
+						<developer_key translate="label">
+							<label>Devolper Key</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</developer_key>
+						<password translate="label">
+							<label>Password</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</password>
+						<profile_id translate="label">
+							<label>Profile id -> Used to get Account Key</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</profile_id>
+					</fields>
+				</core_config>
+				<configs translate="label">
+					<label>Config Settings</label>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<tax_product_code translate="label">
+							<label>Tax Product Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</tax_product_code>
+						<website_code translate="label">
+							<label>Website For Customers</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</website_code>
+						<store_code translate="label">
+							<label>Store For Orders</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</store_code>
+						<customer_group_code translate="label">
+							<label>Group For Customers</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</customer_group_code>
+						<csr_email translate="label">
+							<label>Email Address you want notifications sent to</label>
+							<frontend_type>text</frontend_type>
+							<validate>validate-email</validate>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</csr_email>
+					</fields>
+				</configs>
+				<location translate="label">
+					<label>Location Settings</label>
+					<sort_order>15</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<distribution_center_code translate="label">
+							<label>Distribution Center Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</distribution_center_code>
+						<supplier_code translate="label">
+							<label>Supplier Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</supplier_code>
+						<warehouse_location translate="label">
+							<label>Warehouse Location</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</warehouse_location>
+					</fields>
+				</location>
+				<!-- This is a work in progress
+				<shipping1 translate="label">
+					<label>Shipping Settings #1</label>
+					<sort_order>300</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<destination_zone_name translate="label">
+							<label>Destination Zone Name</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</destination_zone_name>
+						<carrier_code translate="label">
+							<label>Carrier Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</carrier_code>
+						<class_code translate="label">
+							<label>Class Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</class_code>
+						<first_item_rate_attribute translate="label">
+							<label>First Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate_attribute>
+						<first_item_rate translate="label">
+							<label>First Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate>
+						<first_item_handling_rate_attribute translate="label">
+							<label>First Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate_attribute>
+						<first_item_handling_rate translate="label">
+							<label>First Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate>
+						<additional_item_rate_attribute translate="label">
+							<label>Additional Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate_attribute>
+						<additional_item_rate translate="label">
+							<label>Additional Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>45</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate>
+						<additional_item_handling_rate_attribute translate="label">
+							<label>Additional Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate_attribute>
+						<additional_item_handling_rate translate="label">
+							<label>Additional Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>55</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate>
+						<free_shipping_if_buy_it_now translate="label">
+							<label>Free Shipping If Buy It Now</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping_if_buy_it_now>
+					</fields>
+				</shipping1>
+				<shipping2 translate="label">
+					<label>Shipping Settings #2</label>
+					<sort_order>305</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<is_used translate="label">
+							<label>Use this Shipping Method</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</is_used>
+						<destination_zone_name translate="label">
+							<label>Destination Zone Name</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</destination_zone_name>
+						<carrier_code translate="label">
+							<label>Carrier Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</carrier_code>
+						<class_code translate="label">
+							<label>Class Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</class_code>
+						<first_item_rate_attribute translate="label">
+							<label>First Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate_attribute>
+						<first_item_rate translate="label">
+							<label>First Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate>
+						<first_item_handling_rate_attribute translate="label">
+							<label>First Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate_attribute>
+						<first_item_handling_rate translate="label">
+							<label>First Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate>
+						<additional_item_rate_attribute translate="label">
+							<label>Additional Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate_attribute>
+						<additional_item_rate translate="label">
+							<label>Additional Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>45</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate>
+						<additional_item_handling_rate_attribute translate="label">
+							<label>Additional Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate_attribute>
+						<additional_item_handling_rate translate="label">
+							<label>Additional Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>55</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate>
+						<free_shipping_if_buy_it_now translate="label">
+							<label>Free Shipping If Buy It Now</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping_if_buy_it_now>
+					</fields>
+				</shipping2>
+				<shipping3 translate="label">
+					<label>Shipping Settings #3</label>
+					<sort_order>310</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<is_used translate="label">
+							<label>Use this Shipping Method</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</is_used>
+						<destination_zone_name translate="label">
+							<label>Destination Zone Name</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</destination_zone_name>
+						<carrier_code translate="label">
+							<label>Carrier Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</carrier_code>
+						<class_code translate="label">
+							<label>Class Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</class_code>
+						<first_item_rate_attribute translate="label">
+							<label>First Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate_attribute>
+						<first_item_rate translate="label">
+							<label>First Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate>
+						<first_item_handling_rate_attribute translate="label">
+							<label>First Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate_attribute>
+						<first_item_handling_rate translate="label">
+							<label>First Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate>
+						<additional_item_rate_attribute translate="label">
+							<label>Additional Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate_attribute>
+						<additional_item_rate translate="label">
+							<label>Additional Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>45</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate>
+						<additional_item_handling_rate_attribute translate="label">
+							<label>Additional Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate_attribute>
+						<additional_item_handling_rate translate="label">
+							<label>Additional Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>55</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate>
+						<free_shipping_if_buy_it_now translate="label">
+							<label>Free Shipping If Buy It Now</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping_if_buy_it_now>
+					</fields>
+				</shipping3>
+				<shipping4 translate="label">
+					<label>Shipping Settings #4</label>
+					<sort_order>315</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<is_used translate="label">
+							<label>Use this Shipping Method</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</is_used>
+						<destination_zone_name translate="label">
+							<label>Destination Zone Name</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</destination_zone_name>
+						<carrier_code translate="label">
+							<label>Carrier Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</carrier_code>
+						<class_code translate="label">
+							<label>Class Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</class_code>
+						<first_item_rate_attribute translate="label">
+							<label>First Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate_attribute>
+						<first_item_rate translate="label">
+							<label>First Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_rate>
+						<first_item_handling_rate_attribute translate="label">
+							<label>First Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate_attribute>
+						<first_item_handling_rate translate="label">
+							<label>First Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</first_item_handling_rate>
+						<additional_item_rate_attribute translate="label">
+							<label>Additional Item Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate_attribute>
+						<additional_item_rate translate="label">
+							<label>Additional Item Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>45</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_rate>
+						<additional_item_handling_rate_attribute translate="label">
+							<label>Additional Item Handling Rate Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate_attribute>
+						<additional_item_handling_rate translate="label">
+							<label>Additional Item Handling Rate</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>55</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</additional_item_handling_rate>
+						<free_shipping_if_buy_it_now translate="label">
+							<label>Free Shipping If Buy It Now</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping_if_buy_it_now>
+					</fields>
+				</shipping4>
+				-->
+			</groups>
+        </hpchanneladvisor>
+	</sections>
+</config>

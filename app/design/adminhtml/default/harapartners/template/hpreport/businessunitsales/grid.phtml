@@ -1,0 +1,74 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+<div id="aggregates" style="width:100%;"></div>
+
+<script>
+jQuery(document).ready(function() {
+    jQuery("#aggregates").kendoGrid({
+        dataSource: {
+	        data: <?php echo $this->getCollectionJson()?>,
+            pageSize: 30,
+	        group: {
+				field: "business_account_unit",
+				aggregates: [
+	                    { field: "order_id", aggregate: "count" },
+	                    { field: "increment_id", aggregate: "count"},
+	                    { field: "job_name", aggregate: "count"},
+	                    { field: "job_number", aggregate: "count"},
+	                    { field: "status", aggregate: "count"},
+	                    { field: "customer_name", aggregate: "count"},
+	                    { field: "store_name", aggregate: "count"},
+	                    { field: "created_at", aggregate: "count"},
+	                    { field: "updated_at", aggregate: "count"},
+	                    { field: "subtotal", aggregate: "sum" },
+	                    { field: "shipping_amount", aggregate: "sum" },
+	                    { field: "shipping_tax_amount", aggregate: "sum" },
+	                    { field: "tax_amount", aggregate: "sum" },
+	                    { field: "discount_amount", aggregate: "sum" },
+	                    { field: "gift_cards_amount", aggregate: "sum" },             
+	                    { field: "grand_total", aggregate: "sum" }
+	        	]
+	        },
+	        aggregate: [ { field: "order_id", aggregate: "count" },
+	                     { field: "increment_id", aggregate: "count"},
+	                     { field: "job_name", aggregate: "count"},
+	                     { field: "job_number", aggregate: "count"},
+	                     { field: "status", aggregate: "count"},
+	                     { field: "customer_name", aggregate: "count"},
+	                     { field: "store_name", aggregate: "count"},
+	                     { field: "created_at", aggregate: "count"},
+	                     { field: "updated_at", aggregate: "count"},
+	                     { field: "subtotal", aggregate: "sum" },
+	                     { field: "shipping_amount", aggregate: "sum" },
+	                     { field: "shipping_tax_amount", aggregate: "sum" },
+	                     { field: "tax_amount", aggregate: "sum" },
+	                     { field: "discount_amount", aggregate: "sum" },
+	                     { field: "gift_cards_amount", aggregate: "sum" },                       
+	                     { field: "grand_total", aggregate: "sum" }
+	    	]
+	    },
+        sortable: true,
+        scrollable: false,
+        pageable: true,
+        columns: [
+			{ field: "business_account_unit", title: "Business Account"},
+            { field: "order_id", title: "Order Entity Id", footerTemplate: "Total Count: #=count#", groupFooterTemplate: "Count: #=count#" },
+			{ field: "increment_id", title: "Order Number" },
+			{ field: "job_name", title: "Account Name" },
+			{ field: "job_number", title: "Account Number" },
+			{ field: "status", title: "Order Status" },
+			{ field: "customer_name", title: "Billing to Name" },
+			{ field: "store_name", title: "Store" },
+			{ field: "created_at", title: "Created At" },
+			{ field: "updated_at", title: "Updated At" },
+			{ field: "subtotal", title: "Subtotal", format: "{0:n2}", type:"number", footerTemplate: "Total Cost: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Subtotal: #=kendo.toString(sum, 'n2')#" },
+			{ field: "shipping_amount", title: "Shipping", format: "{0:n2}", type:"number", footerTemplate: "Total Shipping: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Shipping: #=kendo.toString(sum, 'n2')#" },
+			{ field: "tax_amount", title: "Tax", format: "{0:n2}", type:"number", footerTemplate: "Total Tax: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Tax: #=kendo.toString(sum, 'n2')#" },
+			{ field: "shipping_tax_amount", title: "Shipping Tax", format: "{0:n2}", type:"number", footerTemplate: "Total Shipping Tax: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Shipping Tax: #=kendo.toString(sum, 'n2')#" },
+			{ field: "discount_amount", title: "Discount Amount", format: "{0:n2}", type:"number", footerTemplate: "Total Discount Amount: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Discount Amount: #=kendo.toString(sum, 'n2')#" },
+			{ field: "gift_cards_amount", title: "Gift Card Amount", format: "{0:n2}", type:"number", footerTemplate: "Total Gift Card Amount: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Gift Card Amount: #=kendo.toString(sum, 'n2')#" },
+            { field: "grand_total", title: "Grand Total", format: "{0:n2}", type:"number", footerTemplate: "Total Amount: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Amount: #=kendo.toString(sum, 'n2')#" }
+        ]
+    });
+});
+</script>

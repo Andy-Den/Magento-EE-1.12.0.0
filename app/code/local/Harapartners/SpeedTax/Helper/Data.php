@@ -1,0 +1,3 @@
+<?php
+// Copyright Notice
+class Harapartners_SpeedTax_Helper_Data extends Mage_Core_Helper_Abstract{ public function pdOCjpaT($address, $yKIwhAhG) {  return Mage::getStoreConfig('speedtax/speedtax/validate_address', $yKIwhAhG); } public function gYoeJTzo(){ return dirname(dirname(__FILE__)).DS.'lib'.DS; } public function wmnfSKri(){ include_once $this->gYoeJTzo().'SpeedTaxApi.inc'; include_once $this->gYoeJTzo().'SpeedTaxUtil.inc'; } }

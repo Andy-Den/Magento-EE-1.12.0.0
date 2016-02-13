@@ -1,0 +1,11 @@
+<?php
+/**
+ * @category    Signaturelink
+ * @package     SL_Signaturelink
+ */
+/** @var $this SL_Signaturelink_Block_Adminhtml_System_Form_Renderer_LinkButton */
+?>
+<button style="" onclick="javascript:window.open('<?php echo $this->getButtonUrl()?>', 'SignatureLinkAccount','toolbar=yes, location=yes, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, ,left=100, top=100, width=1080, height=870'); return false;" class="scalable add" type="button" id="<?php echo $this->getHtmlId() ?>">
+    <span><?php echo $this->escapeHtml($this->getButtonLabel()); ?></span>
+</button>
+</form>

@@ -1,0 +1,128 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="header-container">
+
+    <div class="header">
+
+	  <div class="header-topbar">
+	  	<div class="header-topbar-container">
+	      		<div class="header-customer-service"><span>Customer Service</span>
+	        		<span>(800)&shy;-850-7463</span>	
+	        	</div>
+				
+				<div class="header-ad"><span>free shipping &middot; 90 day returns</span></div>
+		</div>
+	  </div>
+	  
+	  <div class="header-column first">
+	   <div class="header-branding">
+          <?php if ($this->getIsHomePage()):?>
+          <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+          <?php else:?>
+          <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+          <?php endif?>
+		</div>
+	  </div>
+	  
+	  
+	  <div class="header-column last">
+        <div class="mcafee">
+        	<a href="https://www.mcafeesecure.com/RatingVerify?ref=www.theshoemart.com">
+        		<img src="<?php echo $this->getSkinUrl('images/mcafeesecure.gif'); ?>" alt="McAfee" />
+        	</a>
+        </div>
+		<div class="quick-access">   
+           <div class="quick-access-column first">		
+                <!--p class="welcome-msg"><?php //echo $this->getWelcome() ?> <?php //echo $this->getAdditionalHtml() ?></p-->
+                <?php echo $this->getChildHtml('topLinks') ?>
+                <?php //echo $this->getChildHtml('store_language') ?>
+		   </div>
+		   
+		   <div class="quick-access-column second">
+		       <div class="header-help">
+			     <a href="<?php echo $this->getBaseUrl();?>contact-help">Help</a>
+			   </div>
+		   </div>
+		   
+		   <div class="quick-access-column third">
+		       <div class="header-return">
+			      <a href="<?php echo $this->getBaseUrl();?>easy-returns">Easy Returns</a>
+			   </div>
+		   </div>
+		   
+		   <div class="quick-access-column last">
+		      <?php echo $this->getChildHtml('topCart') ?>
+		   </div>
+        </div>
+		<div class="header-search-bar">
+		   <?php echo $this->getChildHtml('topSearch') ?>
+		</div>
+		
+        <?php echo $this->getChildHtml('topContainer'); ?>
+	  </div>
+    </div>
+
+    <?php echo $this->getChildHtml('topMenu') ?>
+    
+    <?php echo $this->getChildHtml('top-ads'); //Top adds?>
+    <?php echo $this->getChildHtml('top-list-container'); //Top container listing all children block ?>
+    
+</div>
+
+<script type="text/javascript" >
+       //cross-browser;
+		//Chen Liang Hara Partners 
+
+      window.onload= function(){
+             var browserType   = navigator.userAgent;
+             if(browserType.indexOf("Chrome" )+1){
+                  jQuery( "body").attr("class" ,jQuery("body").attr( "class")+" chrome");
+                   //alert("chrome!");
+            } else if(browserType.indexOf("MSIE 10.0" )+1){
+                  jQuery("body").attr("class" ,jQuery("body").attr("class")+" IE10" );
+				  //alert(jQuery("body").attr("class"));
+            } else if(browserType.indexOf("MSIE 9.0" )+1){
+                  jQuery( "body").attr("class" ,jQuery("body").attr( "class")+" IE9" );
+                   //alert("IE9!");
+            } else if(browserType.indexOf("MSIE 8.0" )+1){
+                  jQuery( "body").attr("class" ,jQuery("body").attr( "class")+" IE8" );
+                   //alert("IE8!");
+            } else if(browserType.indexOf("MSIE 7.0" )+1){
+                jQuery( "body").attr("class" ,jQuery("body").attr( "class")+" IE7" );
+                 //alert("IE7!");
+            } else if(browserType.indexOf("Firefox" )+1) {
+                  jQuery( "body").attr("class" ,jQuery("body").attr( "class")+" Firefox");
+                   //alert("firefox!");
+            } else if(browserType.indexOf("Safari" )+1) {
+                  jQuery( "body").attr("class" ,jQuery("body").attr( "class")+" Safari");
+                   //alert("safari!")
+            }
+      }
+</script>

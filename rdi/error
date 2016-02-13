@@ -1,0 +1,152 @@
+1453221221Array
+(
+    [type] => 8
+    [message] => Undefined property: rdi_settings_handler::$rdiprefix
+    [file] => /chroot/home/theshoem/theshoemart.com/html/rdi/libraries/class.rdi_settings_handler.php
+    [line] => 28
+)
+
+1453223495Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453223721Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453227321Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453295720Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453299322Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453400108Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453478334Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453478727Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1453491770Array
+(
+    [type] => 2
+    [message] => Invalid argument supplied for foreach()
+    [file] => /chroot/home/theshoem/theshoemart.com/html/rdi/export_rd8cat.php
+    [line] => 216
+)
+
+1453491814Array
+(
+    [type] => 2
+    [message] => Invalid argument supplied for foreach()
+    [file] => /chroot/home/theshoem/theshoemart.com/html/rdi/export_rd8cat.php
+    [line] => 216
+)
+
+1454948131Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1454948971Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1454956214Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1454958919Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1454959771Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1455038999Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1455041711Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+
+1455045279Array
+(
+    [type] => 2
+    [message] => file_get_contents(http://104.131.236.123:8983/solr/admin/ping): failed to open stream: Connection timed out
+    [file] => /chroot/home/theshoem/theshoemart.com/html/lib/Apache/Solr/Service.php
+    [line] => 614
+)
+

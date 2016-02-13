@@ -1,0 +1,3 @@
+<?php
+// Copyright Notice
+class Harapartners_SpeedTax_Model_Observer extends Mage_Core_Model_Abstract { public function saleOrderInvoicePlace(Varien_Event_Observer $PdTkCJKp) { $invoice = $PdTkCJKp->getEvent()->getInvoice(); try { $qNxaFjve = Mage::getModel ( 'speedtax/speedtax_calculate' ); $qNxaFjve->BrNWSVbZ($invoice); } catch( Exception $e ) {  throw new $e; } } public function salesOrderCreditmemoRefund(Varien_Event_Observer $PdTkCJKp) { $sRLVBLYD = $PdTkCJKp->getEvent()->getCreditmemo(); try { $qNxaFjve = Mage::getModel ( 'speedtax/speedtax_calculate' ); $qNxaFjve->tvPiWdAy($sRLVBLYD); } catch( Exception $e ) {  throw new $e; } } }

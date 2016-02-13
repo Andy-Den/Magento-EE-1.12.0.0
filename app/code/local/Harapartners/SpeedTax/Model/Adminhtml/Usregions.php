@@ -1,0 +1,3 @@
+<?php
+// Copyright Notice
+class Harapartners_Speedtax_Model_Adminhtml_Usregions { protected $TQwlivGE; public function toOptionArray($WLsgQNrS=false) { if (!$this->TQwlivGE) { $DFQHFRaZ = Mage::getModel( 'directory/region' )->getCollection(); $DFQHFRaZ->getSelect()->where( 'country_id = ?', 'US' ); $ppAkdgdY = array(); foreach( $DFQHFRaZ as $cOdXbkkz ) { $ppAkdgdY[] = array( 'label' => $cOdXbkkz->getDefaultName(), 'value' => $cOdXbkkz->getId() ); } $this->TQwlivGE = $ppAkdgdY; } $watjSivp = $this->TQwlivGE; if(!$WLsgQNrS){ array_unshift($watjSivp, array('value'=>'', 'label'=>'')); } return $watjSivp; } } 

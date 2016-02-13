@@ -1,0 +1,85 @@
+
+#slpadDivH5, .slpadDivH5 {
+	background-image: url("../images/baseskin_v5.jpg");
+	background-position: 0 0;
+	display: none;
+	height: 200px;
+	margin: 0;
+	position: relative;
+	width: 400px;
+}
+#slpadDivF9, .slpadDivF9 {
+	display: none;
+	width: 100%;
+}
+#SignremoteH5, #slpadConfirmH5, .slsph5 {
+	border: 0; /* 1px solid red; */
+	float: left;
+	left: 0;
+	margin: 14px 0 0 48px;
+	padding: 0;
+	top: 0;
+}
+#sl_msg_box {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 4px solid #F0F0F0;
+	border-radius: 10px 10px 10px 10px;
+	display: none;
+	float: left;
+	font-family: Arial;
+	font-size: 0.9em;
+	height: 130px;
+	left: 20px;
+	padding: 4px;
+	position: absolute;
+	text-align: left;
+	top: 35px;
+	width: 350px;
+	z-index: 1000;
+}
+#sl_msg_box h3 {
+	font-size: 1.1em;
+	margin: 0;
+}
+#sl_msg_box p {
+	font-size: 1em;
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+#sl_msg_box a#closeMsg {
+	float: right;
+	margin-right: 10px;
+}
+#slh5Undo, #slh5Reset, #slh5Help {
+	float: right;
+	font-style: normal;
+	height: 20px;
+	margin: 66px 4px 0 0;
+	text-decoration: none;
+	width: 40px;
+	border: 0; /* 1px solid red; */
+}
+#slh5Reset {
+	margin: 4px 4px 0 0;
+}
+#slh5Help {
+	margin: 4px 4px 0 0;
+}
+
+#slTcWrapper {
+    border: 1px solid black;
+    padding: 3px;
+    width: 600px;
+}
+.slTcHeader {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    background-color: #DDDDDD;
+}
+.slTcText {
+    height: 160px;
+    overflow: auto;
+    width: 600px;
+}

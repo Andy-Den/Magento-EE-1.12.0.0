@@ -1,0 +1,29 @@
+a:5:{i:0;s:345:"Invalid method Mage_Adminhtml_Block_Catalog_Product_Edit::_addButton(Array
+(
+    [0] => approve
+    [1] => Array
+        (
+            [label] => Approve
+            [onclick] => setLocation('http://127.0.0.1/index.php/hp_admin/catalog_product/approve/id/437/key/9ac7605e8d634d805c0d874e94a7477c6be5dce5133354d6662842c3e8c6f344/')
+        )
+
+)
+)";i:1;s:2306:"#0 E:\www\aec\app\code\core\Mage\Adminhtml\Block\Catalog\Product\Edit.php(87): Varien_Object->__call('_addButton', Array)
+#1 E:\www\aec\app\code\core\Mage\Adminhtml\Block\Catalog\Product\Edit.php(87): Mage_Adminhtml_Block_Catalog_Product_Edit->_addButton('approve', Array)
+#2 E:\www\aec\app\code\core\Mage\Core\Block\Abstract.php(238): Mage_Adminhtml_Block_Catalog_Product_Edit->_prepareLayout()
+#3 E:\www\aec\app\code\core\Mage\Core\Model\Layout.php(456): Mage_Core_Block_Abstract->setLayout(Object(Mage_Core_Model_Layout))
+#4 E:\www\aec\app\code\core\Mage\Core\Model\Layout.php(472): Mage_Core_Model_Layout->createBlock('adminhtml/catal...', 'product_edit')
+#5 E:\www\aec\app\code\core\Mage\Core\Model\Layout.php(239): Mage_Core_Model_Layout->addBlock('adminhtml/catal...', 'product_edit')
+#6 E:\www\aec\app\code\core\Mage\Core\Model\Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#7 E:\www\aec\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#8 E:\www\aec\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#9 E:\www\aec\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#10 E:\www\aec\app\code\core\Mage\Adminhtml\Controller\Action.php(275): Mage_Core_Controller_Varien_Action->loadLayout(Array, true, true)
+#11 E:\www\aec\app\code\core\Mage\Adminhtml\controllers\Catalog\ProductController.php(250): Mage_Adminhtml_Controller_Action->loadLayout(Array)
+#12 E:\www\aec\app\code\core\Mage\Core\Controller\Varien\Action.php(419): Mage_Adminhtml_Catalog_ProductController->editAction()
+#13 E:\www\aec\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('edit')
+#14 E:\www\aec\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#15 E:\www\aec\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#16 E:\www\aec\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#17 E:\www\aec\index.php(87): Mage::run('', 'store')
+#18 {main}";s:3:"url";s:117:"/index.php/hp_admin/catalog_product/edit/id/437/key/4ffdc644b254324573c3112c5b01bf0dfd6292497c28a3b347290b88f178e21f/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:5:"admin";}

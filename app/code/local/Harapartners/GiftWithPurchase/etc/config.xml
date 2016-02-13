@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<config>
+    <modules>
+        <Harapartners_GiftWithPurchase>
+            <version>1.0.1</version>
+        </Harapartners_GiftWithPurchase>
+    </modules>
+    <global>
+        <blocks>
+            <giftwithpurchase>
+				<class>Harapartners_GiftWithPurchase_Block</class>
+            </giftwithpurchase>
+        </blocks>
+		<helpers>
+            <giftwithpurchase>
+				<class>Harapartners_GiftWithPurchase_Helper</class>
+			</giftwithpurchase>
+        </helpers>
+        <models>
+            <giftwithpurchase>
+                <class>Harapartners_GiftWithPurchase_Model</class>
+            </giftwithpurchase>
+			<!--Move sales/quote model rewrite to Harapartners_Service module: Add is_gift_with_purchase_product to quote item.-->
+        </models>
+		<resources>
+            <giftwithpurchase_setup>
+                <setup>
+                    <module>Harapartners_GiftWithPurchase</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </giftwithpurchase_setup>
+        </resources>
+		<fieldsets>
+            <sales_convert_quote_item>
+                <is_gift_with_purchase_product>
+                    <to_order_item>*</to_order_item>
+                </is_gift_with_purchase_product>
+			</sales_convert_quote_item>
+		</fieldsets>
+		<sales>
+			<quote>
+				<item>
+                    <product_attributes>
+                        <is_gift_with_purchase_product/>
+                    </product_attributes>
+                </item>
+            </quote>
+		</sales>
+		<events>
+			<sales_quote_collect_totals_before>
+				<observers>
+                    <giftwithpurchase_sales_quote_collect_totals_before>
+                        <class>giftwithpurchase/observer</class>
+                        <method>salesQuoteCollectTotalsBefore</method>
+                    </giftwithpurchase_sales_quote_collect_totals_before>
+                </observers>
+			</sales_quote_collect_totals_before>
+        </events>
+		<!-- Note: checkout/cart/item/default.phtml is also modified to restrict qty changes -->
+    </global>
+	<frontend>
+        <routers>
+            <giftwithpurchase>
+                <use>standard</use>
+                <args>
+                    <module>Harapartners_GiftWithPurchase</module>
+                    <frontName>giftwithpurchase</frontName>
+                </args>
+            </giftwithpurchase>
+        </routers>
+    </frontend>
+	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Harapartners_GiftWithPurchase before="Mage_Adminhtml">Harapartners_GiftWithPurchase_Adminhtml</Harapartners_GiftWithPurchase>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+			<hpreport translate="title" module="hpreport">
+				<title>HP Report</title>
+				<sort_order>1000</sort_order>
+				<children>
+					<giftwithpurchase translate="title" module="giftwithpurchase">
+		                <title>GiftWithPurchase Report</title>
+		                <sort_order>200</sort_order>
+		                <action>giftwithpurchase/adminhtml_report</action>
+		            </giftwithpurchase>
+                </children> 				
+			</hpreport>
+        </menu>
+    </adminhtml>
+</config>

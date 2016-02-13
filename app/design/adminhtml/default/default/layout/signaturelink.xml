@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<layout>
+    <signaturelink_adminhtml_signaturelink_index>
+		<reference name="content">
+			<block type="signaturelink/adminhtml_signaturelink" name="signaturelink" />
+		</reference>
+	</signaturelink_adminhtml_signaturelink_index>
+
+	<adminhtml_signaturelink_whitelist>
+		<reference name="head">
+			<action method="addJs"><name>signaturelink/whitelist.js</name></action>
+		</reference>
+		<reference name="content">
+			<block type="signaturelink/adminhtml_whitelist" name="whitelist">
+				<action method="removeButton"><id>add</id></action>
+			</block>
+			<block type="signaturelink/adminhtml_whitelist_edit" name="whitelist.edit" template="signaturelink/whitelist/edit.phtml" />
+		</reference>
+	</adminhtml_signaturelink_whitelist>
+
+    <adminhtml_sales_order_view>
+		<reference name="content">
+			<block type="signaturelink/adminhtml_ordersignature" name="sl.signature" as="signature" template="signaturelink/pad.phtml"></block>
+		</reference>
+	</adminhtml_sales_order_view>
+	
+	<default>
+		<reference name="notifications">
+			<block type="signaturelink/adminhtml_notifications" name="signaturelinks_notifications" template="signaturelink/notifications.phtml" />
+		</reference>
+	</default>
+	<default>
+		<reference name="head">      
+		<action method="addJs"><script>signaturelink/jquery-1.js</script></action>
+		<action method="addJs"><script>signaturelink/jquery-ui.js</script></action>
+		<action method="addCss"><file>signaturelink/jquery-ui.css</file></action>
+		</reference>
+	</default>	
+
+</layout>

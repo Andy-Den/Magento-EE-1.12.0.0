@@ -1,0 +1,61 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     enterprise_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+?>
+<div><p>join our mailing list to receive valuable savings</p></div>
+<div class="footer-newsletter">
+<form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+    <div class="form-subscribe email-validation">
+        <div class="v-fix"><input name="email" type="text" id="newsletter" value="<?php echo $this->__('Enter your email address here') ?>" onclick="this.value=='<?php echo $this->__('Enter your email address here') ?>'?this.value='':''" onblur="this.value==''?this.value='<?php echo $this->__('Enter your email address here') ?>':''" class="input-text required-entry " /></div>
+        <button type="submit" class="button" title="<?php echo $this->__('Subscribe') ?>"><span><span></span></span></button>
+    </div>
+</form>
+</div>
+
+<a id="error-message" href="#newsletter-error"></a>
+<div style="display:none"><div id="newsletter-error">Please enter a valid email address. For example frank@domain.com.</div></div>
+
+
+
+<script type="text/javascript">
+var emailValidation = function(v){       	
+		 return Validation.get('IsEmpty').test(v) || /^([a-z0-9,!\#\$%&'\*\+\/=\?\^_`\{\|\}~-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z0-9,!\#\$%&'\*\+\/=\?\^_`\{\|\}~-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*@([a-z0-9-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z0-9-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*\.(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]){2,})$/i.test(v);
+};
+jQuery(document).ready(function() {		    
+    jQuery(".email-validation button").click(function() {
+        var emailAddress = jQuery("#newsletter").attr('value');
+        var errorFlag = emailValidation(emailAddress);
+    	if( emailValidation(emailAddress) == false){
+	    	//jQuery("#error-message").fancybox({
+			jQuery("#error-message").fancybox({
+				'speedIn'		:	600, 
+				'speedOut'		:	200, 
+			}).trigger('click');
+			return false;
+        }
+        return true;  	
+    });
+});   
+</script>

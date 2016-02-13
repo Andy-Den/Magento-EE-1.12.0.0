@@ -1,0 +1,50 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+<div id="aggregates" style="width:100%;"></div>
+
+<script>
+jQuery(document).ready(function() {
+    jQuery("#aggregates").kendoGrid({
+        dataSource: {
+	        data: <?php echo $this->getCollectionJson()?>,
+            pageSize: 30,
+            group: {
+            	field: "vendor_name", aggregates: [
+	                    { field: "product_id", aggregate: "count" },
+	                    { field: "name", aggregate: "count"},
+	                    { field: "sku", aggregate: "count"},
+	                    { field: "total_orders", aggregate: "sum"},
+	                    { field: "total_qty", aggregate: "sum"},
+	                    { field: "total_cost", aggregate: "sum"},
+	                    { field: "tax_amount", aggregate: "sum"},
+	                    { field: "net_sales", aggregate: "sum"}
+            	]
+            },
+
+            aggregate: [ { field: "product_id", aggregate: "count" },
+	                    { field: "name", aggregate: "count"},
+	                    { field: "sku", aggregate: "count"},
+	                    { field: "total_orders", aggregate: "sum"},
+	                    { field: "total_qty", aggregate: "sum"},
+	                    { field: "total_cost", aggregate: "sum"},
+	                    { field: "tax_amount", aggregate: "sum"},
+	                    { field: "net_sales", aggregate: "sum"}
+	       ]
+        },
+        sortable: true,
+        scrollable: false,
+        pageable: true,
+        columns: [
+				  { field: "vendor_name", title: "Vendor Name"},
+                  { field: "product_id", title: "Product Id", footerTemplate: "Total Count: #=count#", groupFooterTemplate: "Count: #=count#" },
+                  { field: "name", title: "Product Name" },
+                  { field: "sku", title: "SKU" },
+                  { field: "total_orders", title: "Orders", format: "{0:n2}", type:"number", footerTemplate: "Total Orders: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Orders: #=kendo.toString(sum, 'n2')#" },
+                  { field: "total_qty", title: "Qty",  type:"number", footerTemplate: "Total Qty: #=sum#", groupFooterTemplate: "Total Qty: #=sum#" },
+                  { field: "total_cost", title: "Cost", format: "{0:n2}", type:"number", footerTemplate: "Total Cost: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Cost: #=kendo.toString(sum, 'n2')#" },
+           		  { field: "tax_amount", title: "Tax", format: "{0:n2}", type:"number",  footerTemplate: "Total Tax: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Tax: #=kendo.toString(sum, 'n2')#" },
+            	  { field: "net_sales", title: "Net Sales", format: "{0:n2}", type:"number", footerTemplate: "Total Net Sales: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Net Sales: #=kendo.toString(sum, 'n2')#" }
+        ]
+    });
+});
+</script>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+-->
+<layout version="0.1.0">
+
+	<default>
+		<reference name="top-list-container">
+            <block type="catalogextension/category_view" name="category.view.top.banner" template="catalogextension/category/view/top_banner.phtml"/>
+        </reference>
+	</default>
+	
+<!--
+Category brand layout
+-->
+    <catalog_category_brand translate="label">
+        <label>Brand View</label>
+		<reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="top-list-container">
+            <block type="catalogextension/category_view" name="brand.view.header" template="catalogextension/category/view/top_brand.phtml"/>
+        </reference>
+		<reference name="left">
+			<block type="core/text_list" name="brand.view.left">
+				<block type="catalogextension/category_view" name="brand.view.left.default" template="catalogextension/category/view/left_default.phtml"/>
+			</block>
+			<remove name="catalog.leftnav"/>
+        </reference>
+        <reference name="content">
+            <block type="catalogextension/category_view" name="brand.view.content" template="catalogextension/category/view/content.phtml"/>
+			<remove name="category.products"/>
+        </reference>
+    </catalog_category_brand>
+
+</layout>

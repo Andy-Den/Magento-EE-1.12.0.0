@@ -1,0 +1,67 @@
+<?php
+$SL		= Mage::getModel('signaturelink/sid')->load(Mage::app()->getRequest()->getParam('order_id'), 'order_id');
+$helper = Mage::helper('signaturelink');
+$slData = $helper->getFlashParams();
+
+$riskString = ($SL->getTmRisk()) ? ucfirst($SL->getTmRisk()) . ' (' . $SL->getTmScore() . ')' : 'Not Assessed';
+$signatureId = $SL->getSignatureId();
+?>
+<?php if(!empty($signatureId)) {?>
+	<div id="sl_pad_container" style="display: none">
+		<table cellspacing=0 class="form-list">
+			<tbody>
+				<tr><td class="label"><label>ThreatMetrix&trade; Risk</label></td><td class="value"><strong><?php echo $riskString; ?></strong></td></tr>
+			</tbody>
+		</table>
+		<div class="divider"></div>
+		<div style="text-align: center">
+			<input type="hidden" name="sid" id="sid" value="<?php echo $SL->getSlSid(); ?>">
+			<object id="Signremote" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="200">
+				<param name="movie" value="<?php echo $slData->flashFile. '?' . $slData->vars; ?>" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="wmode" value="opaque" />
+				<!--[if !IE]>-->
+				<object name="Signremote" type="application/x-shockwave-flash" data="<?php echo $slData->flashFile; ?>" width="400" height="200">
+					<param name="allowScriptAccess" value="always" />
+					<param name="wmode" value="opaque" />
+					<param name="FlashVars" value="<?php echo $slData->vars; ?>" />
+				<!--[<![endif]-->
+				<p></p>
+				<!--[if !IE]>-->
+				</object>
+				<!--[<![endif]-->
+			</object>
+		</div>
+	</div>
+
+	<div id="sl_tm_container" style="display: none">
+		<table cellspacing=0 class="form-list">
+			<tbody>
+				<tr><td class="label"><label>Assessed Risk</label></td><td class="value"><strong><?php echo ucfirst($SL->getTmRisk()); ?> (<?php echo $SL->getTmScore(); ?>)</strong></td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+	document.observe('dom:loaded', function() {
+		function getBox(title) {
+			var html = '<div class="entry-edit-head"><h4>%s</h4></div><fieldset></fieldset>';
+			return html.replace('%s', title);
+		}
+
+		var target = $$('div.box-right.entry-edit')[0];
+
+		var Container = new Element('div', {'class': 'box-right entry-edit'}).update(getBox('SecureBuy&trade; Captured Signature'));
+		Container.select('fieldset')[0].update($('sl_pad_container').show().remove());
+		target.insert({before: Container});
+
+	<?php /* if ($SL->getTmScore()): ?>
+		var target = $$('div.box-right')[0];
+		var Container = new Element('div', {'class': 'box-right entry-edit'}).update(getBox('ThreatMetrix&trade;'));
+		Container.select('fieldset')[0].update($('sl_tm_container').show().remove());
+		target.insert({after: Container});
+	<?php endif; */ ?>
+	});
+	</script>
+	
+<?php } ?>	

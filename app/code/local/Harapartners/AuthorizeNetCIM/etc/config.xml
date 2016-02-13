@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<config>
+	<!-- This module requires jQuery to function with OnePageCheckout -->
+    <modules>
+        <Harapartners_AuthorizeNetCIM>
+            <version>2.1.1</version>
+        </Harapartners_AuthorizeNetCIM>
+    </modules>
+    <global>
+        <blocks>
+            <authorizenetcim>
+				<class>Harapartners_AuthorizeNetCIM_Block</class>
+            </authorizenetcim>
+        </blocks>
+		<helpers>
+            <authorizenetcim>
+				<class>Harapartners_AuthorizeNetCIM_Helper</class>
+			</authorizenetcim>
+        </helpers>
+        <models>
+            <authorizenetcim>
+                <class>Harapartners_AuthorizeNetCIM_Model</class>
+				<resourceModel>authorizenetcim_mysql4</resourceModel>
+            </authorizenetcim>
+            <authorizenetcim_mysql4>
+                <class>Harapartners_AuthorizeNetCIM_Model_Mysql4</class>
+                <entities>
+                    <profilemanager>
+                        <table>authorizenetcim_profile</table>
+                    </profilemanager>
+                </entities>
+            </authorizenetcim_mysql4>
+        </models>
+		<resources>
+            <authorizenetcim_setup>
+                <setup>
+                    <module>Harapartners_AuthorizeNetCIM</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </authorizenetcim_setup>
+        </resources>
+		<fieldsets>
+			<sales_convert_quote_payment>
+				<customer_profile_id>
+                    <to_order_payment>*</to_order_payment>
+                </customer_profile_id>
+                <payment_profile_id>
+                    <to_order_payment>*</to_order_payment>
+                </payment_profile_id>
+				<save_credit_card>
+                    <to_order_payment>*</to_order_payment>
+                </save_credit_card>
+			</sales_convert_quote_payment>           
+        </fieldsets>
+		<events>
+			<sales_order_payment_place_start>
+				<observers>
+                    <authorizenetcim_sales_order_payment_place_start>
+                        <class>authorizenetcim/observer</class>
+                        <method>salesOrderPaymentPlaceStart</method>
+                    </authorizenetcim_sales_order_payment_place_start>
+                </observers>
+			</sales_order_payment_place_start>
+			<sales_order_payment_place_end>
+				<observers>
+                    <authorizenetcim_sales_order_payment_place_end>
+                        <class>authorizenetcim/observer</class>
+                        <method>salesOrderPaymentPlaceEnd</method>
+                    </authorizenetcim_sales_order_payment_place_end>
+                </observers>
+			</sales_order_payment_place_end>
+        </events>
+    </global>
+    <frontend>
+        <routers>
+            <authorizenetcim>
+                <use>standard</use>
+                <args>
+                    <module>Harapartners_AuthorizeNetCIM</module>
+                    <frontName>authorizenetcim</frontName>
+                </args>
+            </authorizenetcim>
+        </routers>
+		<layout>
+			<updates>
+				<authorizenetcim>
+					<file>authorizenetcim.xml</file>
+				</authorizenetcim>
+			</updates>
+		</layout>
+    </frontend> 
+	<admin>
+        <routers>
+            <authorizenetcim_adminhtml>
+                <use>admin</use>
+                <args>
+                    <module>Harapartners_HpSubscription_Adminhtml</module>
+                    <frontName>authorizenetcim_adminhtml</frontName>
+                </args>
+            </authorizenetcim_adminhtml>
+        </routers>
+    </admin>  
+    <adminhtml>
+		<layout>
+			<updates>
+				<authorizenetcim>
+					<file>authorizenetcim.xml</file>
+				</authorizenetcim>
+			</updates>
+		</layout>
+        <menu>
+            <customer>
+				<children>
+					<authorizenetcim translate="title" module="authorizenetcim">
+		                <title>AuthorizeNetCIM Management</title>
+		                <sort_order>300</sort_order>
+		                <action>authorizenetcim/adminhtml_widget</action>
+		            </authorizenetcim>
+				</children>
+            </customer>
+        </menu>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<customer translate="title" module="authorizenetcim">
+							<children>
+								<authorizenetcim translate="title">
+									<title>AuthorizeNetCIM Management</title>
+									<sort_order>300</sort_order>
+								</authorizenetcim>
+							</children>
+						</customer>
+					</children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+	<default>
+        <payment>
+            <authorizenetcim>
+                <active>0</active>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <cgi_url>https://secure.authorize.net/gateway/transact.dll</cgi_url>
+                <debug>0</debug>
+                <email_customer>0</email_customer>
+                <login backend_model="adminhtml/system_config_backend_encrypted"/>
+                <model>authorizenetcim/checkout</model>
+                <order_status>processing</order_status>
+                <payment_action>authorize</payment_action>
+                <test>0</test>
+                <title>Credit Card (Authorize.net CIM)</title>
+                <trans_key backend_model="adminhtml/system_config_backend_encrypted"/>
+                <allowspecific>0</allowspecific>
+                <currency>USD</currency>
+                <partial_authorization_checksum_checking>1</partial_authorization_checksum_checking>
+				<require_password_validation>0</require_password_validation>
+				<useccv>1</useccv><!--If not using CCV, customer will not be able to save credit card profile in shopping cart-->
+            </authorizenetcim>
+        </payment>
+    </default>
+</config>

@@ -1,0 +1,47 @@
+
+Init!!!
+MAGE Loaded
+Changed Working Dir to /home/shoemart/usr/local/www/virtual/magento/shoemart
+    (This Matches the Working Dir that the file import expects.)
+END Init!!! 
+
+There are 11 Files in var/importexport/test_2
+
+ENTERING RUN!!!
+MEMORY_GET_USAGE: 10223616
+RUNNING Chunk_0-mod.csv
+    RESULT FOR: Chunk_0-mod.csv IS: 1
+MEMORY_GET_USAGE: 162267136
+RUNNING Chunk_1-mod.csv
+    RESULT FOR: Chunk_1-mod.csv IS: 1
+MEMORY_GET_USAGE: 174587904
+RUNNING Chunk_10-mod.csv
+    RESULT FOR: Chunk_10-mod.csv IS: 1
+MEMORY_GET_USAGE: 266338304
+RUNNING Chunk_2-mod.csv
+    RESULT FOR: Chunk_2-mod.csv IS: 1
+MEMORY_GET_USAGE: 266600448
+RUNNING Chunk_3-mod.csv
+    RESULT FOR: Chunk_3-mod.csv IS: 1
+MEMORY_GET_USAGE: 256901120
+RUNNING Chunk_4-mod.csv
+    RESULT FOR: Chunk_4-mod.csv IS: 1
+MEMORY_GET_USAGE: 228327424
+RUNNING Chunk_5-mod.csv
+    RESULT FOR: Chunk_5-mod.csv IS: 1
+MEMORY_GET_USAGE: 286261248
+RUNNING Chunk_6-mod.csv
+    RESULT FOR: Chunk_6-mod.csv IS: 1
+MEMORY_GET_USAGE: 286261248
+RUNNING Chunk_7-mod.csv
+    RESULT FOR: Chunk_7-mod.csv IS: 1
+MEMORY_GET_USAGE: 255328256
+RUNNING Chunk_8-mod.csv
+    RESULT FOR: Chunk_8-mod.csv IS: 1
+MEMORY_GET_USAGE: 231211008
+RUNNING Chunk_9-mod.csv
+    RESULT FOR: Chunk_9-mod.csv IS: 1
+THERE were 11 Successes. And 0 Failures.
+EXITING RUN!!!
+
+EXITING!!!

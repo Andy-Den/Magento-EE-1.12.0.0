@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ */
+ -->
+<config>
+    <sections>
+        <carriers>
+            <groups>
+                <special_rules translate="label" module="usa">
+                    <label>Special Rules</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>999</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <domestic_rules translate="label">
+                            <label>Domestic Rules</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Please do NOT change the header row. Please do NOT change the "method" column. All methods are Magento core default value.</comment>
+                        </domestic_rules>
+                        <international_rules translate="label">
+                            <label>International Rules</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Please do NOT change the header row. Please do NOT change the "country_id" column. All country_ids are Magento core default value.</comment>
+                        </international_rules>
+                    </fields>
+                </special_rules>
+            </groups>
+        </carriers>
+    </sections>
+</config>

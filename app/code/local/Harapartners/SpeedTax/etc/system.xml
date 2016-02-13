@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ */
+ -->
+<config>
+    <sections>
+        <speedtax translate="label" module="speedtax">
+            <class>speedtax-section</class>
+            <label><![CDATA[SalesTax.com by <img src="http://www.harapartners.com/skin/frontend/enterprise/harapartners/images/hp/salestax/hplogo.png" alt="HaraPartners">]]></label>
+            <header_css>speedtax-header</header_css>
+            <tab>sales</tab>
+            <sort_order>304</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+				<signup_extra>
+					<label>SalesTax.com Signup</label>
+                    <comment><![CDATA[
+                        <p class="switcher" style="background-color:#ffffff;border:0;line-height:25px;padding:0;">
+						Sign up for a <a style="color:#00BDF7;" href="http://harapartners.com/solutions/salestax/30daytrial" target="_blank">Free 30 Day Trial</a>.<br/>
+						Start using SalesTax.com. <a style="color:#00BDF7;" href="http://www.harapartners.com/solutions/salestax/signup" target="_blank">Sign up today</a>.<br/>
+                        Call <span style="color:#00bDF7;">1-888-882-1117</span> with questions or find more information at <a style="color:#00BDF7;" href="http://www.harapartners.com/solutions/salestax" target="_blank">http://www.harapartners.com/solutions/salestax</a>.
+						</p>
+                    ]]></comment>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+				</signup_extra>
+                <speedtax>
+                    <label>SalesTax.com Configuration</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <title_connection_settings translate="label">
+                            <label><![CDATA[<strong>Account Settings</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title_connection_settings>
+                        <account translate="label">
+                            <label>Account ID (Email)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </account>
+                        <license translate="label">
+                            <label>Password</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </license>
+                        <company_code translate="label">
+                            <label>Company Code</label>
+                            <comment>Required. Your company code from the dashboard.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </company_code>
+                        <wsdl translate="label">
+                            <label>Sandbox</label>
+                            <comment>Test Mode (Yes) for Developers</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </wsdl>
+                        <ping>
+                            <label></label>
+                            <frontend_model>speedtax/adminhtml_system_config_form_field_ping</frontend_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ping>
+                        <validate_address translate="label">
+                            <label>Address Validation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <comment>Require a validated address from SpeedTax to checkout</comment>
+                            <sort_order>310</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </validate_address>
+                        <tax_shipping translate="label">
+                            <label>Charge Taxes On Shipping And Handling</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>311</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_shipping>
+                        <customized_tax_class translate="label">
+                            <label>Calculate Tax from Customerized Tax Classes</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>320</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </customized_tax_class>
+                        <log_export>
+                            <label></label>
+                            <frontend_model>speedtax/adminhtml_system_config_form_field_export</frontend_model>
+                            <sort_order>330</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </log_export>
+                        <origins translate="label">
+                            <label>Nexus</label>
+                            <comment>Origins determine whether tax should be calculated.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>350</sort_order>
+                            <source_model>speedtax/adminhtml_usregions</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </origins>
+                    </fields>
+                </speedtax>
+				<help_extra>
+					<label>SalesTax.com Help</label>
+                    <comment><![CDATA[
+                        <p class="switcher" style="background-color:#ffffff;border:0;line-height:25px;padding:0;">
+						Read how to <a style="color:#00BDF7;" href="http://www.harapartners.com/solutions/salestax/help#configuration" target="_blank">setup and cofigure</a> the SalesTax.com module.<br/>
+						<a style="color:#00BDF7;" href="http://www.harapartners.com/solutions/salestax" target="_blank">Learn more about SalesTax.com</a>, what additional features and services are available.
+						</p>
+                    ]]></comment>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+				</help_extra>
+            </groups>
+        </speedtax>
+        <shipping>
+            <groups>
+                <origin>
+                    <fields>
+                        <street translate="label">
+                            <label><![CDATA[Number & Street]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>99</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </street>
+                    </fields>
+                </origin>
+            </groups>
+        </shipping>
+    </sections>
+</config>

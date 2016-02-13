@@ -1,0 +1,37 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+<div id="aggregates" style="width:100%;"></div>
+
+<script>
+jQuery(document).ready(function() {
+    jQuery("#aggregates").kendoGrid({
+        dataSource: {
+	        data: <?php echo $this->getCollectionJson()?>,
+            pageSize: 30,
+            group: {
+                     field: "method_type", aggregates: [
+						{ field: "bussiness_account_unit", aggregate: "count" },
+						{ field: "account_total_cost", aggregate: "sum" },
+                        { field: "sum_subtotal", aggregate: "sum" },
+                        { field: "total_gross_margin", aggregate: "sum" }
+                     ]
+                   },
+
+            aggregate: [ 
+						{ field: "bussiness_account_unit", aggregate: "count" },
+						{ field: "account_total_cost", aggregate: "sum" },
+                        { field: "sum_subtotal", aggregate: "sum" },
+                        { field: "total_gross_margin", aggregate: "sum" }]
+        },
+        sortable: true,
+        scrollable: false,
+        pageable: true,
+        columns: [
+				{ field: "business_account_unit", title: "Business Account"},
+				 { field: "account_total_cost", title: "Total Cost", type:"number",  footerTemplate: "Total Cost: #=sum#", groupFooterTemplate: "Total Cost: #=sum#" },
+	            { field: "sum_subtotal", title: "Subtotal", type:"number",  footerTemplate: "Subtotal: #=sum#", groupFooterTemplate: "Subtotal: #=sum#" },
+	            { field: "total_gross_margin", title: "Gross Margin", type:"number", footerTemplate: "Total Gross Margin: #=sum#", groupFooterTemplate: "Total Gross Margin: #=sum#" }
+        ]
+    });
+});
+</script>

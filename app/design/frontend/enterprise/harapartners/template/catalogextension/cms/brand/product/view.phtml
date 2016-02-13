@@ -1,0 +1,29 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ */
+?>
+<?php 
+	$_product = Mage::getModel('catalog/product')->load($this->getProductId());
+	$_helper = $this->helper('catalog/output'); 
+?>
+<div class="product-info">
+	<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+		<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(140); ?>" width="140" height="140" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+	</a>
+	<?php if($_product->getId()): ?>
+		<h1 class='product-brand'><?php echo $_product->getVendorName(); ?></h1>
+		<h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+		<!--h2 class="product-sku"><?php echo $_product->getSku(); ?></h2-->
+		<?php echo $this->getPriceHtml($_product, true) ?>
+	<?php else: ?>
+		<h1 class="product-brand"><br/>This product is not available now</h1>
+	<?php endif; ?>
+</div>

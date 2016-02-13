@@ -1,0 +1,8 @@
+8525,1614372245,0,admin_login,"2015-10-06 17:05:48",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,96.57.93.149
+8526,1614372245,0,catalog_products,"2015-10-06 17:06:56",view,"a:1:{s:7:""general"";s:7:""1648976"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8527,1614372245,0,catalog_products,"2015-10-06 17:08:37",view,"a:1:{s:7:""general"";s:7:""1648976"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8528,1614372245,0,catalog_products,"2015-10-06 17:10:52",view,"a:1:{s:7:""general"";s:7:""1648953"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8529,1614372245,0,catalog_products,"2015-10-06 17:12:10",view,"a:1:{s:7:""general"";s:7:""1648955"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8530,1614372245,0,catalog_products,"2015-10-06 17:15:38",save,"a:1:{s:7:""general"";s:7:""1648955"";}",success,r.ryan,15,adminhtml_catalog_product_save,,96.57.93.149
+8531,1614372245,0,catalog_products,"2015-10-06 17:16:34",save,"a:1:{s:7:""general"";s:7:""1648955"";}",success,r.ryan,15,adminhtml_catalog_product_save,,96.57.93.149
+8532,1614372245,0,catalog_products,"2015-10-06 17:18:15",delete,"a:1:{s:7:""general"";s:7:""1648955"";}",success,r.ryan,15,adminhtml_catalog_product_delete,,96.57.93.149

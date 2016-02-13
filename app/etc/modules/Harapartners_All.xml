@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+	    <Harapartners_Service>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_Service>
+
+		<Harapartners_TestImportTest>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_TestImportTest>
+		
+		<Harapartners_ShoemartEdi>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_ShoemartEdi>
+		
+		<Harapartners_HpIntWms>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_HpIntWms>
+		
+		<Harapartners_AuthorizeNetCIM>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Harapartners_Service/>
+            </depends>
+        </Harapartners_AuthorizeNetCIM>
+
+		<Harapartners_Vendoroptions>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_Vendoroptions>
+		
+		<Harapartners_HpOrderWorkflow>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_HpOrderWorkflow>
+		
+		<Harapartners_HpChannelAdvisor>
+			<active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_HpChannelAdvisor>
+		
+		<Harapartners_CatalogExtension>
+			<active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_CatalogExtension>
+		
+		<Harapartners_HpOptimization>
+			<active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_HpOptimization>
+		
+		<Harapartners_ShippingFactory>
+			<active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_ShippingFactory>
+		
+		<Harapartners_SpeedTax>
+            <active>false</active>
+            <codePool>local</codePool>
+        </Harapartners_SpeedTax>
+		
+		<Harapartners_HpSalesforce>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Harapartners_HpSalesforce>
+		
+		<Harapartners_HpReport>
+			<active>true</active>
+            <codePool>local</codePool>
+		</Harapartners_HpReport>
+
+		<Harapartners_GiftWithPurchase>
+			<active>true</active>
+            <codePool>local</codePool>
+		</Harapartners_GiftWithPurchase>
+		
+    </modules>
+</config>

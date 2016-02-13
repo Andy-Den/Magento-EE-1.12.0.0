@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ *
+ -->
+<config>
+    <modules>
+        <Harapartners_HpOrderWorkflow>
+            <version>1.0.0</version>
+        </Harapartners_HpOrderWorkflow>
+    </modules>
+    <global>
+		<blocks>
+            <hporderworkflow>
+                <class>Harapartners_HpOrderWorkflow_Block</class>
+            </hporderworkflow>
+        </blocks>
+        <models>
+            <hporderworkflow>
+                <class>Harapartners_HpOrderWorkflow_Model</class>
+            </hporderworkflow>
+        </models>
+        <resources>
+           <hporderworkflow_setup>
+				<setup>
+                    <module>Harapartners_HpOrderWorkflow</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </hporderworkflow_setup>
+        </resources>
+		<helpers>
+			<hporderworkflow>
+                <class>Harapartners_HpOrderWorkflow_Helper</class>
+            </hporderworkflow>
+		</helpers>
+		<events>
+			<!-- We are useing sales_order_invoice_pay -->
+			<!--
+            <sales_order_place_after>
+                <observers>
+                    <hporderworkflow_submit_order>
+                        <class>hporderworkflow/observer</class>
+                        <method>submitOrder</method>
+                    </hporderworkflow_submit_order>
+                </observers>
+            </sales_order_place_after>
+			-->
+			
+			<!--sales_order_invoice_pay register is better (larger)-->
+			<sales_order_invoice_register>
+                <observers>
+                    <hporderworkflow_after_payment>
+                        <class>hporderworkflow/observer</class>
+                        <method>processOrderAfterPayment</method>
+                    </hporderworkflow_after_payment>
+                </observers>
+            </sales_order_invoice_register>
+		</events>
+		<sales>
+		<!-- 
+			/**
+			* @depraceted after 1.4.2, statuses are saved into sales_order_status table
+			*/
+        -->
+            <order>
+                <statuses>
+                    <hporderworkflow_sent translate="label"><label>Order Workflow Sent</label></hporderworkflow_sent>
+                    <hporderworkflow_sent_failed translate="label"><label>Order Workflow Failed</label></hporderworkflow_sent_failed>
+                </statuses>
+                <states>
+                    <processing>
+                        <statuses>
+                            <hporderworkflow_sent />
+							<hporderworkflow_sent_failed />
+                        </statuses>
+                    </processing>
+                </states>
+            </order>
+        </sales>
+    </global>
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<hporderworkflow translate="title">
+											<title>Order Workflow Settings</title>
+											<sort_order>1000</sort_order>
+										</hporderworkflow>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<admin>
+        <routers>
+            <hporderworkflow>
+                <use>admin</use>
+                <args>
+                    <module>Harapartners_HpOrderWorkflow</module>
+                    <frontName>hporderworkflow</frontName>
+                </args>
+            </hporderworkflow>
+        </routers>
+    </admin>
+	<!--
+	<crontab>
+        <jobs>
+            <quielogistics_process_message_queue_shipment>
+                <schedule>
+                    <cron_expr>*/15 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>hporderworkflow/observer::processMessageQueueShipment</model>
+                </run>
+            </quielogistics_process_message_queue_shipment>
+			<quielogistics_process_message_queue_inventory>
+                <schedule>
+                    <cron_expr>0 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>hporderworkflow/observer::processMessageQueueInventory</model>
+                </run>
+            </quielogistics_process_message_queue_inventory>
+        </jobs>
+    </crontab>
+	-->
+</config>

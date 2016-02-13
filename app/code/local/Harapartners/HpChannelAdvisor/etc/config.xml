@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ *
+ * @author      Steven Hoffman <s.hoffman@harapartners.com>
+ * @copyright   Copyright (c) 2013 Harapartners Inc.
+ * 
+ -->
+<!-- app/code/local/Harapartners/HpChannelAdvisor/etc/config.xml -->
+<config>
+	<modules>
+		<Harapartners_HpChannelAdvisor>
+            <version>1.0.0.0</version>
+        </Harapartners_HpChannelAdvisor>
+    </modules>
+	<global>
+        <blocks>
+            <hpchanneladvisor>
+				<class>Harapartners_Webservice_Block</class>
+            </hpchanneladvisor>
+        </blocks>
+		<events>
+			<sales_order_shipment_track_save_after>
+                <observers>
+                    <harapartners_hpchanneladvisor>
+                        <type>model</type>
+                        <class>hpchanneladvisor/observer</class>
+                        <method>salesOrderShipmentTrackSaveAfter</method>
+                    </harapartners_hpchanneladvisor>
+                </observers>
+            </sales_order_shipment_track_save_after>
+			
+			<sales_order_creditmemo_refund>
+                <observers>
+                    <harapartners_hpchanneladvisor>
+                        <type>model</type>
+                        <class>hpchanneladvisor/observer</class>
+                        <method>creditMemoRefund</method>
+                    </harapartners_hpchanneladvisor>
+                </observers>
+            </sales_order_creditmemo_refund>
+		</events>
+		<models>
+            <hpchanneladvisor>
+                <class>Harapartners_HpChannelAdvisor_Model</class>
+				<resourceModel>hpchanneladvisor_resource</resourceModel>
+            </hpchanneladvisor>
+			<!--
+            <hpchanneladvisor_resource>
+                <class>Harapartners_Webservice_Model_Resource</class>
+                <entities>
+                    <amazon>
+                        <table>webservice_amazon</table>
+                    </amazon>
+					<ebay>
+                        <table>webservice_ebay</table>
+                    </ebay>
+                </entities>
+            </hpchanneladvisor_resource>
+			-->
+        </models>
+		<resources>
+            <hpchanneladvisor_setup>
+                <setup>
+                    <module>Harapartners_HpChannelAdvisor</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </hpchanneladvisor_setup>
+            <hpchanneladvisor_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </hpchanneladvisor_write>
+            <hpchanneladvisor_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </hpchanneladvisor_read>
+        </resources>
+		<helpers>
+            <hpchanneladvisor>
+				<class>Harapartners_HpChannelAdvisor_Helper</class>
+			</hpchanneladvisor>
+        </helpers>
+		<sales>
+            <order>
+                <statuses>
+                    <ebay_complete translate="label"><label>Ebay Payment Captured</label></ebay_complete>
+                    <ebay_processing translate="label"><label>Ebay Payment Hold</label></ebay_processing>
+                </statuses>
+                <states>
+                    <processing>
+                        <statuses>
+                            <ebay_complete />
+							<ebay_processing />
+                        </statuses>
+                    </processing>
+                </states>
+            </order>
+        </sales>
+    </global>
+	<frontend>
+        <routers>
+            <Harapartners_hpchanneladvisor>
+                <use>standard</use>
+                <args>
+                    <module>Harapartners_HpChannelAdvisor</module>
+                    <frontName>hpchanneladvisor</frontName>
+                </args>
+            </Harapartners_hpchanneladvisor>
+        </routers>
+		<!--
+		<layout>
+			<updates>
+				<webservice>
+					<file>webservice.xml</file>
+				</webservice>
+			</updates>
+		</layout>
+		-->
+    </frontend>
+	<admin>
+        <routers>
+            <hpchanneladvisor>
+                <use>admin</use>
+                <args>
+                    <module>Harapartners_HpChannelAdvisor</module>
+                    <frontName>hpchanneladvisor</frontName>
+                </args>
+            </hpchanneladvisor>
+        </routers>
+    </admin>
+	<!--
+	<adminhtml>
+        <menu>
+            <harapartners>
+				<children>
+					<webservice translate="title" module="webservice">
+		                <title>Webservice</title>
+		                <sort_order>200</sort_order>
+		                <action>webservice/adminhtml_index</action>
+		            </webservice>
+				</children>
+            </harapartners>
+        </menu>
+    </adminhtml>
+	-->
+</config>

@@ -1,0 +1,9 @@
+a:5:{i:0;s:195:"Error in file: "E:\www\aec\app\code\local\Harapartners\HpVendor\sql\hpvendor_setup\mysql4-upgrade-1.0.2-1.0.3.php" - SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'vendor_id'";i:1;s:850:"#0 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.0.2', '1.0.3')
+#2 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('1.0.2', '1.0.3')
+#3 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 E:\www\aec\app\code\core\Mage\Core\Model\App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 E:\www\aec\app\code\core\Mage\Core\Model\App.php(343): Mage_Core_Model_App->_initModules()
+#6 E:\www\aec\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 E:\www\aec\index.php(87): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

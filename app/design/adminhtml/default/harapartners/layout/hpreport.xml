@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ -->
+ 
+<layout>
+	<hpreport_adminhtml_newcustomerreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_newcustomerreport_index>
+	
+	<hpreport_adminhtml_businessunitreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addJs"><script>kendoui/console.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_businessunitreport_index>	
+	
+	<hpreport_adminhtml_businessunitsalesreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addJs"><script>kendoui/console.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_businessunitsalesreport_index>		
+
+	<hpreport_adminhtml_creditcardbatchreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_creditcardbatchreport_index>
+	
+	<hpreport_adminhtml_creditcarddetailreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addJs"><script>kendoui/console.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_creditcarddetailreport_index>	
+	
+	<hpreport_adminhtml_creditcardshippedreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_creditcardshippedreport_index>	
+	
+	<hpreport_adminhtml_grossmarginreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_grossmarginreport_index>		
+	
+	<hpreport_adminhtml_manufacturercostreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_manufacturercostreport_index>	
+	
+	<hpreport_adminhtml_manufacturercostdetailreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_manufacturercostdetailreport_index>		
+	
+
+	<hpreport_adminhtml_manufacturersalesreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addJs"><script>kendoui/console.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_manufacturersalesreport_index>
+
+	<hpreport_adminhtml_manufacturerbillingsummaryreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_manufacturerbillingsummaryreport_index>
+	
+	<hpreport_adminhtml_delayedshippingreport_index>
+		<reference name="head">
+			<action method="addJs"><script>jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>kendoui/kendo.web.min.js</script></action>
+			<action method="addCss"><name>kendo.common.min.css</name></action>
+			<action method="addCss"><name>kendo.default.min.css</name></action>
+			<action method="addCss"><name>examples-offline.css</name></action>
+		</reference>
+    </hpreport_adminhtml_delayedshippingreport_index>		
+</layout>

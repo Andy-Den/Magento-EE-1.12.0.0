@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+		<layout>
+            <updates>
+                <hpreport_adminhtml>
+                    <file>hpreport.xml</file>
+                </hpreport_adminhtml>
+            </updates>
+        </layout>
+		<menu>
+			<hpreport translate="title" module="hpreport">
+				<title>HP Report</title>
+				<sort_order>1000</sort_order>
+				<children>
+					<sales_for_channel translate="title" module="hpreport">
+                        <title>Channel Sales Report</title>
+                        <sort_order>100</sort_order>
+                        <action>hpreport/adminhtml_salesforchannel</action>
+                    </sales_for_channel>
+                </children> 				
+			</hpreport>
+		</menu>
+		<!--acl>
+            <resources>
+                <admin>
+                    <children>
+                        <hpreport>
+                            <children>
+                                <hpreport translate="title" module="hpreport">
+									<title >HP Sales by Category Report</title>
+									<sort_order>1000</sort_order>
+								</hpreport>
+							</children>
+                        </hpreport>
+                    </children>
+                </admin>
+            </resources>
+        </acl-->
+</config>

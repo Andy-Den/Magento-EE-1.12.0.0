@@ -1,0 +1,40 @@
+<?php 
+/* NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ */
+?>
+<?php 
+	$childrenCategories = $this->getChildrenCategories();
+	$imageSize = Harapartners_Service_Helper_Catalog::BRAND_LIST_PAGE_BRAND_IMAGE_SIZE;
+?>
+<div class="category-brand-all">
+	<div class="brand-all-title">All Brands</div>
+<?php if(count($childrenCategories) == 0): ?>
+	<div class="brand-all-note-msg"><?php echo $this->__('There are no brands available at this moment.') ?></div>
+<?php else: ?>
+<?php 
+   	$collectionSize = $childrenCategories->count();
+   	$columnCount = Harapartners_Service_Helper_Catalog::BRAND_LIST_PAGE_GRID_COLUMN_COUNT;
+   	$i=0; 
+   	foreach($childrenCategories as $category): 
+?>
+        <?php if ($i++%$columnCount==0): ?>
+        <ul class="brands-grid">
+        <?php endif ?>
+            <li class="item<?php if(($i-1)%$columnCount==0): ?> first<?php elseif($i%$columnCount==0): ?> last<?php endif; ?>">
+                <a href="<?php echo $category->getUrl() ?>" title="<?php echo $category->getName() ?>" class="brand-image">
+                	<img src="<?php echo $this->getThumbnailUrl($category); ?>" alt="<?php echo $category->getName() ?>" />
+                </a>
+            </li>
+        <?php if ($i%$columnCount==0 || $i==$collectionSize): ?>
+        </ul>
+        <?php endif ?>
+    <?php endforeach ?>
+<?php endif; ?>
+</div>

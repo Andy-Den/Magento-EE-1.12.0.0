@@ -1,0 +1,56 @@
+<?php 
+
+$collection = $this->getCollection();
+$productArray = array();
+$productArray[0]["ProductName"] = "Test1";
+$productArray[0]["UnitPrice"] = "10";
+$productArray[0]["UnitsOnOrder"] = "20";
+$productArray[0]["UnitsInStock"] = "50";
+$productArray[1]["ProductName"] = "Test2";
+$productArray[1]["UnitPrice"] = "10";
+$productArray[1]["UnitsOnOrder"] = "20";
+$productArray[1]["UnitsInStock"] = "40";
+$productArray = json_encode($productArray);
+?>
+
+    
+    
+    
+<div id="grid"></div>
+<script>
+
+   jQuery(document).ready(function() {
+	   var product = <?php echo $productArray;?>;
+       jQuery("#grid").kendoGrid({
+           dataSource: {
+    	  	   data:<?php echo $productArray;?>,
+               pageSize: 20,
+               group: {
+                        field: "UnitsInStock", aggregates: [
+                           { field: "ProductName", aggregate: "count" },
+                           { field: "UnitPrice", aggregate: "sum"},
+                           { field: "UnitsOnOrder", aggregate: "average" },
+                           { field: "UnitsInStock", aggregate: "count" }
+                        ]
+                      },
+
+               aggregate: [ { field: "ProductName", aggregate: "count" },
+                             { field: "UnitPrice", aggregate: "sum" },
+                             { field: "UnitsOnOrder", aggregate: "average" },
+                             { field: "UnitsInStock", aggregate: "min" },
+                             { field: "UnitsInStock", aggregate: "max" }]
+           },
+           sortable: true,
+           scrollable: false,
+           pageable: true,
+           columns: [
+               { field: "ProductName", title: "Product Name", footerTemplate: "Total Count: #=count#", groupFooterTemplate: "Count: #=count#" },
+               { field: "UnitPrice", title: "Unit Price" },
+               { field: "UnitsOnOrder", title: "Units On Order", footerTemplate: "Average: #=average#",
+                   groupFooterTemplate: "Average: #=average#" },
+               { field: "UnitsInStock", title: "Units In Stock", footerTemplate: "<div>Min: #= min #</div><div>Max: #= max #</div>",
+                   groupHeaderTemplate: "Units In Stock: #= value # (Count: #= count#)" }
+           ]
+       });
+   });
+</script>

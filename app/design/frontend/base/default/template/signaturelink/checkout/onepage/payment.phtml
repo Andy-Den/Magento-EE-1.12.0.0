@@ -1,0 +1,253 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category	design
+ * @package	 base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license	 http://www.magentocommerce.com/license/enterprise-edition
+ */
+
+//Q3 Changes 
+$baseurl = Mage::getBaseUrl();
+$baseurlarr = explode("index.php", $baseurl);
+$grandTotal = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
+$secure_3d = Mage::getStoreConfig('payment/aim/secure_3d');
+$checkActive = Mage::getStoreConfig('payment/aim/active');
+//Q3 Changes   
+
+
+//New changes for SecureBuy & MPI
+$signpadMode     = Mage::getStoreConfig('signaturelink/sl_config/signpad_mode');
+$grandTotal      = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
+$langageValue    = Mage::getStoreConfig('signaturelink/sl_config/lang_list');
+$securebuyOptVal = Mage::getStoreConfig('signaturelink/sl_config/securebuy_options_list');
+$secureBuyflag   = 0;
+
+if($signpadMode == 1)	{
+	switch ($securebuyOptVal) {
+		case 0:
+			$secureBuyflag = 0;
+			break;
+		case 1:
+			$secureBuyflag = 1;
+			break;
+		case 2:
+			$orderMinAmount = Mage::getStoreConfig('signaturelink/sl_config/opt_min_amountbox');
+			if($grandTotal >= $orderMinAmount) {
+				$secureBuyflag = 1;
+			} 
+			break;
+		default:
+			$secureBuyflag = 1;
+	}
+}
+//New changes for SecureBuy & MPI
+?>
+<script type="text/javascript">
+//<![CDATA[
+	var payment = new Payment('co-payment-form', '<?php echo $this->getUrl('checkout/onepage/savePayment') ?>');
+	var opcSavePaymentUrl = '<?php echo $this->getUrl('checkout/onepage/savePayment') ?>';
+//]]>
+</script>
+
+<?php if($secureBuyflag == 1)	{ ?>
+	<form method="post" action="" id="co-payment-form">
+		<fieldset>
+			<input type="hidden" name="slSid" id="slSid" />
+			<input type="hidden" name="slCapture" id="slCapture" />
+			<input type="hidden" name="slProfile" id="slProfile" />
+			<input type="hidden" id="checkenabel" value="<?php echo $checkActive;?>">
+			<?php echo $this->getChildHtml('methods') ?>
+		</fieldset>
+	</form>
+
+	<?php echo $this->getChildHtml('pad'); ?>
+
+	<div class="tool-tip" id="payment-tool-tip" style="display:none;">
+		<div class="btn-close"><a href="#" id="payment-tool-tip-close" title="<?php echo $this->__('Close') ?>"><?php echo $this->__('Close') ?></a></div>
+		<div class="tool-tip-content"><img src="<?php echo $this->getSkinUrl('images/cvv.gif') ?>" alt="<?php echo $this->__('Card Verification Number Visual Reference') ?>" title="<?php echo $this->__('Card Verification Number Visual Reference') ?>" /></div>
+	</div>
+
+	<!--Q3 Changes -->
+	<div id='3d-failure-msg' style="margin-top:13px;text-align:center;color:#FF0000;"></div>
+	<div class="buttons-set" id="payment-buttons-container">
+	<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+
+	<div id="sb3dDiv" style="display: none;" >
+		<span style="font-size:1.1em; font-weight:bold;text-align:left;float:left;">Processing, please wait. Do not click the refresh or back button or this transaction may be interrupted.</span>
+		<iframe src=""  id="sb3dFrame" name="sb3dFrame" width="490" height="600" frameborder="0" style="float:left;margin-left:15%;"></iframe>
+	</div>
+	<!--Q3 Changes -->
+
+	<form id="slForm" action="">
+		<p class="back-link"><a href="#" onclick="emptyFrame();checkout.back(); return false;"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+		<?php if(!$secure_3d) { ?>
+		<button type="button" onclick="submitSLwithout3d(this)" class="button" id="sl_verify"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+		<?php } else { ?>
+		<button type="button" onclick="submitSL(this)" class="button" id="sl_verify"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+		<?php }?>
+		<span class="please-wait" id="payment-please-wait" style="display:none;">
+			<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Loading next step...') ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
+		</span>
+
+	<!--Q3 Changes -->
+	<input type="hidden" id="payment-submit-3d" value="">
+	<input type="hidden" id="baseURL" value="<?php echo $baseurlarr[0];?>">
+	<input type="hidden" id="grandTotal" value="<?php echo $grandTotal;?>">
+	<input type="hidden" id="secure-card-validation" value="<?php echo $secure_3d;?>">
+	<input type="hidden" id="checkenabel" value="<?php echo $checkActive;?>">
+	<input type="hidden" id="hdnReturnedLanguageCode" name="hid" value="" />
+	<!--Q3 Changes -->
+
+	</form>
+	</div>
+
+
+	<script type="text/javascript">
+	//<![CDATA[
+	function submitSL(form) 
+	{
+			var spo, err, code, slid;
+
+		try
+		{
+			spo = cnps._captureOptions.signPadOptions;
+			// checkout.setLoadWaiting('payment');
+
+			slid = jQuery('#' + spo.ffuid).val();
+			// set validResult with failure and run the client callback function
+			err = ( spo.use && cnps._techFailed ? 'tech-failed' : 'not-used' );
+			code = ( slid ? slid : '' );
+
+			if( spo.use && !cnps._techFailed )
+			{
+				var valid = false;
+				if( spo.orderSubmitSetupFunc ) {
+					spo.orderSubmitSetupFunc();
+				}
+				if( spo.extValidateFunc ) {
+					var v = spo.extValidateFunc();
+					if (typeof v === 'boolean') {
+						valid = v;
+					} else {
+						valid = true; // bypass external validation if it doesn't return 'true' or 'false'
+					}
+				} else {
+					valid = true; // so far
+				}
+				if( valid ) {
+					valid = signpad.validateFields();
+				}
+
+				if( signpad._validResults.hasCode() || signpad._validResults.hasError() ) {
+					if( spo.orderSubmitResetFunc ) {
+						spo.orderSubmitResetFunc();
+					}
+					if( signpad._validResults._err != signpad._msgPleaseSign ) {
+						submitOrderContinue();
+					}
+				}
+			}
+		}
+		catch ( ex )
+		{
+			err = ( spo.use && cnps._techFailed ? 'tech-failed' : 'not-used' );
+			signpad.setSignResultsAndContinue(err, code);
+		}
+		
+	}
+
+	function toggleToolTip(event){
+		if($('payment-tool-tip')){
+			$('payment-tool-tip').setStyle({
+				top: (Event.pointerY(event)-560)+'px'//,
+				//left: (Event.pointerX(event)+100)+'px'
+			})
+			$('payment-tool-tip').toggle();
+		}
+		Event.stop(event);
+	}
+	if($('payment-tool-tip-close')){
+		Event.observe($('payment-tool-tip-close'), 'click', toggleToolTip);
+	}
+	//]]>
+	</script>
+	<script type="text/javascript">
+	//<![CDATA[
+		payment.currentMethod = "<?php echo $this->getChild('methods')->getSelectedMethodCode() ?>";
+	//]]>
+	</script>
+<?php } else { ?>
+	<script type="text/javascript">
+	//<![CDATA[
+		var payment = new Payment('co-payment-form', '<?php echo $this->getUrl('checkout/onepage/savePayment') ?>');
+		var opcSavePaymentUrl = '<?php echo $this->getUrl('checkout/onepage/savePayment') ?>';
+	//]]>
+	</script>
+	<form method="post" action="" id="co-payment-form">
+		<fieldset>
+			<input type="hidden" name="slSid" id="slSid" />
+			<input type="hidden" name="slCapture" id="slCapture" />
+			<input type="hidden" name="slProfile" id="slProfile" />
+			<input type="hidden" id="checkenabel" value="<?php echo $checkActive;?>">
+			<?php echo $this->getChildHtml('methods') ?>
+		</fieldset>
+	</form>
+
+	<?php echo $this->getChildHtml('pad'); ?>
+
+	<div class="tool-tip" id="payment-tool-tip" style="display:none;">
+		<div class="btn-close"><a href="#" id="payment-tool-tip-close" title="<?php echo $this->__('Close') ?>"><?php echo $this->__('Close') ?></a></div>
+		<div class="tool-tip-content"><img src="<?php echo $this->getSkinUrl('images/cvv.gif') ?>" alt="<?php echo $this->__('Card Verification Number Visual Reference') ?>" title="<?php echo $this->__('Card Verification Number Visual Reference') ?>" /></div>
+	</div>
+
+	<form id="slForm" action="">
+	<input type="hidden" id="hdnReturnedLanguageCode" name="hid" value="" />
+	<div class="buttons-set" id="payment-buttons-container">
+		<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+		<p class="back-link"><a href="#" onclick="checkout.back(); return false;"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+		<button type="button" onclick="payment.save();" class="button" id="sl_verify"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+		<span class="please-wait" id="payment-please-wait" style="display:none;">
+			<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Loading next step...') ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
+		</span>
+	</div>
+	</form>
+	<script type="text/javascript">
+		function toggleToolTip(event){
+			if($('payment-tool-tip')){
+				$('payment-tool-tip').setStyle({
+					top: (Event.pointerY(event)-560)+'px'//,
+					//left: (Event.pointerX(event)+100)+'px'
+				})
+				$('payment-tool-tip').toggle();
+			}
+			Event.stop(event);
+		}
+		if($('payment-tool-tip-close')){
+			Event.observe($('payment-tool-tip-close'), 'click', toggleToolTip);
+		}
+		//]]>
+	</script>	
+	<script type="text/javascript">
+	//<![CDATA[
+		payment.currentMethod = "<?php echo $this->getChild('methods')->getSelectedMethodCode() ?>";
+	//]]>
+	</script>
+<?php } ?>

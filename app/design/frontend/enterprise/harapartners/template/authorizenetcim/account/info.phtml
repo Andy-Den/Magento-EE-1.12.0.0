@@ -1,0 +1,150 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ */
+?>
+
+<?php if($this->getTitle()): ?>
+<div class="page-title">
+    <h1><?php echo $this->getTitle() ?></h1>
+</div>
+<?php endif; ?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<form action="<?php echo $this->getPostUrl() ?>" method="post" id="form-validate" >
+    <div class="fieldset">
+        <h2 class="legend"><?php echo $this->__('Card Holder Information') ?></h2>
+        <?php echo $this->getBlockHtml('formkey')?>
+        <input type="hidden" name="profile_id" value="<?php echo $this->getPaymentProfileId() ?>" />
+        <ul class="form-list">
+            <li class="fields">
+            	<div class="field">
+                    <label for="first_name" class="required"><em>*</em><?php echo $this->__('First Name') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="first_name" id="first-name" class="required-entry input-text" value="<?php echo $this->getFirstName()?>"/>
+                    </div>
+                </div>
+            </li>
+			<li class="fields">
+				<div class="field">
+                    <label for="last_name" class="required"><em>*</em><?php echo $this->__('Last Name') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="last_name" id="last-name" class="required-entry input-text" value="<?php echo $this->getLastName()?>"/>
+                    </div>
+                </div>
+			</li>
+			<li class="fields">
+				<div class="field">
+                    <label for="cc_number" class="required"><em>*</em><?php echo $this->__('Card Number') ?></label>
+                    <div class="input-box">
+                    	<?php if($this->getPaymentProfileId()):?>
+                    		<input type="text" readonly="readonly" name="cc_number_display" class="required-entry input-text" id="card_number_display" value="<?php echo $this->getDisplayCardNumber(); ?>" autocomplete="off"/>
+                        	<input type="text" style="display: none;" name="cc_number" id="card_number" class="required-entry input-text" value="<?php echo $this->getCardNumber()?>" autocomplete="off"/>
+                        <?php else: ?>
+                        	<input type="text" name="cc_number" id="card_number" class="required-entry input-text" value="<?php echo $this->getCardNumber()?>" autocomplete="off"/>
+                        <?php endif;?>
+                    </div>
+                </div>
+			</li>
+			
+			<?php if($this->getPaymentProfileId()):?>
+			<li class="fields" id="cc_number_allow_edit_checkbox">
+				<div class="field">
+                    <label for="cc_number_allow_edit_checkbox"></label>
+                    <div class="input-box">
+                        <input type="checkbox" name="cc_number_allow_edit_checkbox" />Edit Card Number
+                    </div>
+                </div>
+			</li>
+			<?php endif;?>
+			
+			<li id="cc_type_exp_div">
+		        <label for="<?php echo $_code ?>_expiration" class="required"><em>*</em><?php echo $this->__('Expiration Date') ?></label>
+		        <div class="input-box">
+		        	<div class="v-fix">
+		            	<?php echo $this->getMonthSelectHtml(); ?>
+					 </div>
+		            <div class="v-fix">
+		            	<?php echo $this->getYearSelectHtml(); ?>
+		            </div>
+		        </div>
+		    </li>
+		    <?php if(!$this->getPaymentProfileId()): //CVV only require for creating a new card?>
+		    <li class="fields">
+				<div class="field">
+                    <label for="cc_cid" class="required"><em>*</em><?php echo $this->__('CVV') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="cc_cid" id="cc_cid" class="required-entry input-text" value="" autocomplete="off"/>
+                    </div>
+                </div>
+			</li>
+			<?php endif; ?>
+			<li class="fields">
+				<div class="field">
+                    <label for="phone_number" class="required"><em>*</em><?php echo $this->__('Phone Number') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="phone_number" id="phone-number" class="required-entry input-text" value="<?php echo $this->getPhoneNumber()?>"/>
+                    </div>
+                </div>
+			</li>
+        </ul>
+    </div>
+    <div class="fieldset">
+        <h2 class="legend"><?php echo $this->__('Billing Address') ?></h2>
+        <ul class="form-list">
+        	<li><label for="company"><?php echo $this->__('Company') ?></label><input type="text" name="company" id="company"  class="input-text" value="<?php echo $this->getCompany()?>"/></li>
+			<li><label for="address" class="required"><em>*</em><?php echo $this->__('Address') ?></label><input type="text" name="address" id="address" class="input-text" value="<?php echo $this->getAddress()?>"/></li>
+			<li><label for="city" class="required"><em>*</em><?php echo $this->__('City') ?></label><input type="text" name="city" id="city" class="input-text" value="<?php echo $this->getCity()?>"/></li>
+            <li><label for="zipcode" class="required"><em>*</em><?php echo $this->__('Zip Code') ?></label><input type="text" name="zipcode" id="zipcode" class="input-text" value="<?php echo $this->getZipcode()?>"/></li>
+            <li class="fields">
+         		<div class="field">
+                    <label for="region_id" class="required"><em>*</em><?php echo $this->__('State/Province') ?></label>
+                    <div class="input-box">
+                        <select id="region_id" name="region_id" title="<?php echo $this->__('State/Province') ?>" class="validate-select" style="display:none;">
+                           <option value=""><?php echo $this->__('Please select region, state or province') ?></option>
+                        </select>
+                        <script type="text/javascript">
+                            $('region_id').setAttribute('defaultValue',  "<?php echo $this->getSavedRegionId(); ?>");
+                        </script>
+                        <input type="text" id="region" name="region" value="<?php echo $this->getRegionId(); ?>"  title="<?php echo $this->__('State/Province') ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('region') ?>" />
+                    </div>
+                </div>
+            </li>
+            <li class="fields">
+                <div class="field">
+                    <label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
+                    <div class="input-box" >
+                        <?php echo $this->getCountryHtmlSelect(); ?>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-set form-buttons">
+        <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Go back') ?></a></p>
+        <button type="submit" class="button" title="<?php echo $this->getButtonText() ?>"><span><span><?php echo $this->getButtonText() ?></span></span></button>
+    </div>
+    <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    var dataForm = new VarienForm('form-validate', true);
+    new RegionUpdater('country', 'region', 'region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'zip');
+
+	//Small widget to allow changing CC numbers
+    jQuery(document).ready(function (){
+		jQuery("#cc_number_allow_edit_checkbox").click(function(){
+			jQuery(this).hide();
+			jQuery("input#card_number_display").hide();
+			jQuery("input#card_number").attr("value", "").show();
+		});
+    });
+//]]>
+</script>

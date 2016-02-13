@@ -1,0 +1,39 @@
+<?php
+$_product    = $this->getProduct();
+$_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+$confManuColorMapping = Mage::helper('service/catalog')->getConfManuColorMapping($this->getProduct());
+?>
+<?php if ($_product->isSaleable() && count($_attributes)):?>
+
+<form action="<?php echo $this->getUrl("checkout/cart/add"); ?>" method="POST" id="product_list_addtocart_form_<?php echo $_product->getId(); ?>" >
+	<input type="hidden" name="product" value="<?php echo $_product->getId(); ?>" />
+	<div class="category-list-product-options">
+		<dl>
+	    <?php foreach($_attributes as $_attribute): ?>
+	        <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
+	        <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
+	            <div class="input-box">
+	                <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
+	                    <option value=""><?php echo $this->__('Choose an Option...') ?></option>
+	                    <?php foreach($_attribute->getPrices() as $priceOption):?>
+	                   	<option value="<?php echo $priceOption['value_index']; ?>"><?php echo (isset($confManuColorMapping[$priceOption['value_index']]['label']))?$confManuColorMapping[$priceOption['value_index']]['label']:$priceOption['store_label']; ?></option>
+	                    <?php endforeach;?>
+					</select>
+				</div>
+	        </dd>
+	        <div class="clear"></div>
+	    <?php endforeach; ?>
+	    </dl>
+    </div>
+    <script type="text/javascript">
+    	//Basic validation
+    	var productListAddToCartForm<?php echo $_product->getId(); ?> = new VarienForm('product_list_addtocart_form_<?php echo $_product->getId(); ?>');
+    </script>
+    
+	<?php if ($this->helper('wishlist')->isAllow()) : ?>
+	<span class="product-list-add-to-wishlist"><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><?php echo $this->__('Add To Wish List') ?></a></span>
+	<?php endif; ?>
+	<span class="product-list-add-to-cart"><button type="submit" title="<?php echo $this->__('Add To Cart') ?>" class="button btn-cart"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button></span>
+</form>
+
+<?php endif;?>

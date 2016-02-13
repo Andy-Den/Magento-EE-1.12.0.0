@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<!-- app/code/local/Harapartners/Import/etc/config.xml -->
+<config>
+    <modules>
+        <Harapartners_TestImportTest>
+            <version>1.0.0.0</version>
+        </Harapartners_TestImportTest>
+    </modules>
+	<global>
+        <models>
+			<importexport>
+				<rewrite>
+					<import_entity_product_type_configurable>Harapartners_TestImportTest_Model_Import_Entity_Product_Type_Configurable</import_entity_product_type_configurable>
+				</rewrite>
+			</importexport>
+            <testimporttest>
+                <class>Harapartners_TestImportTest_Model</class>
+                <resourceModel>testimporttest_resource</resourceModel>
+            </testimporttest>
+            <testimporttest_resource>
+                <class>Harapartners_TestImportTest_Model_Resource</class>
+                <entities>
+                    <importdata>
+                        <table>importexport_importdata</table>
+                    </importdata>
+                </entities>
+            </testimporttest_resource>
+        </models>
+        <blocks>
+            <testimporttest>
+                <class>Harapartners_TestImportTest_Block</class>
+            </testimporttest>
+        </blocks>
+        <helpers>
+            <testimporttest>
+                <class>Harapartners_TestImportTest_Helper</class>
+            </testimporttest>
+        </helpers>
+		<resources>
+			<testimporttest_setup>
+				<setup>
+					<module>Harapartners_TestImportTest</module>
+					<class>Mage_Catalog_Model_Resource_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</testimporttest_setup>
+		</resources>
+		<!-- TEMP EDIT
+        <importexport module="importexport">
+            <import_entities>
+				
+				<catalog_product1 translate="label">
+                    <model_token>testimporttest/import_entity_product</model_token>
+                    <label>Products (HARA)</label>
+                </catalog_product1>
+				
+            </import_entities>
+			<import_product_types>
+                <configurable1234>testimporttest/import_entity_product_type_configurable1234</configurable1234>
+			</import_product_types>
+		</importexport>
+		TEMP EDIT-->
+	</global>
+</config>

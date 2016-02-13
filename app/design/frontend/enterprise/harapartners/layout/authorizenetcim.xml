@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<layout version="0.1.0">
+	<customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="customer"><name>creditcard</name><path>authorizenetcim/manage</path><label>Manage Credit Card</label></action>
+        </reference>
+    </customer_account>
+	
+	<authorizenetcim_manage_index translate="label">
+		<label>Credit Card List</label>
+		<reference name="head">
+			<action method="setTitle"><title>My Saved Credit Cards</title></action>
+		</reference>
+		<update handle="customer_account"/>
+		<reference name="my.account.wrapper">		
+			<block type="authorizenetcim/account_list" name="credit.card.list" template="authorizenetcim/account/list.phtml"/>
+			<block type="core/text_list" name="authorizenetcim.buttons" as="control_buttons">
+				<block type="authorizenetcim/account_button_add" name="authorizenetcim.button.add" as="button_add" template="authorizenetcim/account/button/add.phtml" />
+			</block>
+		</reference>
+	</authorizenetcim_manage_index>
+	
+	<authorizenetcim_manage_edit translate="label">
+		<label>Manage New Credit Card</label>
+		<reference name="head">
+			<action method="setTitle"><title>Manage Saved Credit Cards</title></action>
+		</reference>
+		<update handle="customer_account"/>
+		<reference name="my.account.wrapper">
+			<block type="authorizenetcim/account_info" name="credit.card.info" template="authorizenetcim/account/info.phtml"/>
+		</reference>
+	</authorizenetcim_manage_edit>
+	
+</layout>	

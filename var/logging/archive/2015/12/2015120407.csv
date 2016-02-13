@@ -1,0 +1,4 @@
+8521,1755957342,0,admin_login,"2015-09-30 15:31:32",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8522,1755957342,0,admin_login,"2015-09-30 15:31:34",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8523,1755957342,0,adminhtml_system_config,"2015-09-30 15:31:56",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8524,1755957342,0,adminhtml_system_config,"2015-09-30 15:32:05",save,"a:1:{s:7:""general"";s:7:""catalog"";}",success,rdi,10,adminhtml_system_config_save,,104.169.200.94

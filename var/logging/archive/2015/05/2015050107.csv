@@ -1,0 +1,72 @@
+8215,1213242525,0,admin_login,"2015-02-09 11:43:49",login,"a:1:{s:7:""general"";N;}",success,jzhao,3,adminhtml_index_index,,72.80.156.157
+8216,1213242525,0,adminhtml_system_config,"2015-02-09 11:44:16",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jzhao,3,adminhtml_system_config_edit,,72.80.156.157
+8217,1213242525,0,adminhtml_system_config,"2015-02-09 12:29:52",save,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jzhao,3,adminhtml_system_config_save,,72.80.156.157
+8218,1213242525,0,cache_management,"2015-02-09 12:30:53",flush,"a:1:{s:7:""general"";N;}",success,jzhao,3,adminhtml_cache_flushAll,,72.80.156.157
+8219,1213242525,0,admin_login,"2015-02-09 12:34:38",login,"a:1:{s:7:""general"";N;}",success,jzhao,3,adminhtml_index_index,,72.80.156.157
+8220,1213242525,0,adminhtml_system_config,"2015-02-09 12:34:56",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jzhao,3,adminhtml_system_config_edit,,72.80.156.157
+8221,1614372245,0,admin_login,"2015-02-09 15:08:33",login,"a:1:{s:7:""general"";N;}",success,demianb,13,adminhtml_index_index,,96.57.93.149
+8222,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:12:41",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8223,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:12:43",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8224,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:12:45",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8225,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:12:45",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8226,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:12:46",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8227,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:13:12",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8228,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:13:14",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8229,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:13:33",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8230,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:15:03",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8231,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:16:22",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8232,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:16:22",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8233,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 15:16:30",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8234,1614372245,0,index_management,"2015-02-09 15:17:27",massUpdate,"a:1:{s:7:""general"";s:25:""1, 2, 3, 4, 5, 6, 7, 8, 9"";}",failure,demianb,13,adminhtml_process_massReindex,"error: Stock Status Index process is working now. Please try run this process later.",96.57.93.149
+8235,1614372245,0,admin_login,"2015-02-09 19:19:34",login,"a:1:{s:7:""general"";N;}",success,demianb,13,adminhtml_index_index,,96.57.93.149
+8236,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:20:24",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8237,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:20:40",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8238,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:20:41",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8239,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:20:50",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8240,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:53:32",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8241,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:53:54",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8242,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:53:55",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8243,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:54:02",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8244,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:55:08",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8245,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:55:19",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8246,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:55:21",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8247,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 19:55:27",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8248,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:10:09",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8249,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:10:20",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8250,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:10:21",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8251,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:10:27",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8252,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:11:55",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8253,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:12:03",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8254,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:12:04",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8255,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:12:10",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8256,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:12:53",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8257,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:12:54",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8258,1614372245,0,adminhtml_system_convert_gui,"2015-02-09 20:13:02",run,"a:1:{s:7:""general"";s:23:""Import All Products: #3"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8259,1213242525,0,adminhtml_system_config,"2015-02-09 20:20:18",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jzhao,3,adminhtml_system_config_edit,,72.80.156.157
+8260,1213242525,0,adminhtml_system_config,"2015-02-09 20:20:29",view,"a:1:{s:7:""general"";s:6:""design"";}",success,jzhao,3,adminhtml_system_config_edit,,72.80.156.157
+8261,1614372245,0,admin_login,"2015-02-11 17:39:34",login,"a:1:{s:7:""general"";N;}",success,demianb,13,adminhtml_dashboard_index,,96.57.93.149
+8262,644644002,0,admin_login,"2015-02-11 17:39:47",login,"a:1:{s:7:""general"";N;}",success,sam,8,adminhtml_index_index,,38.108.124.162
+8263,1213242525,0,admin_login,"2015-02-12 18:23:52",login,"a:1:{s:7:""general"";N;}",success,jzhao,3,adminhtml_index_index,,72.80.156.157
+8264,644644002,0,admin_login,"2015-02-12 18:23:56",login,"a:1:{s:7:""general"";N;}",success,sam,8,adminhtml_index_index,,38.108.124.162
+8265,1213242525,0,adminhtml_system_config,"2015-02-12 18:24:19",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jzhao,3,adminhtml_system_config_edit,,72.80.156.157
+8266,644644002,0,adminhtml_system_config,"2015-02-12 18:24:37",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,sam,8,adminhtml_system_config_edit,,38.108.124.162
+8267,644644002,0,cache_management,"2015-02-12 19:14:07",flush,"a:1:{s:7:""general"";N;}",success,sam,8,adminhtml_cache_flushSystem,,38.108.124.162
+8268,644644002,0,catalog_products,"2015-02-12 19:23:17",view,"a:1:{s:7:""general"";s:7:""1571955"";}",success,sam,8,adminhtml_catalog_product_edit,,38.108.124.162
+8269,644644002,0,catalog_products,"2015-02-12 19:24:37",view,"a:1:{s:7:""general"";s:7:""1365587"";}",success,sam,8,adminhtml_catalog_product_edit,,38.108.124.162
+8270,644644002,0,catalog_products,"2015-02-12 19:35:08",view,"a:1:{s:7:""general"";s:7:""1366583"";}",success,sam,8,adminhtml_catalog_product_edit,,38.108.124.162
+8271,644644002,0,catalog_products,"2015-02-12 19:36:03",save,"a:1:{s:7:""general"";s:7:""1366583"";}",success,sam,8,adminhtml_catalog_product_save,,38.108.124.162
+8272,644644002,0,catalog_products,"2015-02-12 19:39:32",save,"a:1:{s:7:""general"";s:7:""1366583"";}",success,sam,8,adminhtml_catalog_product_save,,38.108.124.162
+8273,644644002,0,catalog_products,"2015-02-12 19:44:38",save,"a:1:{s:7:""general"";s:7:""1366583"";}",success,sam,8,adminhtml_catalog_product_save,,38.108.124.162
+8274,1614372245,0,admin_login,"2015-02-18 20:53:31",login,"a:1:{s:7:""general"";N;}",success,demianb,13,adminhtml_index_index,,96.57.93.149
+8275,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:54:22",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8276,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:54:39",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8277,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:54:41",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8278,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:55:26",save,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8279,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:55:27",edit,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8280,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:56:19",delete,"a:1:{s:7:""general"";s:1:""3"";}",success,demianb,13,adminhtml_system_convert_gui_delete,,96.57.93.149
+8281,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:56:57",edit,"a:1:{s:7:""general"";s:1:""7"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8282,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:57:20",save,"a:1:{s:7:""general"";s:1:""7"";}",success,demianb,13,adminhtml_system_convert_gui_save,,96.57.93.149
+8283,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:57:22",edit,"a:1:{s:7:""general"";s:1:""7"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149
+8284,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:57:28",run,"a:1:{s:7:""general"";s:23:""Hara Import Profile: #7"";}",success,demianb,13,adminhtml_system_convert_gui_run,,96.57.93.149
+8285,1614372245,0,admin_login,"2015-02-18 20:57:47",login,"a:1:{s:7:""general"";N;}",success,demianb,13,adminhtml_index_index,,96.57.93.149
+8286,1614372245,0,adminhtml_system_convert_gui,"2015-02-18 20:58:29",edit,"a:1:{s:7:""general"";s:1:""4"";}",success,demianb,13,adminhtml_system_convert_gui_edit,,96.57.93.149

@@ -1,0 +1,46 @@
+Product Prices index was rebuilt successfully
+Catalog URL Rewrites index was rebuilt successfully
+Product Flat Data index was rebuilt successfully
+Category Flat Data index process unknown error:
+exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1005 Can't create table 'shoemart_vps.catalog_category_flat_store_1' (errno: 150)' in /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Varien/Db/Statement/Pdo/Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Statement.php(300): Varien_Db_Statement_Pdo_Mysql->_execute(Array)
+#3 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#4 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('CREATE TABLE `c...', Array)
+#5 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Varien/Db/Adapter/Pdo/Mysql.php(419): Zend_Db_Adapter_Pdo_Abstract->query('CREATE TABLE `c...', Array)
+#6 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Varien/Db/Adapter/Pdo/Mysql.php(2039): Varien_Db_Adapter_Pdo_Mysql->query('CREATE TABLE `c...')
+#7 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php(604): Varien_Db_Adapter_Pdo_Mysql->createTable(Object(Varien_Db_Ddl_Table))
+#8 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php(1418): Mage_Catalog_Model_Resource_Category_Flat->_createTable('1')
+#9 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php(1431): Mage_Catalog_Model_Resource_Category_Flat->_createTables()
+#10 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Category/Indexer/Flat.php(246): Mage_Catalog_Model_Resource_Category_Flat->reindexAll()
+#11 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Index/Model/Process.php(209): Mage_Catalog_Model_Category_Indexer_Flat->reindexAll()
+#12 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Index/Model/Process.php(255): Mage_Index_Model_Process->reindexAll()
+#13 /home/shoemart/usr/local/www/virtual/magento/shoemart/shell/indexer.php(158): Mage_Index_Model_Process->reindexEverything()
+#14 /home/shoemart/usr/local/www/virtual/magento/shoemart/shell/indexer.php(198): Mage_Shell_Compiler->run()
+#15 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error: 1005 Can't create table 'shoemart_vps.catalog_category_flat_store_1' (errno: 150)' in /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Varien/Db/Statement/Pdo/Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Statement.php(300): Varien_Db_Statement_Pdo_Mysql->_execute(Array)
+#2 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('CREATE TABLE `c...', Array)
+#4 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Varien/Db/Adapter/Pdo/Mysql.php(419): Zend_Db_Adapter_Pdo_Abstract->query('CREATE TABLE `c...', Array)
+#5 /home/shoemart/usr/local/www/virtual/magento/shoemart/lib/Varien/Db/Adapter/Pdo/Mysql.php(2039): Varien_Db_Adapter_Pdo_Mysql->query('CREATE TABLE `c...')
+#6 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php(604): Varien_Db_Adapter_Pdo_Mysql->createTable(Object(Varien_Db_Ddl_Table))
+#7 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php(1418): Mage_Catalog_Model_Resource_Category_Flat->_createTable('1')
+#8 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php(1431): Mage_Catalog_Model_Resource_Category_Flat->_createTables()
+#9 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Catalog/Model/Category/Indexer/Flat.php(246): Mage_Catalog_Model_Resource_Category_Flat->reindexAll()
+#10 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Index/Model/Process.php(209): Mage_Catalog_Model_Category_Indexer_Flat->reindexAll()
+#11 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Index/Model/Process.php(255): Mage_Index_Model_Process->reindexAll()
+#12 /home/shoemart/usr/local/www/virtual/magento/shoemart/shell/indexer.php(158): Mage_Index_Model_Process->reindexEverything()
+#13 /home/shoemart/usr/local/www/virtual/magento/shoemart/shell/indexer.php(198): Mage_Shell_Compiler->run()
+#14 {main}
+Category Products index was rebuilt successfully
+Catalog Search Index index was rebuilt successfully
+Stock Status index was rebuilt successfully
+Tag Aggregation Data index was rebuilt successfully
+Catalog Permissions index was rebuilt successfully
+Target Rules index was rebuilt successfully

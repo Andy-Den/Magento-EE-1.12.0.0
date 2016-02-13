@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<!-- app/code/local/Harapartners/Service/etc/config.xml -->
+<config>
+    <modules>
+        <Harapartners_Service>
+            <version>1.0.0</version>
+        </Harapartners_Service>
+    </modules>
+    <global>
+        <helpers>
+            <service>
+            	<class>Harapartners_Service_Helper</class>
+            </service>
+        </helpers>
+		<blocks>
+			<catalog>
+				<rewrite>
+					<product_view_type_configurable>Harapartners_Service_Block_Rewrite_Product_View_Type_Configurable</product_view_type_configurable>
+					<product_view_type_configurable>Harapartners_Service_Block_Rewrite_Product_View_Type_Configurable</product_view_type_configurable>
+				</rewrite>
+			</catalog>
+			<review>
+				<rewrite>	
+					<helper>Harapartners_Service_Block_Rewrite_Review_Helper</helper>
+				</rewrite>
+			</review>
+		</blocks>
+		<models>
+			<service>
+				<class>Harapartners_Service_Model</class>
+			</service>
+			<index>
+				<rewrite>
+					<!--Harapartners_Import: Important logic to prevent cleaning cache and indexing for each product save.-->
+					<indexer>Harapartners_Service_Model_Rewrite_Index_Indexer</indexer>
+				</rewrite>
+			</index>
+			<sales>
+				<rewrite>
+					<!--Harapartners_Vendor/Vendoroptions: Add vendor ID to quote item.-->
+					<quote>Harapartners_Service_Model_Rewrite_Sales_Quote</quote>
+				</rewrite>
+			</sales>
+		</models>
+		<events>
+			<harapartners_import_after>
+                <observers>
+                    <!--Harapartners_Import-->
+                    <import>
+                        <type>singleton</type>
+                        <class>import/observer</class>
+                        <method>processBatch</method>
+                    </import>
+                </observers>
+            </harapartners_import_after>
+		</events>
+    </global>
+	<frontend>
+        <routers>
+            <service>
+                <use>standard</use>
+                <args>
+                    <module>Harapartners_Service</module>
+                    <frontName>service</frontName>
+                </args>
+            </service>
+        </routers>
+		<!--layout>
+			<updates>
+				<service>
+					<file>service.xml</file>
+				</service>
+			</updates>
+		</layout-->
+    </frontend> 
+	<adminhtml/>
+</config>

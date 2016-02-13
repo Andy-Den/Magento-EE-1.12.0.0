@@ -1,0 +1,111 @@
+8398,1755957342,0,admin_login,"2015-09-14 15:51:13",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8399,1755957342,0,catalog_products,"2015-09-15 14:37:38",view,"a:1:{s:7:""general"";s:7:""1648808"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8400,1755957342,0,catalog_products,"2015-09-15 14:38:32",view,"a:1:{s:7:""general"";s:7:""1648799"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8401,1755957342,0,index_management,"2015-09-15 14:38:56",massUpdate,"a:1:{s:7:""general"";s:25:""1, 2, 3, 4, 5, 6, 7, 8, 9"";}",success,rdi,10,adminhtml_process_massChangeMode,,104.169.200.94
+8402,1755957342,0,admin_login,"2015-09-18 13:54:11",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8403,1755957342,0,admin_login,"2015-09-18 13:54:22",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8404,1755957342,0,index_management,"2015-09-18 13:55:38",massUpdate,"a:1:{s:7:""general"";s:4:""4, 3"";}",success,rdi,10,adminhtml_process_massReindex,,104.169.200.94
+8405,1755957342,0,index_management,"2015-09-18 13:56:25",massUpdate,"a:1:{s:7:""general"";s:25:""1, 2, 3, 4, 5, 6, 7, 8, 9"";}",success,rdi,10,adminhtml_process_massReindex,,104.169.200.94
+8406,1755957342,0,admin_login,"2015-09-20 23:47:57",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8407,1755957342,0,admin_login,"2015-09-20 23:48:01",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8408,1755957342,0,catalog_products,"2015-09-20 23:49:12",view,"a:1:{s:7:""general"";s:7:""1648808"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8409,1755957342,0,catalog_products,"2015-09-20 23:49:49",view,"a:1:{s:7:""general"";s:7:""1648807"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8410,1755957342,0,catalog_products,"2015-09-20 23:50:11",view,"a:1:{s:7:""general"";s:7:""1648799"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8411,1755957342,0,catalog_products,"2015-09-21 15:53:21",view,"a:1:{s:7:""general"";s:7:""1648799"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8412,1755957342,0,admin_login,"2015-09-21 15:55:49",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8413,1755957342,0,admin_login,"2015-09-21 15:56:01",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8414,1755957342,0,catalog_products,"2015-09-21 15:56:22",view,"a:1:{s:7:""general"";s:7:""1648813"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8415,1755957342,0,catalog_products,"2015-09-21 15:57:43",view,"a:1:{s:7:""general"";s:7:""1648354"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8416,1755957342,0,catalog_products,"2015-09-21 16:28:59",save,"a:1:{s:7:""general"";s:7:""1648814"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8417,1755957342,0,catalog_products,"2015-09-21 16:29:36",save,"a:1:{s:7:""general"";s:7:""1648814"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8418,1755957342,0,catalog_products,"2015-09-21 16:30:44",delete,"a:1:{s:7:""general"";s:7:""1648814"";}",success,rdi,10,adminhtml_catalog_product_delete,,104.169.200.94
+8419,1755957342,0,catalog_products,"2015-09-21 16:32:03",save,"a:1:{s:7:""general"";s:7:""1648815"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8420,1755957342,0,catalog_products,"2015-09-21 16:32:54",massDelete,"a:1:{s:7:""general"";s:7:""1648815"";}",success,rdi,10,adminhtml_catalog_product_massDelete,,104.169.200.94
+8421,1755957342,0,admin_login,"2015-09-21 21:04:38",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8422,1755957342,0,admin_login,"2015-09-21 21:04:47",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8423,1755957342,0,catalog_products,"2015-09-21 21:05:41",view,"a:1:{s:7:""general"";s:7:""1648354"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8424,1755957342,0,index_management,"2015-09-21 21:06:58",massUpdate,"a:1:{s:7:""general"";s:7:""3, 4, 5"";}",success,rdi,10,adminhtml_process_massReindex,,104.169.200.94
+8425,1755957342,0,catalog_products,"2015-09-21 21:07:37",view,"a:1:{s:7:""general"";s:7:""1648354"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8426,1755957342,0,catalog_products,"2015-09-21 21:18:37",view,"a:1:{s:7:""general"";s:7:""1648816"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8427,1755957342,0,catalog_products,"2015-09-21 21:20:08",save,"a:1:{s:7:""general"";s:7:""1648816"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8428,1755957342,0,catalog_products,"2015-09-21 21:20:48",save,"a:1:{s:7:""general"";s:7:""1648816"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8429,1755957342,0,catalog_products,"2015-09-21 21:21:09",save,"a:1:{s:7:""general"";s:7:""1648816"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8430,1755957342,0,catalog_products,"2015-09-21 21:27:46",view,"a:1:{s:7:""general"";s:7:""1648817"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8431,1755957342,0,catalog_products,"2015-09-21 21:29:06",save,"a:1:{s:7:""general"";s:7:""1648817"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8432,1755957342,0,cache_management,"2015-09-21 21:30:03",flush,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_cache_flushSystem,,104.169.200.94
+8433,1755957342,0,catalog_products,"2015-09-21 21:30:47",save,"a:1:{s:7:""general"";s:7:""1648816"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8434,1755957342,0,cache_management,"2015-09-21 21:31:46",flush,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_cache_flushSystem,,104.169.200.94
+8435,1755957342,0,catalog_products,"2015-09-21 21:32:11",view,"a:1:{s:7:""general"";s:7:""1648817"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8436,1755957342,0,catalog_products,"2015-09-21 21:32:23",save,"a:1:{s:7:""general"";s:7:""1648817"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8437,1755957342,0,catalog_products,"2015-09-21 21:34:21",save,"a:1:{s:7:""general"";s:7:""1648818"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8438,1755957342,0,catalog_products,"2015-09-21 21:35:56",save,"a:1:{s:7:""general"";s:7:""1648818"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8439,1755957342,0,catalog_products,"2015-09-21 21:40:19",view,"a:1:{s:7:""general"";s:7:""1648819"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8440,1755957342,0,catalog_products,"2015-09-21 21:40:32",view,"a:1:{s:7:""general"";s:7:""1648818"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8441,1755957342,0,cache_management,"2015-09-21 21:41:58",flush,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_cache_flushSystem,,104.169.200.94
+8442,1755957342,0,catalog_products,"2015-09-21 21:42:28",view,"a:1:{s:7:""general"";s:7:""1648820"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8443,1755957342,0,catalog_products,"2015-09-21 21:42:46",save,"a:1:{s:7:""general"";s:7:""1648820"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8444,1755957342,0,index_management,"2015-09-21 21:44:13",massUpdate,"a:1:{s:7:""general"";s:25:""1, 2, 3, 4, 5, 6, 7, 8, 9"";}",success,rdi,10,adminhtml_process_massReindex,,104.169.200.94
+8445,1755957342,0,admin_login,"2015-09-22 14:08:22",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8446,1755957342,0,admin_login,"2015-09-22 14:08:25",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8447,1755957342,0,cache_management,"2015-09-22 14:08:48",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,rdi,10,adminhtml_cache_massRefresh,,104.169.200.94
+8448,1755957342,0,adminhtml_system_config,"2015-09-22 14:09:30",view,"a:1:{s:7:""general"";s:5:""admin"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8449,1755957342,0,adminhtml_system_config,"2015-09-22 14:09:38",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8450,1755957342,0,adminhtml_system_config,"2015-09-22 14:09:52",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8451,1755957342,0,adminhtml_system_config,"2015-09-22 14:10:03",save,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_save,,104.169.200.94
+8452,1755957342,0,adminhtml_system_config,"2015-09-22 14:18:36",save,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_save,,104.169.200.94
+8453,1755957342,0,adminhtml_system_config,"2015-09-22 14:20:45",save,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_save,,104.169.200.94
+8454,1755957342,0,admin_login,"2015-09-22 15:02:10",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8455,1755957342,0,catalog_products,"2015-09-22 15:03:01",view,"a:1:{s:7:""general"";s:7:""1648816"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8456,1755957342,0,catalog_products,"2015-09-22 15:03:47",view,"a:1:{s:7:""general"";s:7:""1648808"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8457,1755957342,0,cache_management,"2015-09-22 15:14:28",save,"a:1:{s:7:""general"";s:105:""Cache types: config, layout, block_html, translate, collections, eav, config_api, config_api2, full_page "";}",success,rdi,10,adminhtml_cache_massRefresh,,104.169.200.94
+8458,1755957342,0,adminhtml_system_config,"2015-09-22 15:18:40",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8459,1755957342,0,adminhtml_system_config,"2015-09-22 15:18:51",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8460,1755957342,0,adminhtml_system_config,"2015-09-22 15:19:05",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8461,1755957342,0,catalog_products,"2015-09-22 15:22:55",view,"a:1:{s:7:""general"";s:7:""1648354"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8462,1755957342,0,catalog_products,"2015-09-22 15:23:14",save,"a:1:{s:7:""general"";s:7:""1648354"";}",success,rdi,10,adminhtml_catalog_product_save,,104.169.200.94
+8463,1755957342,0,catalog_products,"2015-09-22 15:42:31",view,"a:1:{s:7:""general"";s:7:""1648154"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8464,1755957342,0,admin_login,"2015-09-23 17:05:16",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8465,1755957342,0,admin_login,"2015-09-23 17:05:18",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8466,1755957342,0,catalog_products,"2015-09-23 17:07:54",massDelete,"a:1:{s:7:""general"";s:25:""1648820, 1648819, 1648818"";}",success,rdi,10,adminhtml_catalog_product_massDelete,,104.169.200.94
+8467,1755957342,0,catalog_products,"2015-09-23 17:08:52",view,"a:1:{s:7:""general"";s:7:""1648606"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8468,1755957342,0,admin_login,"2015-09-23 17:38:37",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8469,1755957342,0,admin_login,"2015-09-23 17:38:42",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8470,1755957342,0,catalog_products,"2015-09-23 18:22:52",view,"a:1:{s:7:""general"";s:7:""1648949"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8471,1755957342,0,catalog_categories,"2015-09-23 18:25:01",view,"a:1:{s:7:""general"";s:3:""719"";}",success,rdi,10,adminhtml_catalog_category_edit,,104.169.200.94
+8472,1755957342,0,catalog_categories,"2015-09-23 18:25:08",view,"a:1:{s:7:""general"";s:3:""993"";}",success,rdi,10,adminhtml_catalog_category_edit,,104.169.200.94
+8473,1755957342,0,catalog_categories,"2015-09-23 18:25:24",view,"a:1:{s:7:""general"";s:3:""725"";}",success,rdi,10,adminhtml_catalog_category_edit,,104.169.200.94
+8474,1755957342,0,catalog_products,"2015-09-23 18:26:11",view,"a:1:{s:7:""general"";s:7:""1648807"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8475,1755957342,0,catalog_products,"2015-09-23 19:24:38",view,"a:1:{s:7:""general"";s:7:""1648807"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8476,1755957342,0,catalog_products,"2015-09-23 19:24:45",view,"a:1:{s:7:""general"";s:7:""1648949"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8477,1614372245,0,admin_login,"2015-09-24 12:34:57",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,96.57.93.149
+8478,1614372245,0,catalog_categories,"2015-09-24 12:35:51",view,"a:1:{s:7:""general"";s:3:""969"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8479,1614372245,0,catalog_categories,"2015-09-24 12:36:25",view,"a:1:{s:7:""general"";s:3:""182"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8480,1614372245,0,catalog_categories,"2015-09-24 12:36:38",view,"a:1:{s:7:""general"";s:3:""182"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8481,1614372245,0,catalog_categories,"2015-09-24 12:36:44",view,"a:1:{s:7:""general"";s:3:""815"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8482,1614372245,0,catalog_categories,"2015-09-24 12:37:34",save,"a:1:{s:7:""general"";s:9:""815, 1157"";}",success,r.ryan,15,adminhtml_catalog_category_save,,96.57.93.149
+8483,1614372245,0,catalog_categories,"2015-09-24 12:37:35",view,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8484,1614372245,0,catalog_categories,"2015-09-24 12:37:58",move,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_move,,96.57.93.149
+8485,1614372245,0,catalog_categories,"2015-09-24 12:38:13",view,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8486,1614372245,0,catalog_categories,"2015-09-24 12:38:24",save,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_save,,96.57.93.149
+8487,1614372245,0,catalog_categories,"2015-09-24 12:38:25",view,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8488,1614372245,0,catalog_categories,"2015-09-24 17:18:22",view,"a:1:{s:7:""general"";s:4:""1045"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8489,1614372245,0,catalog_categories,"2015-09-24 17:18:29",view,"a:1:{s:7:""general"";s:4:""1053"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8490,1614372245,0,catalog_products,"2015-09-24 17:19:34",view,"a:1:{s:7:""general"";s:7:""1648184"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8491,1614372245,0,catalog_categories,"2015-09-24 17:21:34",view,"a:1:{s:7:""general"";s:4:""1053"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8492,1614372245,0,index_management,"2015-09-24 17:22:17",massUpdate,"a:1:{s:7:""general"";s:4:""3, 4"";}",success,r.ryan,15,adminhtml_process_massReindex,,96.57.93.149
+8493,1614372245,0,catalog_categories,"2015-09-24 17:22:31",view,"a:1:{s:7:""general"";s:4:""1052"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8494,1614372245,0,catalog_categories,"2015-09-24 17:22:42",view,"a:1:{s:7:""general"";s:4:""1053"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8495,1614372245,0,catalog_categories,"2015-09-24 17:22:54",view,"a:1:{s:7:""general"";s:3:""969"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8496,1614372245,0,catalog_categories,"2015-09-24 17:23:12",view,"a:1:{s:7:""general"";s:4:""1053"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8497,1614372245,0,catalog_categories,"2015-09-24 17:43:20",view,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8498,1614372245,0,catalog_categories,"2015-09-24 17:43:35",view,"a:1:{s:7:""general"";s:3:""719"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8499,1614372245,0,catalog_categories,"2015-09-24 17:43:41",view,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8500,1614372245,0,catalog_categories,"2015-09-24 17:43:59",delete,"a:1:{s:7:""general"";s:4:""1157"";}",success,r.ryan,15,adminhtml_catalog_category_delete,,96.57.93.149
+8501,1755957342,0,catalog_products,"2015-09-24 17:47:47",view,"a:1:{s:7:""general"";s:7:""1648450"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8502,1755957342,0,catalog_products,"2015-09-24 17:48:15",view,"a:1:{s:7:""general"";s:7:""1648949"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8503,1755957342,0,catalog_categories,"2015-09-24 17:50:00",view,"a:1:{s:7:""general"";s:4:""1053"";}",success,rdi,10,adminhtml_catalog_category_edit,,104.169.200.94
+8504,1755957342,0,catalog_categories,"2015-09-24 17:50:28",view,"a:1:{s:7:""general"";s:4:""1063"";}",success,rdi,10,adminhtml_catalog_category_edit,,104.169.200.94
+8505,1614372245,0,catalog_categories,"2015-09-24 17:53:01",view,"a:1:{s:7:""general"";s:4:""1053"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8506,1755957342,0,index_management,"2015-09-24 17:57:12",massUpdate,"a:1:{s:7:""general"";s:4:""3, 5"";}",success,rdi,10,adminhtml_process_massReindex,,104.169.200.94
+8507,1755957342,0,adminhtml_system_config,"2015-09-24 18:15:42",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8508,1755957342,0,adminhtml_system_config,"2015-09-24 18:15:57",save,"a:1:{s:7:""general"";s:7:""catalog"";}",success,rdi,10,adminhtml_system_config_save,,104.169.200.94

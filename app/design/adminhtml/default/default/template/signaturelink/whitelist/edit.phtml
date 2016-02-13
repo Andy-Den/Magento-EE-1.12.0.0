@@ -1,0 +1,36 @@
+<?php /** @var $this SL_Signaturelink_Block_Adminhtml_Wishlist_Edit */ ?>
+
+<div id="message-popup-window-mask" style="display:none;"></div>
+
+<div id="message-popup-window"  style="display:none;" class="message-popup show" style="width:300px;">
+    <div class="message-popup-head">
+        <a href="#" title="close" class="cancel-whitelist-entry"><span>close</span></a>
+        <h2>Edit SignatureLink Whitelist Entry</h2>
+    </div>
+    <div class="message-popup-content">
+        <div class="message">
+            <ul class="messages"></ul>
+            <p class="form-list">
+                <div class="field">
+                    <label for="whitelist-email" class="" style="color:#666; font-weight:bold;">Email Address</label>
+                    <div class="input-box">
+                        <input name="whitelist-email" id="whitelist-email" class="input-text required-entry" value="" style="width:80%;">
+                    </div>
+                    <input type="hidden" name="whitelist-edit-url" id="whitelist-edit-url" value="<?php echo $this->getFormAction(); ?>" />
+                    <input type="hidden" name="whitelist-form-key" id="whitelist-form-key" value="<?php echo $this->getFormKey(); ?>" />
+                    <input type="hidden" name="whitelist-edit-action" id="whitelist-edit-action" value="" />
+                    <input type="hidden" name="whitelist-edit-id" id="whitelist-edit-id" value="" />
+
+                </div>
+            </p>
+            <br />
+            <div class="form-buttons" style="position:relative;">
+                <button id="save-whitelist-entry" type="button" class="scalable save"><span>Save</span></button>
+                <button type="button" class="scalable cancel cancel-whitelist-entry"><span>Cancel</span></button>
+                <img src="<?php echo $this->getJsUrl($this->__('signaturelink/whitelist-loader.gif')); ?>" alt="" id="whitelist-loader" style="display:none; position:absolute; top:1px;left:151px;" />
+                <button style="float:right;" type="button" id="delete-whitelist-entry" class="scalable delete delete-whitelist-entry"><span>Delete</span></button>
+            </div>
+        </div>
+
+    </div>
+</div>

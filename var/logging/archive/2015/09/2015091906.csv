@@ -1,0 +1,6 @@
+8362,1236707998,0,admin_login,"2015-07-20 09:52:48",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,73.182.170.158
+8363,1236707998,0,admin_login,"2015-07-20 09:53:24",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,73.182.170.158
+8364,1236707998,0,catalog_categories,"2015-07-20 09:53:55",view,"a:1:{s:7:""general"";s:4:""1072"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,73.182.170.158
+8365,1236707998,0,reports,"2015-07-20 09:57:30",view,"a:1:{s:7:""general"";s:16:""shopcart_product"";}",success,r.ryan,15,adminhtml_report_shopcart_product,,73.182.170.158
+8366,1236707998,0,catalog_products,"2015-07-20 10:01:47",view,"a:1:{s:7:""general"";s:7:""1645000"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,73.182.170.158
+8367,1236707998,0,catalog_products,"2015-07-20 10:08:12",view,"a:1:{s:7:""general"";s:7:""1340885"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,73.182.170.158

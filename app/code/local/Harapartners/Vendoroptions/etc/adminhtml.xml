@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ *
+ * @author      Steven Hoffman <s.hoffman@harapartners.com>
+ * @copyright   Copyright (c) 2013 Harapartners Inc.
+ * 
+ -->
+<!-- app/code/local/Harapartners/Vendoroptions/etc/adminhtml.xml -->
+
+<config>
+	<layout>
+		<updates>
+			<harapartners_vendoroptions>
+				<file>harapartners/vendoroptions.xml</file>
+			</harapartners_vendoroptions>
+		</updates>
+	</layout>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<vendoroptions translate="title" module="vendoroptions">
+						<title>Vendor/Brand</title>
+						<children>
+							<configure>
+								<title>Manage Vendors/Brands</title>
+							</configure>
+						</children>
+					</vendoroptions>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+    <menu>
+        <vendoroptions translate="title" module="vendoroptions">
+            <title>Vendor/Brand</title>
+            <sort_order>5000</sort_order>
+            <children>
+                <configure translate="title" module="vendoroptions">
+                    <title>Manage Vendors/Brands</title>
+                    <sort_order>10</sort_order>
+                    <action>vendoroptions/adminhtml_configure</action>
+                </configure>
+            </children>
+        </vendoroptions>
+    </menu>
+</config>

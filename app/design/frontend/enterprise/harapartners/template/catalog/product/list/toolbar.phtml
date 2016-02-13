@@ -1,0 +1,92 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     enterprise_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @see Mage_Catalog_Block_Product_List_Toolbar
+ */
+?>
+<?php 
+//List mode is forbidden for search result
+$_modes = $this->getModes();
+if(in_array('catalogsearch_result_index', $this->getLayout()->getUpdate()->getHandles())){
+	$_modes = array('grid' => 'Grid');
+	$this->setCurrentMode('grid');
+}
+?>
+
+<?php if($this->getCollection()->getSize()): ?>
+<div class="toolbar">
+    <?php if( $this->isExpanded() ): ?>
+        <?php if( $this->isEnabledViewSwitcher() ): ?>
+        <span class="view-mode">
+            <?php if($_modes && count($_modes)>1): ?>
+            <label><?php echo $this->__('View as') ?>:</label>
+            <?php $_i=1; $_fix=''; foreach ($this->getModes() as $_code=>$_label): ?>
+                <?php if ($_i==1 && strtolower($_code)=='list') $_fix='-fix'; ?>
+                <?php if($this->isModeActive($_code)): ?>
+                    <strong class="<?php echo strtolower($_code); echo $_fix; ?>" title="<?php echo $_label ?>"><?php echo $_label ?></strong>
+                <?php else: ?>
+                    <a class="<?php echo strtolower($_code); echo $_fix; ?>" title="<?php echo $_label ?>" href="<?php echo $this->getModeUrl($_code) ?>"><?php echo $_label ?></a>
+                <?php endif; ?>
+            <?php $_i++; endforeach; ?>
+            <?php endif; ?>
+        </span>
+        <?php endif; ?>
+    <?php endif; ?>
+
+	    <span class="pager">
+	        <div class="limiter">
+	            <label class="styled-select-label"><?php echo $this->__('Show') ?></label>
+	            <div class="styled-select styled-pager-select">
+		            <select onchange="setLocation(this.value)">
+		            <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
+		                <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
+		                    <?php echo $_limit ?>
+		                </option>
+		            <?php endforeach; ?>
+		            </select>
+	            </div>
+	        </div>
+	        <?php echo $this->getPagerHtml() ?>
+	    </span>
+	    <span class="sort-by">
+            <label class="styled-select-label"><?php echo $this->__('Sort By') ?></label>
+            <div class="styled-select styled-sort-by-select">
+	            <select onchange="setLocation(this.value)">
+	            <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
+	                <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
+	                    <?php echo $this->__($_order) ?>
+	                </option>
+	            <?php endforeach; ?>
+	            </select>
+            </div>
+        </span>
+</div>
+<div class="clear"></div>
+<?php endif ?>

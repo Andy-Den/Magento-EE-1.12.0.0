@@ -1,0 +1,12 @@
+8304,1679891416,0,admin_login,"2015-03-22 19:15:03",login,"a:1:{s:7:""general"";N;}",failure,steven,,adminhtml_index_index,,100.33.27.216
+8305,1679891416,0,admin_login,"2015-03-22 19:15:11",login,"a:1:{s:7:""general"";N;}",failure,steven,,adminhtml_index_index,,100.33.27.216
+8306,2889355962,0,admin_login,"2015-03-22 19:30:03",login,"a:1:{s:7:""general"";N;}",success,mai78erne,7,adminhtml_index_index,,172.56.18.186
+8307,2889355962,0,adminhtml_permission_users,"2015-03-22 19:34:10",save,"a:1:{s:7:""general"";s:2:""14"";}",success,mai78erne,7,adminhtml_permissions_user_save,,172.56.18.186
+8308,1679891416,0,admin_login,"2015-03-22 19:41:56",login,"a:1:{s:7:""general"";N;}",success,steven,14,adminhtml_index_index,,100.33.27.216
+8309,1679891416,0,adminhtml_system_config,"2015-03-22 19:42:49",view,"a:1:{s:7:""general"";s:8:""hpintwms"";}",success,steven,14,adminhtml_system_config_edit,,100.33.27.216
+8310,1679891416,0,adminhtml_system_config,"2015-03-22 19:49:19",view,"a:1:{s:7:""general"";s:8:""hpintwms"";}",success,steven,14,adminhtml_system_config_edit,,100.33.27.216
+8311,1679891416,0,adminhtml_system_config,"2015-03-22 19:49:22",view,"a:1:{s:7:""general"";s:12:""hpsalesforce"";}",success,steven,14,adminhtml_system_config_edit,,100.33.27.216
+8312,1679891416,0,adminhtml_system_config,"2015-03-22 19:49:31",view,"a:1:{s:7:""general"";s:12:""shoemart_edi"";}",success,steven,14,adminhtml_system_config_edit,,100.33.27.216
+8313,1679891416,0,adminhtml_system_config,"2015-03-22 19:49:39",view,"a:1:{s:7:""general"";s:3:""api"";}",success,steven,14,adminhtml_system_config_edit,,100.33.27.216
+8314,644644002,0,admin_login,"2015-03-25 15:48:00",login,"a:1:{s:7:""general"";N;}",success,mai78erne,7,adminhtml_index_index,,38.108.124.162
+8315,644644002,0,adminhtml_system_config,"2015-03-25 15:48:56",view,"a:1:{s:7:""general"";s:8:""hpintwms"";}",success,mai78erne,7,adminhtml_system_config_edit,,38.108.124.162

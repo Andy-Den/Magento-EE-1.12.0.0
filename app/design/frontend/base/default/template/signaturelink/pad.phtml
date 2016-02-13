@@ -1,0 +1,138 @@
+<?php
+$helper = Mage::helper('signaturelink');
+$slData = $helper->getFlashParams();
+$checkStatus = Mage::getStoreConfig('payment/aim/active');
+
+
+//New changes for SecureBuy & MPI
+$signpadMode     = Mage::getStoreConfig('signaturelink/sl_config/signpad_mode');
+$grandTotal      = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
+$langageValue    = Mage::getStoreConfig('signaturelink/sl_config/lang_list');
+$securebuyOptVal = Mage::getStoreConfig('signaturelink/sl_config/securebuy_options_list');
+$secureBuyflag   = 0;
+
+if($signpadMode == 1)	{
+	switch ($securebuyOptVal) {
+		case 0:
+			$secureBuyflag = 0;
+			break;
+		case 1:
+			$secureBuyflag = 1;
+			break;
+		case 2:
+			$orderMinAmount = Mage::getStoreConfig('signaturelink/sl_config/opt_min_amountbox');
+			if($grandTotal >= $orderMinAmount) {
+				$secureBuyflag = 1;
+			} 
+			break;
+		default:
+			$secureBuyflag = 1;
+	}
+}
+//New changes for SecureBuy & MPI
+?>
+
+<?php if($secureBuyflag == 1)	{ ?>
+	<center>
+	<div id="sl_pad_container" style="padding-top: 25px">
+
+	  <div id="slpadDivF9" class="slpadDivF9">
+	   <object id="SignremoteF9" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="200" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
+	    <param name="movie" value="<?php echo $slData->flashFile. '?' . $slData->vars; ?>" />
+	    <param name="allowScriptAccess" value="always" />
+		<!--[if !IE]>-->
+		<object name="SignremoteF9" type="application/x-shockwave-flash" data="<?php echo $slData->flashFile; ?>" width="400" height="200">
+		    <param name="allowScriptAccess" value="always" />
+		    <param name="wmode" value="opaque" />
+		    <param name="FlashVars" value="<?php echo $slData->vars; ?>" />
+		</object>
+		<!--[<![endif]-->
+	    </object>
+	   </div>
+		<div id="slpadDivH5" class="slpadDivH5">
+			<canvas id="SignremoteH5" class="slsph5" height="171" width="301"></canvas>
+			<a href="javascript:canvfuncs.undo();" id="slh5Undo">&nbsp;</a>
+			<a href="javascript:canvfuncs.clear();" id="slh5Reset">&nbsp;</a>
+			<a href="javascript:canvfuncs.showHelp();" id="slh5Help">&nbsp;</a>
+		</div>
+		<input type="hidden" id="slCmds" name="slCmds">
+	</div>
+	</center>
+
+
+	<script type="text/javascript">
+	function submitOrderPrep(form) {
+		checkout.setLoadWaiting('payment');
+	}
+
+	function submitOrderDePrep(form) {
+		payment.resetLoadWaiting();
+	}
+
+	function submitOrderContinue(err, code) {
+		var hasSigned = (err && err.toLowerCase().beginsWith('please sign') ? false : true);
+		if( hasSigned ) {
+		paymentSubmit();
+		var secureCardValidate = jQuery('#secure-card-validation').val();
+		var check              = '<?php echo $checkStatus;?>';
+		// alert(secureCardValidate);
+		if(check == 1) {
+				if(document.getElementById('p_method_aim')){
+					if(((!document.getElementById('p_method_aim').checked) || secureCardValidate != 1) && (jQuery("input[name='payment[method]']:checked").val()!=undefined)) {
+						payment.save();
+					} else {
+					   
+					}
+				}
+			}
+		}
+	}
+
+	var cbFunc = submitOrderContinue;
+
+	var captureOptions = {
+	    signPadOptions: {
+		use:    true,
+		type:   'html5',
+		form:   'slForm',
+		signpadFileLoc: '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>signaturelink/playerProductInstall.swf',
+		signpadInsertId:    'Signremote',
+		// callbackFuncName: (cbFunc && cbFunc.name) ? cbFunc.name : 'submitCallback',
+		controlInputId: 'sl_verify',
+		signPadId: 'Signremote',
+		signPadDivId: 'slpadDiv',
+		companyID:      '<?php echo $slData->clientId; ?>',
+		storeID:     '<?php echo $slData->storeId; ?>',
+		ffuid:  'sid',
+		spSLId: 'slSid',
+		coordsID: 'slCmds',
+		htmlDataId:     '',
+		orderSubmitSetupFunc:   submitOrderPrep,
+		orderSubmitResetFunc:   submitOrderDePrep,
+		orderSubmitContFunc: (cbFunc && cbFunc.name) ? cbFunc.name : 'submitOrderContinue',
+		externalValidate: null,
+		readonly: false
+	    }
+	};
+
+	var termsAndConditionsOptions = {
+		use: true,
+		settingID: "tc",
+		clientID:'<?php echo $slData->clientId; ?>',
+		storeID:     '<?php echo $slData->storeId; ?>',
+		useSecure: true,
+		languageCodeControlID: "hdnReturnedLanguageCode",
+		replacementID:'sl_tc',
+		languageCode: "<?php echo $langageValue;?>"
+	};
+
+	jQuery(document).ready(function() {
+	  cnps.init(captureOptions, termsAndConditionsOptions);
+	  cnps.registerSignpad();
+	});
+
+	jQuery(function () {
+	    cnps.loadAll();
+	});
+	</script>
+<?php }?>

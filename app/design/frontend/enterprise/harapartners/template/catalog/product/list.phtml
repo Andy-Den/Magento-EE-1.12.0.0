@@ -1,0 +1,132 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if(!$_productCollection->count()): ?>
+<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<?php else: ?>
+<div class="category-products">
+    <?php echo $this->getToolbarHtml() ?>
+    <?php // List mode ?>
+    <?php if($this->getMode()!='grid'): ?>
+    <?php $_iterator = 0; ?>
+    <ol class="products-list" id="products-list">
+    <?php foreach ($_productCollection as $_product): ?>
+    	<?php $detailedProduct = Mage::getModel('catalog/product')->load($_product->getId())?>
+        <li itemtype="http://schema.org/Product" itemscope class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+            <?php // Product Image ?>
+            <meta content="<?php echo $_product->getProductUrl() ?>" itemprop="url" />
+            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+            	<img itemprop="image" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(150); ?>" width="150" height="150" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+            </a>
+            <?php // Product description ?>
+            <div class="product-shop">
+                <div class="f-fix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
+	                <div class='center-column'>
+	                	<h1 class='product-brand'><?php echo $_product->getVendorName(); ?></h1>
+	                    <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
+	                    <h2 class="product-name">
+	                    	<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>" itemprop="name">
+	                    		<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
+	                    	</a>
+	                    </h2>
+	                    <!--h2 class="product-sku"><?php echo $_product->getSku(); ?></h2-->
+	                    <?php echo $this->getPriceHtml($_product, true) ?>
+	                    <div class="desc std" itemprop="description">
+	                        <?php echo $_helper->productAttribute($detailedProduct, $detailedProduct->getDescription(), 'description') ?>
+	                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="link-learn"><?php echo $this->__('more...') ?></a>
+	                    </div>
+	                </div>
+	                <div class='right-column'>
+		                <div class='add'>
+		                   <?php if($_product->isSaleable()): ?>
+			                   <div>
+				                	<?php echo $this->getReviewsSummaryHtml($_product, 'hp_list', true) ?>
+				                	<?php echo Mage::helper('service/catalog')->getConfigurableDropDownHtml($_product) ?>
+				                	<meta content="http://schema.org/InStock" itemprop="availability" />
+				                </div>
+		                    <?php else: ?>
+		                        <span class="availability out-of-stock"><span><?php echo $this->__('Out Of stock') ?></span></span>
+		                    <?php endif; ?>
+		                </div>
+	                </div>
+                </div>
+            </div>
+        </li>
+    <?php endforeach; ?>
+    </ol>
+    <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+
+    <?php else: ?>
+    <?php // Grid Mode ?>
+    <?php $_collectionSize = $_productCollection->count() ?>
+    <?php 
+    	//$_columnCount = $this->getColumnCount();
+   		$_columnCount = Harapartners_Service_Helper_Catalog::PRODUCT_LIST_PAGE_GRID_COLUMN_COUNT;
+    ?>
+    <?php $i=0; foreach ($_productCollection as $_product): ?>
+        <?php if ($i++%$_columnCount==0): ?>
+        <ul class="products-grid">
+        <?php endif ?>
+            <li itemtype="http://schema.org/Product" itemscope class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+            	<meta content="<?php echo $_product->getProductUrl() ?>" itemprop="url" />
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+                	<img itemprop="image" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(150); ?>" width="150" height="150" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                </a>
+                <?php echo $this->getReviewsSummaryHtml($_product, 'hp_grid', true) ?>
+                <h1 class='product-brand'><?php echo $_product->getVendorName(); ?></h1>
+                <h2 class="product-name">
+                	<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" itemprop="name" >
+                		<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                	</a>
+                </h2>
+                <!--h2 class="product-sku"><?php echo $_product->getSku(); ?></h2-->
+                <div itemtype="http://schema.org/Offer" itemscope itemprop="offers">
+                	<?php echo $this->getPriceHtml($_product, true) ?>
+                </div>
+            </li>
+        <?php if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
+        </ul>
+        <?php endif ?>
+        <?php endforeach ?>
+        <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+    <?php endif; ?>
+
+    <div class="toolbar-bottom">
+        <?php echo $this->getToolbarHtml() ?>
+    </div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,33 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ */
+?>
+<div class="vendoroptions-header-mapped-category-container">
+	<div class="mapped-category-title">
+		<div class="mapped-category-title-separator"></div>
+		<div class="mapped-category-title-content">Shop <?php echo $this->getVendor()->getName()?></div>
+	</div>
+	<div class="clear"></div>
+	<?php echo $this->getMappedCategoryProductHtml(); ?>
+</div>
+<script type="text/javascript">
+	jQuery(document).ready(function (){
+		jQuery(".mapped-category-level-0").click(function (event){
+			var target = jQuery(event.target);
+			var categoryId = target.attr('category_id');
+			jQuery(".mapped-category-level-0").removeClass("mapped-category-level-0-selected");
+			target.addClass("mapped-category-level-0-selected");
+			jQuery(".mapped-category-tab").hide();
+			jQuery(".mapped-category-tab[category_id='"+categoryId+"']").show();
+		});
+		jQuery(".mapped-category-level-0:eq(0)").click();
+	});
+</script>

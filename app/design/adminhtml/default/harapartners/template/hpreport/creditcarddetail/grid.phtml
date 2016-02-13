@@ -1,0 +1,63 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+<div id="aggregates" style="width:100%;"></div>
+
+<script>
+jQuery(document).ready(function() {
+    jQuery("#aggregates").kendoGrid({
+        dataSource: {
+	        data: <?php echo $this->getCollectionJson()?>,
+            pageSize: 30,
+            group: {
+                     field: "credit_card_type", aggregates: [
+	                    { field: "order_id", aggregate: "count" },
+	                    { field: "increment_id", aggregate: "count"},
+	                    { field: "status", aggregate: "count"},
+	                    { field: "pay_id", aggregate: "count"},
+	                    { field: "customer_name", aggregate: "count"},
+	                    { field: "store_name", aggregate: "count"},
+	                    { field: "created_at", aggregate: "count"},
+	                    { field: "updated_at", aggregate: "count"},
+	                    { field: "shipping_tax_amount", aggregate: "sum" },
+	                    { field: "shipping_amount", aggregate: "sum" },
+	                    { field: "tax_amount", aggregate: "sum" },
+                        { field: "subtotal", aggregate: "sum" },
+                        { field: "grand_total", aggregate: "sum" }
+                     ]
+                   },
+
+            aggregate: [ { field: "order_id", aggregate: "count" },
+		                    { field: "increment_id", aggregate: "count"},
+		                    { field: "status", aggregate: "count"},
+		                    { field: "pay_id", aggregate: "count"},
+		                    { field: "customer_name", aggregate: "count"},
+		                    { field: "store_name", aggregate: "count"},
+		                    { field: "created_at", aggregate: "count"},
+		                    { field: "updated_at", aggregate: "count"},
+		                    { field: "shipping_tax_amount", aggregate: "sum" },
+		                    { field: "shipping_amount", aggregate: "sum" },
+		                    { field: "tax_amount", aggregate: "sum" },
+		                    { field: "subtotal", aggregate: "sum" },
+		                    { field: "grand_total", aggregate: "sum" }]
+        },
+        sortable: true,
+        scrollable: false,
+        pageable: true,
+        columns: [
+                  { field: "order_id", title: "Order Entity Id", footerTemplate: "Total Count: #=count#", groupFooterTemplate: "Count: #=count#" },
+                  { field: "increment_id", title: "Order Number" },
+                  { field: "status", title: "Order Status" },
+                  { field: "pay_id", title: "Pay ID" },
+                  { field: "customer_name", title: "Billing to Name" },
+                  { field: "store_name", title: "Store" },
+                  { field: "created_at", title: "Created At" },
+                  { field: "updated_at", title: "Updated At" },
+                  { field: "shipping_tax_amount", title: "Shipping Tax",  type:"number", footerTemplate: "Total Shipping Tax: #=sum#", groupFooterTemplate: "Total Shipping Tax: #=sum#" },
+                  { field: "shipping_amount", title: "Shipping",  type:"number", footerTemplate: "Total Shipping: #=sum#", groupFooterTemplate: "Total Shipping: #=sum#" },
+                  { field: "tax_amount", title: "Tax",  type:"number", footerTemplate: "Total Tax: #=sum#", groupFooterTemplate: "Total Tax: #=sum#" },
+            { field: "subtotal", title: "Sub Total", type:"number",  footerTemplate: "Subtotal: #=sum#", groupFooterTemplate: "Total Cost: #=sum#" },
+            { field: "grand_total", title: "Grand Total", type:"number", footerTemplate: "Total Amount: #=sum#", groupFooterTemplate: "Total Amount: #=sum#" }
+        ]
+    });
+});
+</script>

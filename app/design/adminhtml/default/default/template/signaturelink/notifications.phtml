@@ -1,0 +1,11 @@
+<?php
+/**
+ * @category    Signaturelink
+ * @package     SL_Signaturelink
+ */
+?>
+<?php if($this->isRequiredSettingsNotification()):?>
+<div class="notification-global" id="kabbage-notification">
+    <?php echo $this->__('SignatureLink needs to be configured! You can do this in the <a href="%s">Configuration section</a>.', $this->getManageUrl());?>
+</div>
+<?php endif;?>

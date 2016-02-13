@@ -1,0 +1,29 @@
+
+Init!!!
+MAGE Loaded
+Changed Working Dir to /home/shoemart/usr/local/www/virtual/magento/shoemart
+    (This Matches the Working Dir that the file import expects.)
+END Init!!! 
+
+There are 5 Files in var/importexport/test_2
+
+ENTERING RUN!!!
+MEMORY_GET_USAGE: 10223616
+RUNNING Chunk_1-mod.csv
+    RESULT FOR: Chunk_1-mod.csv IS: 1
+MEMORY_GET_USAGE: 326631424
+RUNNING Chunk_3-mod.csv
+    RESULT FOR: Chunk_3-mod.csv IS: 1
+MEMORY_GET_USAGE: 430178304
+RUNNING Chunk_5-mod.csv
+    RESULT FOR: Chunk_5-mod.csv IS: 1
+MEMORY_GET_USAGE: 509345792
+RUNNING Chunk_7-mod.csv
+    RESULT FOR: Chunk_7-mod.csv IS: 1
+MEMORY_GET_USAGE: 607125504
+RUNNING Chunk_9-mod.csv
+    RESULT FOR: Chunk_9-mod.csv IS: 1
+THERE were 5 Successes. And 0 Failures.
+EXITING RUN!!!
+
+EXITING!!!

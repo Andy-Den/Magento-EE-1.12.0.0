@@ -1,0 +1,16 @@
+/*The shoe mart JS*/
+
+jQuery(document).ready(function(){
+
+		 jQuery("#slides_window")/*.before('<div id="slides_buttons">') */
+		 .cycle({
+		 fx: 'fade',
+		 timeout:0,
+		 speed:600,
+		 timeout:6000,
+	/* next:"#slides_window",   */
+	/*     pager:  '#slides_buttons'   */
+	});
+	
+	
+});

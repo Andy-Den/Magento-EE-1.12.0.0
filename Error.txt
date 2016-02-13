@@ -1,0 +1,147 @@
+
+Init!!!
+Memory: 4718592
+Memory: 5767168
+Memory: 5767168
+Memory: 5767168
+MAGE Loaded
+Changed Working Dir to D:\www\aec
+    (This Matches the Working Dir that the file import expects.)
+END Init!!! 
+
+There are 107 Files in var\importexport\test_2
+
+ENTERING RUN!!!
+MEMORY_GET_USAGE: 6553600
+RUNNING validSorted_Chunk_0.csv
+Memory: 11010048
+Memory: 11010048
+Memory: 12058624
+Memory: 13893632
+Memory: 14417920
+Memory: 14942208
+Memory: 14942208
+Memory: 15204352
+Memory: 15204352
+Memory: 15204352
+Memory: 15204352
+Memory: 15204352
+Memory: 15204352
+Memory: 15466496
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 15990784
+Memory: 16252928
+Memory: 16515072
+Memory: 16515072
+Memory: 16515072
+Memory: 16515072
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 16777216
+Memory: 17039360
+Memory: 17039360
+Memory: 17039360
+Memory: 17039360
+Memory: 17039360
+Memory: 17039360
+Memory: 17039360
+Memory: 17039360
+Memory: 17301504
+Memory: 17301504
+Memory: 17301504
+Memory: 17301504
+Memory: 17301504
+Memory: 17301504
+Memory: 17301504
+Memory: 17563648
+Memory: 17563648
+Memory: 17563648
+Memory: 17563648
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 17825792
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18087936
+Memory: 18350080
+Memory: 18350080
+Memory: 18612224
+Memory: 18612224
+Memory: 18612224
+Memory: 18612224
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 18874368
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19136512
+Memory: 19398656
+Memory: 19398656
+Memory: 19922944
+Memory: 19922944
+Memory: 121634816
+745M
+Memory: 739770368
+745M
+Memory: 740032512
+745M
+Memory: 740032512
+745M
+Memory: 740818944
+745M
+Memory: 740818944
+745M
+Memory: 768081920
+745M
+
+Fatal error: Allowed memory size of 781189120 bytes exhausted (tried to allocate 50 bytes) in D:\www\aec\lib\Zend\Db\Statement\Pdo.php on line 296

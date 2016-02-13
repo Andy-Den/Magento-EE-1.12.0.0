@@ -1,0 +1,3 @@
+store,websites,attribute_set,type,category_ids,sku,name,color,size,meta_title,meta_description,image,small_image,thumbnail,url_key,url_path,gift_message_available,price,special_price,weight,msrp,status,visibility,enable_googlecheckout,tax_class_id,description,short_description,meta_keyword,qty,min_qty,max_sale_qty,is_in_stock,manage_stock,store_id,media_gallery
+admin,"aec,turner",Default,simple,2,test617550,A Good Yarn Cardigan PJ Set,Black,S,,,,,,,,,62,,0,,Enabled,,,Taxable Goods,,,,4,,,,,,
+turner,"aec,turner",Default,simple,2,test617550,Turner Test,White,S,,,,,,,,,,,,,,,,,,,,,,,,,,

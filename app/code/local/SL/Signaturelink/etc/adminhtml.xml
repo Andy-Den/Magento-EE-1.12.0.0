@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<!-- <sales>
+			<children>
+				<signaturelink module="signaturelink">
+					<title>SecureBuy History</title>
+					<sort_order>15</sort_order>
+					<action>adminhtml/signaturelink</action>
+				</signaturelink>
+			</children>
+		</sales> -->
+		<customer>
+			<children>
+				<signaturelink translate="title" module="signaturelink">
+					<title>SecureBuy Whitelist</title>
+					<action>adminhtml/signaturelink/whitelist</action>
+					<sort_order>40</sort_order>
+				</signaturelink>
+			</children>
+		</customer>
+	</menu>
+
+	<layout>
+		<updates>
+			<signaturelink>
+				<file>signaturelink.xml</file>
+			</signaturelink>
+		</updates>
+	</layout>
+
+    <acl>
+        <resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+            <admin>
+                <children>
+					<sales>
+						<children>
+							<signaturelink module="signaturelink">
+								<title>SecureBuy Module</title>
+								<sort_order>10</sort_order>
+							</signaturelink>
+						</children>
+					</sales>
+					<customer>
+						<children>
+							<signaturelink module="signaturelink">
+								<title>SecureBuy Whitelist</title>
+								<sort_order>10</sort_order>
+							</signaturelink>
+						</children>
+					</customer>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <signaturelink module="signaturelink">
+                                        <title>SecureBuy Configuration</title>
+                                    </signaturelink>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,63 @@
+<?php
+//New changes for SecureBuy & MPI
+$signpadMode     = Mage::getStoreConfig('signaturelink/sl_config/signpad_mode');
+$grandTotal      = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
+$langageValue    = Mage::getStoreConfig('signaturelink/sl_config/lang_list');
+$securebuyOptVal = Mage::getStoreConfig('signaturelink/sl_config/securebuy_options_list');
+$secureBuyflag   = 0;
+
+if($signpadMode == 1)	{
+	switch ($securebuyOptVal) {
+		case 0:
+			$secureBuyflag = 0;
+			break;
+		case 1:
+			$secureBuyflag = 1;
+			break;
+		case 2:
+			$orderMinAmount = Mage::getStoreConfig('signaturelink/sl_config/opt_min_amountbox');
+			if($grandTotal >= $orderMinAmount) {
+				$secureBuyflag = 1;
+			} 
+			break;
+		default:
+			$secureBuyflag = 1;
+	}	
+	
+}
+
+if($secureBuyflag == 1)	{ 
+//New changes for SecureBuy & MPI
+?>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript">
+	jQuery.noConflict();
+</script>
+
+<input type="hidden" name="sid" id="sid" />
+<input type="hidden" name="slCmds" id="slCmds" />
+
+<?php
+if ($this->isTMEnabled()):
+	$helper = Mage::helper('signaturelink');
+
+	//$host = $helper->getConfig('tm_config', 'tm_host'); // i.signaturelink.com
+    $host = 'i.signaturelink.com'; //
+	$orgId = '9bje8m71';
+	$sessionId = $helper->generateSLSession();
+
+	$targetBase = sprintf("https://%s/fp/%%s?org_id=%s&amp;session_id=%s", $host, $orgId, $sessionId);
+	$targetImg = sprintf($targetBase, 'clear.png');
+	$targetScript = sprintf($targetBase, 'check.js');
+	$targetFlash = sprintf($targetBase, 'fp.swf');
+?>
+
+<p style="background:url(<?php echo $targetImg; ?>&amp;m=1)" />
+<img src="<?php echo $targetImg; ?>&amp;m=2" alt=" " />
+<script type="text/javascript" src="<?php echo $targetScript ?>"></script>
+<object type="application/x-shockwave-flash" data="<?php echo $targetFlash; ?>" width="1" height="1" id="sl_obj_id">
+	<param name="movie" value="<?php echo $targetFlash; ?>" />
+	<div />
+</object>
+<?php endif; ?>
+<?php } ?>

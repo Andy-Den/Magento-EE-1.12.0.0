@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<config>
+    <modules>
+        <Harapartners_CatalogExtension>
+            <version>1.0.6</version>
+        </Harapartners_CatalogExtension>
+    </modules>			
+	<global>
+		<blocks>
+            <catalogextension>
+                <class>Harapartners_CatalogExtension_Block</class>
+            </catalogextension>
+		</blocks>
+        <models>
+            <catalogextension>
+				<class>Harapartners_CatalogExtension_Model</class>
+			</catalogextension>
+			<catalog>
+				<rewrite>
+					<category>Harapartners_CatalogExtension_Model_Rewrite_Catalog_Category</category>
+				</rewrite>
+			</catalog>
+		</models>
+		<helpers>
+			<catalogextension>
+				<class>Harapartners_CatalogExtension_Helper</class>
+			</catalogextension>
+		</helpers>
+		<resources>
+            <catalogextension_setup>
+                <setup>
+                    <module>Harapartners_CatalogExtension</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </catalogextension_setup>
+        </resources>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<catalogextension>
+					<file>catalogextension.xml</file>
+				</catalogextension>
+			</updates>
+		</layout>
+	</frontend>
+    <adminhtml/>
+	<default/>
+</config>

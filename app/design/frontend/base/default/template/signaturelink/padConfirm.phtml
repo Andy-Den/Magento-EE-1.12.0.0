@@ -1,0 +1,99 @@
+<?php
+//New changes for SecureBuy & MPI
+$signpadMode     = Mage::getStoreConfig('signaturelink/sl_config/signpad_mode');
+$grandTotal      = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
+$langageValue    = Mage::getStoreConfig('signaturelink/sl_config/lang_list');
+$securebuyOptVal = Mage::getStoreConfig('signaturelink/sl_config/securebuy_options_list');
+$secureBuyflag   = 0;
+
+if($signpadMode == 1)	{
+	switch ($securebuyOptVal) {
+		case 0:
+			$secureBuyflag = 0;
+			break;
+		case 1:
+			$secureBuyflag = 1;
+			break;
+		case 2:
+			$orderMinAmount = Mage::getStoreConfig('signaturelink/sl_config/opt_min_amountbox');
+			if($grandTotal >= $orderMinAmount) {
+				$secureBuyflag = 1;
+			} 
+			break;
+		default:
+			$secureBuyflag = 1;
+	}
+}
+//New changes for SecureBuy & MPI
+
+if($secureBuyflag == 1)	{ 
+
+$helper = Mage::helper('signaturelink');
+$slData = $helper->getFlashParams();
+$ieFlashUrl = $slData->flashFile . '?' . $slData->vars;
+?>
+
+
+<script type="text/javascript" rel="sljs">
+	captureOptions.signPadOptions.signPadId = 'slpadConfirm';
+	captureOptions.signPadOptions.readonly = true;
+	
+	var termsAndConditionsOptions = {
+		use: true,
+		settingID: "tc",
+		clientID:'<?php echo $slData->clientId; ?>',
+		storeID:     '<?php echo $slData->storeId; ?>',
+		useSecure: true,
+		languageCodeControlID: "hdnReturnedLanguageCode",
+		replacementID:'sl_tc',
+		languageCode: "<?php echo $langageValue;?>"
+	};
+
+	jQuery(document).ready(function() {
+	  cnps.init(captureOptions, termsAndConditionsOptions);
+	  cnps.registerSignpad();
+	});
+
+	jQuery(function () {
+		cnps.loadAll();
+	});
+</script>
+
+<script type="text/javascript">
+	sl_processDom('<?php echo $ieFlashUrl; ?>', '<?php echo $helper->generateSLSession(); ?>');
+</script>
+
+<center>
+<div id="sl_pad_confirm" style="padding-top: 20px">
+ <div id="slpadDivF9" class="slpadDivF9">
+	<object id="slpadConfirmF9" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="200">
+		<param name="movie" value="<?php echo $ieFlashUrl; ?>" />
+		<param name="allowScriptAccess" value="always" />
+		<!--[if !IE]>-->
+		<object name="slpadConfirmF9" type="application/x-shockwave-flash" data="<?php echo $slData->flashFile; ?>" width="400" height="200">
+			<param name="allowScriptAccess" value="always" />
+			<param name="wmode" value="opaque" />
+			<param name="FlashVars" value="<?php echo $slData->vars; ?>" />
+		<!--[<![endif]-->
+		<!-- p>You must have Flash installed to continue checkout.</p -->
+		<!--[if !IE]>-->
+		</object>
+		<!--[<![endif]-->
+	</object>
+ </div>
+	<div id="slpadDivH5" class="slpadDivH5">
+		<canvas id="slpadConfirmH5" class="slsph5" height="171" width="301"></canvas>
+		<a href="javascript:canvfuncs.undo();" id="slh5Undo">&nbsp;</a>
+		<a href="javascript:canvfuncs.clear();" id="slh5Reset">&nbsp;</a>
+		<a href="javascript:canvfuncs.showHelp();" id="slh5Help">&nbsp;</a>
+	</div>
+
+	<?php if ($helper->isTCEnabled()): ?>
+	<div id="sl_tc_container">
+		<div>PURCHASE AGREEMENT - Last Updated <span id="sl_tc_header"></span></div>
+		<textarea id="sl_tc" rows="10" cols="100" style="min-width: 400px; width:99%;"></textarea>
+	</div>
+	<?php endif; ?>
+</div>
+</center>
+<?php } ?>

@@ -1,0 +1,43 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+
+ 
+<div id="singleSort" style="width:100%;"></div>
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery("#singleSort").kendoGrid({
+	        dataSource: {
+	            data: <?php echo $this->getCollectionJson() ?> ,
+	            pageSize: 30
+	        },
+	        sortable: {
+	            mode: "single",
+	            allowUnsort: false
+	        },
+	        pageable: true,
+	        scrollable: false,
+	        columns: [
+	 	        {
+	                field: "vendor_name",
+	                title: "Vendor Name",
+	            },	      	        
+	            {
+	                field: "vendor_id",
+	                title: "Vendor ID",
+	            },
+	            {
+	                field: "cost_count",
+	                title: "Item Count",
+	                type: "number",
+	            },
+	            {
+	                field: "cost_sum",
+	                title: "Sum of Costs",
+	                type: "number",
+	                format: "{0:n2}",
+	            }
+	        ]
+	    });
+	 });
+</script>

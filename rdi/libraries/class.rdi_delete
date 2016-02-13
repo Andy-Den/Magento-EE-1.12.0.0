@@ -1,0 +1,29 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of class
+ *
+ * @author PMBliss
+ */
+class rdi_delete extends rdi_general {
+          
+    public function rdi_delete($db = '')
+    {
+         if ($db)
+            $this->set_db($db);  
+    }
+    
+    public function delete_products()
+    {
+        global $benchmarker, $pos, $cart, $debug, $insert_products, $update_products, $update_type_product, $field_mapping,
+                $insert_upsell, $update_upsell, $hook_handler, $avail_stock_update;
+        
+        $cart->get_processor("rdi_cart_delete")->rdi_cart_delete
+    }
+}
+?>

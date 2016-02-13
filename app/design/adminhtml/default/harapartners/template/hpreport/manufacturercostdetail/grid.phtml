@@ -1,0 +1,50 @@
+<?php $records = count($this->getCollection())?>
+<div><b>Total Records : <?php echo $records?></b></div>
+<div id="aggregates" style="width:100%;"></div>
+
+<script>
+jQuery(document).ready(function() {
+    jQuery("#aggregates").kendoGrid({
+        dataSource: {
+	        data: <?php echo $this->getCollectionJson()?>,
+            pageSize: 30,
+            group: {
+            	field: "vendor_name", aggregates: [
+                        { field: "order_id", aggregate: "count" },
+                        { field: "increment_id", aggregate: "count" },
+	                    { field: "product_id", aggregate: "count" },
+	                    { field: "name", aggregate: "count"},
+	                    { field: "sku", aggregate: "count"},
+	                    { field: "unit_cost", aggregate: "sum"},
+	                    { field: "qty_ordered", aggregate: "sum"},
+	                    { field: "total_cost", aggregate: "sum"}
+				]
+           },
+
+            aggregate: [{ field: "order_id", aggregate: "count" }, 
+                        { field: "increment_id", aggregate: "count" },
+                        { field: "product_id", aggregate: "count" },
+	                    { field: "name", aggregate: "count"},
+	                    { field: "sku", aggregate: "count"},
+	                    { field: "unit_cost", aggregate: "sum"},
+	                    { field: "qty_ordered", aggregate: "sum"},
+	                    { field: "total_cost", aggregate: "sum"}
+	        ]
+        },
+        sortable: true,
+        scrollable: false,
+        pageable: true,
+        columns: [
+				  { field: "vendor_name", title: "Vendor Name"},
+                  { field: "order_id", title: "Order Id"},
+                  { field: "increment_id",  title: "Increment Id" },
+                  { field: "product_id", title: "Product Id", footerTemplate: "Total Count: #=count#", groupFooterTemplate: "Count: #=count#" },
+                  { field: "name", title: "Product Name" },
+                  { field: "sku", title: "SKU" },
+                  { field: "unit_cost", title: "Unit Cost", format: "{0:n2}", type:"number"},
+                  { field: "qty_ordered", title: "Qty",  type:"number", footerTemplate: "Total Qty: #=sum#", groupFooterTemplate: "Total Qty: #=sum#" },
+                  { field: "total_cost", title: "Total Cost", format: "{0:n2}", type:"number", footerTemplate: "Total Cost: #=kendo.toString(sum, 'n2')#", groupFooterTemplate: "Total Cost: #=kendo.toString(sum, 'n2')#" }
+        ]
+    });
+});
+</script>

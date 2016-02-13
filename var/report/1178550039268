@@ -1,0 +1,8 @@
+a:5:{i:0;s:215:"Error in file: "/var/www/magento/shoemart/app/code/core/Mage/Sales/data/sales_setup/data-install-1.6.0.0.php" - SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ebay_complete' for key 'PRIMARY'";i:1;s:858:"#0 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(391): Mage_Core_Model_Resource_Setup->_modifyResourceDb('data-install', '', '1.6.0.7')
+#2 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(289): Mage_Core_Model_Resource_Setup->_installData('1.6.0.7')
+#3 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(269): Mage_Core_Model_Resource_Setup->applyDataUpdates()
+#4 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/App.php(351): Mage_Core_Model_Resource_Setup::applyAllDataUpdates()
+#5 /var/www/magento/shoemart/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#6 /var/www/magento/shoemart/index.php(89): Mage::run('', 'store')
+#7 {main}";s:3:"url";s:45:"/ecco-kids-boomerang-magpie-077022-51019.html";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

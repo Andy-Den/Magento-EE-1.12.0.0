@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ *
+ * @author      Steven Hoffman <s.hoffman@harapartners.com>
+ * @copyright   Copyright (c) 2013 Harapartners Inc.
+ * 
+ -->
+<!-- app/code/local/Harapartners/HpIntWms/etc/system.xml -->
+
+<config>
+    <sections>
+        <hpintwms translate="label" module="hpintwms">
+            <label>Hara Partners Int-WMS</label>
+            <tab>service</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+				<conection_config translate="label">
+					<label>Conection Settings</label>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<endpoint_info translate="label">
+							<label>Endpoint URL or IP</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</endpoint_info>
+						<port translate="label">
+							<label>Port</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</port>
+						<username translate="label">
+							<label>Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</username>
+						<password translate="label">
+							<label>Password</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</password>
+						<database_name translate="label">
+							<label>Database Name</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</database_name>
+						<zend_conection_type translate="label">
+							<label>Zend Adapter Type to Use</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</zend_conection_type>
+						<pdo_adapter_type translate="label">
+							<label>Pdo Adpater Type to Use</label>
+							<comment>Leave Blank if not needed. Generally needed on Unix systems (pdoType)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</pdo_adapter_type>
+						<adapter_comment translate="label">
+							<label>Notes:</label>
+							<!--
+							<comment>
+							<![CDATA[Notes:<br>On Windows, sqlsrv is currently working.<br>No Adapter type needed.<br><br>
+							On Unix, pdo_mssql is currently working.<br>Set Adapter type to dblib.]]>
+							</comment>
+							-->
+							<frontend_type>label</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</adapter_comment>
+					</fields>
+				</conection_config>
+				<sync_setting>
+					<label>Sync Settings</label>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<inventory_date_last_sync translate="label">
+							<label>DateTime of last Inventory Sync</label>
+							<comment>This is an auto updated field (Valid DateString if you feel the need to edit this)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</inventory_date_last_sync>
+					</fields>
+				</sync_setting>
+			</groups>
+        </hpintwms>
+	</sections>
+</config>

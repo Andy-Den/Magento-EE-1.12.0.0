@@ -1,0 +1,12 @@
+8509,1614372245,0,admin_login,"2015-09-28 13:12:43",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,96.57.93.149
+8510,1614372245,0,catalog_products,"2015-09-28 13:14:11",view,"a:1:{s:7:""general"";s:7:""1648949"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8511,1614372245,0,catalog_products,"2015-09-28 13:29:58",view,"a:1:{s:7:""general"";s:7:""1648949"";}",success,r.ryan,15,adminhtml_catalog_product_edit,,96.57.93.149
+8512,1614372245,0,catalog_categories,"2015-09-28 13:30:19",view,"a:1:{s:7:""general"";s:4:""1154"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8513,1614372245,0,catalog_categories,"2015-09-28 13:30:47",view,"a:1:{s:7:""general"";s:4:""1052"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8514,1755957342,0,admin_login,"2015-09-28 17:36:50",login,"a:1:{s:7:""general"";N;}",failure,rdi,10,adminhtml_index_index,,104.169.200.94
+8515,1755957342,0,admin_login,"2015-09-28 17:36:54",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8516,1755957342,0,catalog_products,"2015-09-28 17:37:16",view,"a:1:{s:7:""general"";s:7:""1648949"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8517,1755957342,0,cache_management,"2015-09-28 17:38:07",save,"a:1:{s:7:""general"";s:105:""Cache types: config, layout, block_html, translate, collections, eav, config_api, config_api2, full_page "";}",success,rdi,10,adminhtml_cache_massRefresh,,104.169.200.94
+8518,1755957342,0,adminhtml_system_config,"2015-09-28 17:39:57",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,rdi,10,adminhtml_system_config_edit,,104.169.200.94
+8519,1236707998,0,admin_login,"2015-09-29 01:30:44",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,73.182.170.158
+8520,3488426836,0,admin_login,"2015-09-29 15:05:45",login,"a:1:{s:7:""general"";N;}",success,mai78erne,7,adminhtml_index_index,,207.237.43.84

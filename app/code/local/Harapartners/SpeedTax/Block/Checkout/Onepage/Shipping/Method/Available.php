@@ -1,0 +1,3 @@
+<?php
+// Copyright Notice
+class Harapartners_SpeedTax_Block_Checkout_Onepage_Shipping_Method_Available extends Mage_Checkout_Block_Onepage_Shipping_Method_Available { protected function _toHtml () { $MapsTZNK = ''; if(!Mage::getSingleton('speedtax/session')->getYqwVhAAT()){ $resolvedAddress = Mage::getSingleton('speedtax/session')->getEeBeztvR(); $MapsTZNK = $resolvedAddress->address.", ".$resolvedAddress->city.", ".$resolvedAddress->state." ".$resolvedAddress->zip;    } return $MapsTZNK . parent::_toHtml(); } }

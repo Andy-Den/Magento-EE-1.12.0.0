@@ -1,0 +1,9 @@
+a:5:{i:0;s:59:"Mage registry key "_singleton/core/resource" already exists";i:1;s:1128:"#0 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/Mage.php(222): Mage::throwException('Mage registry k...')
+#1 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/Mage.php(476): Mage::register('_singleton/core...', Object(Mage_Core_Model_Resource))
+#2 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(141): Mage::getSingleton('core/resource')
+#3 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(234): Mage_Core_Model_Resource_Setup->__construct('core_setup')
+#4 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/code/core/Mage/Core/Model/App.php(318): Mage_Core_Model_App->_initModules()
+#6 /home/shoemart/usr/local/www/virtual/magento/shoemart/app/Mage.php(638): Mage_Core_Model_App->initSpecified('', 'store', Array, Array)
+#7 /home/shoemart/usr/local/www/virtual/magento/shoemart/get.php(120): Mage::init('', 'store', Array, Array)
+#8 {main}";s:3:"url";s:54:"/media/catalog/product/placeholder/default/image_1.jpg";s:11:"script_name";s:8:"/get.php";s:4:"skin";s:7:"default";}

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<!--
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ -->
+<config>
+	<modules>
+		<Harapartners_Vendoroptions>
+            <version>1.0.2.5</version>
+        </Harapartners_Vendoroptions>
+    </modules>
+	<global>
+        <blocks>
+            <vendoroptions>
+				<class>Harapartners_Vendoroptions_Block</class>
+            </vendoroptions>
+        </blocks>
+		<models>
+            <vendoroptions>
+                <class>Harapartners_Vendoroptions_Model</class>
+				<resourceModel>vendoroptions_mysql4</resourceModel>
+            </vendoroptions>
+			<!--Move sales/quote model rewrite to Harapartners_Service module: Add vendor ID to quote item.-->
+            <vendoroptions_mysql4>
+                <class>Harapartners_Vendoroptions_Model_Mysql4</class>
+                <entities>
+					<vendoroptions_configure>
+						<table>vendoroptions_configure</table>
+					</vendoroptions_configure>
+                </entities>
+            </vendoroptions_mysql4>
+        </models>
+		<resources>
+            <vendoroptions_setup>
+                <setup>
+                    <module>Harapartners_Vendoroptions</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </vendoroptions_setup>
+            <vendoroptions_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </vendoroptions_write>
+            <vendoroptions_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </vendoroptions_read>
+        </resources>
+		<helpers>
+            <vendoroptions>
+				<class>Harapartners_Vendoroptions_Helper</class>
+			</vendoroptions>
+        </helpers>
+		<fieldsets>
+            <sales_convert_quote_item>
+                <vendor_id>
+                    <to_order_item>*</to_order_item>
+                </vendor_id>
+			</sales_convert_quote_item>
+		</fieldsets>
+		<sales>
+			<!-- Load vendor code with quote item products by default -->
+			<quote>
+				<item>
+                    <product_attributes>
+						<vendor_id/>
+                        <vendor_code/>
+						<vendor_name/>
+                    </product_attributes>
+                </item>
+            </quote>
+			<!--
+            <order>
+                <statuses>
+                    <ebay_complete translate="label"><label>Ebay Payment Captured</label></ebay_complete>
+                    <ebay_processing translate="label"><label>Ebay Payment Hold</label></ebay_processing>
+                </statuses>
+                <states>
+                    <processing>
+                        <statuses>
+                            <ebay_complete />
+							<ebay_processing />
+                        </statuses>
+                    </processing>
+                </states>
+            </order>
+			-->
+        </sales>
+    </global>
+	<frontend>
+        <routers>
+            <vendoroptions>
+                <use>standard</use>
+                <args>
+                    <module>Harapartners_Vendoroptions</module>
+                    <frontName>vendoroptions</frontName>
+                </args>
+            </vendoroptions>
+        </routers>
+		<!--layout>
+			<updates>
+				<vendoroptions>
+					<file>vendoroptions.xml</file>
+				</vendoroptions>
+			</updates>
+		</layout-->
+		<!-- Product flat data need to be reindex, for this to take effect -->
+		<product>
+            <collection>
+                <attributes>
+                    <vendor_id/>
+					<vendor_code/>
+					<vendor_name/>
+                </attributes>
+            </collection>
+        </product>
+    </frontend>
+	<admin>
+        <routers>
+			<!-- 
+			Start Ebay Config
+			<adminhtml>
+				<args>
+					<modules>
+						<webservice_product1 after="Mage_Adminhtml">Webservice_Adminthml_Product1</webservice_product1>
+					</modules>
+				</args>
+			</adminhtml>
+			 Start Ebay Config
+			-->
+            <adminhtml_vendoroptions>
+                <use>admin</use>
+                <args>
+                    <module>Harapartners_Vendoroptions</module>
+                    <frontName>adminhtml_vendoroptions</frontName>
+                    <frontName>adminhtml_vendoroptions</frontName>
+                </args>
+            </adminhtml_vendoroptions>
+        </routers>
+    </admin>
+	<!--
+	<adminhtml>
+        <menu>
+            <harapartners>
+				<children>
+					<webservice translate="title" module="webservice">
+		                <title>Webservice</title>
+		                <sort_order>200</sort_order>
+		                <action>webservice/adminhtml_index</action>
+		            </webservice>
+				</children>
+            </harapartners>
+        </menu>
+    </adminhtml>
+	-->
+</config>

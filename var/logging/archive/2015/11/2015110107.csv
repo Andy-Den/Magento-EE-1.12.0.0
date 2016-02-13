@@ -1,0 +1,4 @@
+8374,1755957342,0,admin_login,"2015-09-01 18:18:52",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8375,1755957342,0,admin_login,"2015-09-01 18:32:34",login,"a:1:{s:7:""general"";N;}",success,rdi,10,adminhtml_index_index,,104.169.200.94
+8376,1755957342,0,catalog_products,"2015-09-01 18:33:08",view,"a:1:{s:7:""general"";s:7:""1645000"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94
+8377,1755957342,0,catalog_products,"2015-09-01 19:54:09",view,"a:1:{s:7:""general"";s:7:""1645000"";}",success,rdi,10,adminhtml_catalog_product_edit,,104.169.200.94

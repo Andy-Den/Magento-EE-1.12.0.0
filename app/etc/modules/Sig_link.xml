@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <SL_Signaturelink>
+            <codePool>local</codePool>
+            <active>true</active>
+        </SL_Signaturelink>
+		
+		<Slap_Aim>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Slap_Aim>
+    </modules>
+</config>

@@ -1,0 +1,9 @@
+a:5:{i:0;s:402:"Error in file: "E:\www\aec\app\code\local\Harapartners\OptionSwatch\sql\optionswatch_setup\mysql4-install-1.0.0.php" - SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT `FK_OPTIONSWATCH_OPTION_ID_CON` FOREIGN KEY (`option_id`) REFERENCES ' at line 16";i:1;s:836:"#0 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '1.0.0')
+#2 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.0.0')
+#3 E:\www\aec\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 E:\www\aec\app\code\core\Mage\Core\Model\App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 E:\www\aec\app\code\core\Mage\Core\Model\App.php(343): Mage_Core_Model_App->_initModules()
+#6 E:\www\aec\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 E:\www\aec\index.php(87): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

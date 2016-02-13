@@ -1,0 +1,71 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User Software Agreement (EULA).
+ * It is also available through the world-wide-web at this URL:
+ * http://www.harapartners.com/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to eula@harapartners.com so we can send you a copy immediately.
+ * 
+ */
+?>
+
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $_profiles = $this->getPaymentProfiles() ?>
+<div class="page-title">
+    <h1><?php echo $this->__('My Saved Credit Cards') ?></h1>
+</div>
+<?php echo $this->getPagerHtml(); ?>
+<?php if(count($_profiles->getItems())): ?>
+<table class="data-table" id="my-credit-cards-table">
+    <col width="1" />
+    <col width="1" />
+    <col width="1" />
+    <thead>
+        <tr>
+            <th><?php echo $this->__('Card Number') ?></th>
+            <th><?php echo $this->__('Billing Address') ?></th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($_profiles as $_profile): ?>
+        <tr>
+            <td><?php echo "xxxx-" . $_profile->getData( "last4digits" ) ?></td>
+            <td>
+            	<div><?php echo $_profile->getData( "first_name" ) . " " . $_profile->getData( "last_name" ) ?></<div>
+            	<div><?php echo $_profile->getData( "company" ) ?></div>
+            	<div><?php echo $_profile->getData( "address" ) ?></div>
+            	<div><?php echo $_profile->getData( "city" ) . ", " . $_profile->getData( "region" ) . " " . $_profile->getData( "zipcode" ) ?></div>
+            	<div><?php echo $_profile->getData( "country" ) ?></div>
+            	<div><?php echo $_profile->getData( "phone_number" ) ?></div>
+            </td>
+            <td class="a-center">
+                <span class="nobr">
+                	<a href="<?php echo $this->getEditUrl($_profile) ?>"><?php echo $this->__('Edit') ?></a>
+	                <span class="separator">|</span>
+					<a href="<?php echo $this->getDeleteUrl($_profile) ?>" class="profile-delete"><?php echo $this->__('Delete') ?></a>
+                </span>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<script type="text/javascript">decorateTable('my-credit-cards-table');</script>
+<?php echo $this->getPagerHtml(); ?>
+<?php else: ?>
+    <p><?php echo $this->__('You have no saved credit cards.'); ?></p>
+<?php endif ?>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.profile-delete').click(function(){
+			if(!confirm("Do you want to delete this card from your saved credit card list?")){
+				return false;
+			}
+		});
+	});
+	
+</script>

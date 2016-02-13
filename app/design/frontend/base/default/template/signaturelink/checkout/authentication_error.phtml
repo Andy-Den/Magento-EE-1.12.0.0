@@ -1,0 +1,15 @@
+<?php /** @var $this SL_Signaturelink_Block_Checkout_AuthenticationError */ ?>
+
+<div class="page-title">
+    <h1><?php echo $this->__('Authentication Error') ?></h1>
+</div>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<h2 class="sub-title"><?php echo $this->__('There was a problem completing your order.') ?></h2>
+
+<p class="sl-authentication-error">
+    <?php echo Mage::helper('signaturelink')->getConfig('tm_config', 'tm_quarantine_fraud_message'); ?>
+</p>
+
+<div class="buttons-set">
+    <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+</div>

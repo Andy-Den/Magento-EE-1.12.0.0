@@ -1,0 +1,6 @@
+8368,1614372245,0,admin_login,"2015-07-28 17:09:10",login,"a:1:{s:7:""general"";N;}",failure,r.rryan,,adminhtml_index_index,,96.57.93.149
+8369,1614372245,0,admin_login,"2015-07-28 17:09:34",login,"a:1:{s:7:""general"";N;}",failure," r.ryan",,adminhtml_index_index,,96.57.93.149
+8370,1614372245,0,admin_login,"2015-07-28 17:10:20",login,"a:1:{s:7:""general"";N;}",success,r.ryan,15,adminhtml_index_index,,96.57.93.149
+8371,1614372245,0,catalog_categories,"2015-07-28 17:13:27",view,"a:1:{s:7:""general"";s:3:""970"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8372,1614372245,0,catalog_categories,"2015-07-28 17:13:44",view,"a:1:{s:7:""general"";s:3:""970"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149
+8373,1614372245,0,catalog_categories,"2015-07-28 17:13:47",view,"a:1:{s:7:""general"";s:3:""971"";}",success,r.ryan,15,adminhtml_catalog_category_edit,,96.57.93.149

@@ -1,0 +1,9 @@
+a:5:{i:0;s:217:"Error in file: "/var/www/magento/shoemart/app/code/local/Harapartners/Vendoroptions/sql/vendoroptions_setup/mysql4-upgrade-1.0.2.0-1.0.2.1.php" - SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty";i:1;s:967:"#0 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(422): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.0.0.0', '1.0.2.5')
+#2 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.0.2.5')
+#3 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /var/www/magento/shoemart/app/code/core/Mage/Core/Model/App.php(343): Mage_Core_Model_App->_initModules()
+#6 /var/www/magento/shoemart/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 /var/www/magento/shoemart/index.php(89): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:36:"/index.php/install/wizard/installDb/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}
